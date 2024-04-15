@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components"
-import { theme } from "../theme.css"
+import { theme } from "../../theme.css"
 
 const Wrapper = styled.article`
   margin-bottom: 4rem;
@@ -15,12 +15,13 @@ const Carousel = styled.div`
   border-radius: 10px;
   box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
     rgba(15, 15, 15, 0.3) 0px 2px 4px;
+  padding: 1rem 0;
 `
 
 const Cards = styled.ul`
   position: relative;
   width: fit-content;
-  width: 64rem;
+  width: 100%;
   height: 35rem;
   display: flex;
 `

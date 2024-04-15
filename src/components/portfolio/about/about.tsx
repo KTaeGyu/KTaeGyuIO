@@ -1,12 +1,12 @@
 import React from "react"
-import features from "../../assets/data/features"
+import features from "../../../assets/data/features"
 import {
   Content,
   Hr,
   Section,
   Title,
   Wrapper,
-} from "../../styles/portfolio/about"
+} from "../../../styles/portfolio/about/about"
 import Feature from "./feature"
 
 const About = () => {

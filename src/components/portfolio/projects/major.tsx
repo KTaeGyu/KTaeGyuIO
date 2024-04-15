@@ -1,8 +1,9 @@
 import React from "react"
-import { team } from "../../assets/data/teams"
-import Check from "../../assets/icons/Check.inline.svg"
-import Chevron from "../../assets/icons/Chevron.inline.svg"
-import Click from "../../assets/icons/Click.inline.svg"
+import { major } from "../../../assets/data/majorProjects"
+import IconPath from "../../../assets/iconPath"
+import Chevron from "../../../assets/icons/Chevron.inline.svg"
+import Click from "../../../assets/icons/Click.inline.svg"
+import useCarousel from "../../../hooks/useCarousel"
 import {
   Abstract,
   Carousel,
@@ -31,17 +32,31 @@ import {
   UrlTitle,
   Urls,
   Wrapper,
-} from "../../styles/portfolio/team"
+} from "../../../styles/portfolio/projects/major"
 import Readme from "./readme"
 
-interface TeamProp {
-  team: team
+interface MajorProp {
+  major: major
 }
 
-const Team = ({ team }: TeamProp) => {
-  const { title, size, abstract, descript, readme, features, fields, urls } =
-    team
-  const pages = team.pages
+const Major = ({ major }: MajorProp) => {
+  const {
+    title,
+    size,
+    abstract,
+    descript,
+    readme,
+    features,
+    fields,
+    urls,
+    colors,
+  } = major
+  const pages = major.pages
+  const pageLength = pages.length
+  const primary = colors[0]
+
+  // 캐러셀
+  const { carouselRef, handleSwipe, index } = useCarousel(pages)
 
   return (
     <Wrapper>
@@ -51,22 +66,24 @@ const Team = ({ team }: TeamProp) => {
       </Size>
       <Content>
         <Carousel>
-          <Pages>
+          <Pages ref={carouselRef} $pages={pageLength}>
             {pages.map((page) => (
               <Page key={page.id}>{page.content}</Page>
             ))}
           </Pages>
           <Navigation>
-            <Prev>
+            <Prev onClick={() => handleSwipe(-1)}>
               <Chevron />
             </Prev>
-            <NowPage>1 / 2</NowPage>
-            <Next>
+            <NowPage>
+              {index} / {pageLength}
+            </NowPage>
+            <Next onClick={() => handleSwipe(1)}>
               <Chevron />
             </Next>
           </Navigation>
         </Carousel>
-        <Overview>
+        <Overview $primary={primary}>
           <Abstract>{abstract}</Abstract>
           <Descript>{descript}</Descript>
           <ReadmeBtn>
@@ -81,7 +98,7 @@ const Team = ({ team }: TeamProp) => {
             {fields.map((field, idx) => (
               <React.Fragment key={idx}>
                 <Field>
-                  <Check /> FE
+                  <IconPath.Check /> FE
                 </Field>
                 <Skills>
                   {field.skills.map((skill, idx) => (
@@ -108,4 +125,4 @@ const Team = ({ team }: TeamProp) => {
   )
 }
 
-export default Team
+export default Major

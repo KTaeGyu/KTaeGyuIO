@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { theme } from "../theme.css"
+import { theme } from "../../theme.css"
 
 const Wrapper = styled.div`
   width: 100%;
@@ -29,23 +29,24 @@ const Carousel = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
+  margin: 0 1rem;
   overflow: hidden;
 `
 
-const Pages = styled.div`
+const Pages = styled.ul<{ $pages: number }>`
   flex-grow: 1;
-  width: fit-content;
+  width: ${({ $pages }) => `${$pages * 100}`}%;
   display: flex;
+  transition: all 0.5s ease-in-out;
 `
 
-const Page = styled.div`
-  width: 32rem;
+const Page = styled.li`
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 1rem;
-  cursor: pointer;
 `
 
 const Image = styled.img`
@@ -80,11 +81,23 @@ const Next = styled.button`
   }
 `
 
-const Overview = styled.div`
+const Overview = styled.div<{ $primary: string }>`
   width: 50%;
   height: 26.625rem;
   overflow-y: scroll;
   padding: 0 1rem;
+  margin-right: 0.25rem;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    border-radius: 2rem;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2rem;
+    background: ${({ $primary }) => $primary};
+    min-height: 50px;
+  }
 `
 
 const Abstract = styled.p`

@@ -1,5 +1,7 @@
 interface ImagePath {
   [key: string]: { default: string }
+  // intro
+  profile: { default: string }
   // skills
   python: { default: string }
   javascript: { default: string }
@@ -25,11 +27,13 @@ interface ImagePath {
   firebase: { default: string }
   jira: { default: string }
   notion: { default: string }
-  // intro
-  profile: { default: string }
+  // projects
+  sample: { default: string }
 }
 
 const imagePath: ImagePath = {
+  // intro
+  profile: require("./images/profile.jpg"),
   // skills
   python: require("./images/python.webp"),
   javascript: require("./images/javascript.webp"),
@@ -55,8 +59,8 @@ const imagePath: ImagePath = {
   firebase: require("./images/firebase.webp"),
   jira: require("./images/jira.webp"),
   notion: require("./images/notion.webp"),
-  // intro
-  profile: require("./images/profile.jpg"),
+  // projects
+  sample: require("./images/sample.png"),
 }
 
 export type { ImagePath }

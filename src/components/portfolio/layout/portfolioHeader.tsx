@@ -1,12 +1,12 @@
 import React from "react"
-import useActiveHeader from "../../hooks/useActiveHeader"
+import useActiveHeader from "../../../hooks/useActiveHeader"
 import {
   Content,
   NavItem,
   Navbar,
   Title,
   Wrapper,
-} from "../../styles/layouts/portfolioHeader"
+} from "../../../styles/layouts/portfolioHeader"
 
 const Header = () => {
   const { isTop } = useActiveHeader()

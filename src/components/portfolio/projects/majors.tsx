@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react"
-import teams from "../../assets/data/teams"
-import Chevron from "../../assets/icons/Chevron.inline.svg"
+import majors from "../../../assets/data/majorProjects"
+import Chevron from "../../../assets/icons/Chevron.inline.svg"
 import {
   Card,
   Cards,
@@ -12,13 +12,13 @@ import {
   Prev,
   Title,
   Wrapper,
-} from "../../styles/portfolio/teams"
-import { theme } from "../../styles/theme.css"
-import Team from "./team"
+} from "../../../styles/portfolio/projects/majors"
+import { theme } from "../../../styles/theme.css"
+import Major from "./major"
 
-const Teams = () => {
-  const cardLength = teams.length
-  const cards = teams
+const Majors = () => {
+  const cardLength = majors.length
+  const cards = majors
 
   const carouselRef = useRef<HTMLUListElement>(null)
   const [index, setIndex] = useState(0)
@@ -35,12 +35,12 @@ const Teams = () => {
 
   return (
     <Wrapper>
-      <Title>Team Projects</Title>
+      <Title>Major Projects</Title>
       <Carousel>
         <Cards ref={carouselRef}>
-          {cards.map((team) => (
-            <Card key={team.id} className={team.id === index ? "active" : ""}>
-              <Team team={team} />
+          {cards.map((major) => (
+            <Card key={major.id} className={major.id === index ? "active" : ""}>
+              <Major major={major} />
             </Card>
           ))}
         </Cards>
@@ -66,4 +66,4 @@ const Teams = () => {
   )
 }
 
-export default Teams
+export default Majors

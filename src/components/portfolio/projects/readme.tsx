@@ -5,8 +5,6 @@ interface ReadmeProp {
 }
 
 const Readme = ({ content }: ReadmeProp) => {
-  console.log(content)
-
   return <></>
 }
 

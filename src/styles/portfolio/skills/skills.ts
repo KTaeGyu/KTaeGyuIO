@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { theme } from "../theme.css"
+import { theme } from "../../theme.css"
 
 const Section = styled.section`
   background: aqua;
@@ -7,7 +7,7 @@ const Section = styled.section`
 `
 
 const Wrapper = styled.div`
-  width: 70rem;
+  width: ${theme.sizes.container};
   border-radius: 10px;
   background: ${theme.colors.light};
   padding: 3rem;

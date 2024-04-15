@@ -1,18 +1,19 @@
 import styled from "styled-components"
-import { theme } from "../theme.css"
+import { theme } from "../../theme.css"
 
 const Section = styled.section`
-  background: ${theme.colors.light};
+  background: aliceblue;
   padding: 3rem 0;
 `
 
 const Wrapper = styled.div`
-  width: 70rem;
+  width: ${theme.sizes.container};
   border-radius: 10px;
   margin: 0 auto;
   background: ${theme.colors.light};
-  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
-    rgba(15, 15, 15, 0.4) 0px 2px 8px;
+  border: 1px solid ${theme.colors.border};
+  /* box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
+    rgba(15, 15, 15, 0.4) 0px 2px 8px; */
   padding: 3rem;
 `
 

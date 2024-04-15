@@ -28,7 +28,7 @@ const Section = styled.section`
 
 const Wrapper = styled.div`
   z-index: 1;
-  width: 70rem;
+  width: ${theme.sizes.container};
   height: 100%;
   display: flex;
   align-items: center;

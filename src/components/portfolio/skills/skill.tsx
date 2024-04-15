@@ -4,8 +4,8 @@ import React, {
   SetStateAction,
   useRef,
 } from "react"
-import { skill } from "../../assets/data/skills"
-import Close from "../../assets/icons/Close.inline.svg"
+import { skill } from "../../../assets/data/skills"
+import IconPath from "../../../assets/iconPath"
 import {
   CloseBtn,
   Container,
@@ -30,26 +30,34 @@ import {
   Urls,
   UrlsTitle,
   Wrapper,
-} from "../../styles/portfolio/skill"
+} from "../../../styles/portfolio/skills/skill"
+import { Controlls } from "./skills"
 
 interface SkillProp {
   skill: skill
-  selected: boolean
-  setSelect: Dispatch<SetStateAction<number>>
+  controlls: Controlls
+  setControls: Dispatch<SetStateAction<Controlls>>
 }
 
-const Skill = ({ skill, selected, setSelect }: SkillProp) => {
+const Skill = ({ skill, controlls, setControls }: SkillProp) => {
+  // 데이터
   const { id, logo, title, experience, level, urls } = skill
-  const closeBtn = useRef<HTMLButtonElement>(null)
+  const selected = controlls.select === id
 
+  // 상세 열기, 닫기
+  const closeBtn = useRef<HTMLButtonElement>(null)
   const handleOpen: MouseEventHandler<HTMLLIElement> = (e) => {
     const target = e.target as HTMLElement
     if (closeBtn.current?.contains(target)) return
-    setSelect(id)
+    if (controlls.select === id) return
+    if (controlls.select !== -1) {
+      setControls((prev) => ({ ...prev, height: prev.height, select: id }))
+    } else {
+      setControls((prev) => ({ ...prev, height: prev.height + 38, select: id }))
+    }
   }
-
   const handleClose: MouseEventHandler<HTMLButtonElement> = () => {
-    setSelect(-1)
+    setControls((prev) => ({ ...prev, height: prev.height - 38, select: -1 }))
   }
 
   return (
@@ -101,7 +109,7 @@ const Skill = ({ skill, selected, setSelect }: SkillProp) => {
             </Urls>
           ) : null}
           <CloseBtn ref={closeBtn} onClick={handleClose}>
-            <Close width={24} height={24} fill="black" />
+            <IconPath.Close />
           </CloseBtn>
         </Content>
       </Container>

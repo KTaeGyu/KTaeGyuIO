@@ -1,6 +1,12 @@
 import React from "react"
-import { Hr, Section, Title, Wrapper } from "../../styles/portfolio/projects"
-import Teams from "./teams"
+import {
+  Hr,
+  Section,
+  Title,
+  Wrapper,
+} from "../../../styles/portfolio/projects/projects"
+import Majors from "./majors"
+import Minis from "./minis"
 
 const Projects = () => {
   return (
@@ -8,7 +14,8 @@ const Projects = () => {
       <Wrapper>
         <Title>Projects</Title>
         <Hr />
-        <Teams />
+        <Majors />
+        <Minis />
       </Wrapper>
     </Section>
   )

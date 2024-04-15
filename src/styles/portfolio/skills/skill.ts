@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { theme } from "./../theme.css"
+import { theme } from "../../theme.css"
 
 const Wrapper = styled.li`
   width: 33.33%;

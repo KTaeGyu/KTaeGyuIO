@@ -1,5 +1,6 @@
 import React from "react"
-import { Image } from "../../styles/portfolio/team"
+import { Image } from "../../styles/portfolio/projects/major"
+import imagePath from "../imagePath"
 
 interface size {
   period: string
@@ -21,7 +22,7 @@ interface url {
   link: string
 }
 
-interface team {
+interface major {
   id: number
   title: string
   size: size
@@ -32,11 +33,12 @@ interface team {
   features: string
   fields: field[]
   urls: url[]
+  colors: string[]
 }
 
 let id = 0
 
-const teams: team[] = [
+const majors: major[] = [
   {
     id: id++,
     title: "Wondoo",
@@ -47,11 +49,11 @@ const teams: team[] = [
     pages: [
       {
         id: 0,
-        content: <Image src="/images/sampleCard.png" alt="샘플이미지" />,
+        content: <Image src={imagePath.sample.default} alt="샘플이미지" />,
       },
       {
         id: 1,
-        content: <Image src="/images/sampleCard.png" alt="샘플이미지" />,
+        content: <Image src={imagePath.sample.default} alt="샘플이미지" />,
       },
     ],
     abstract: "개발자를 위한 학습 공유 플랫폼",
@@ -59,7 +61,7 @@ const teams: team[] = [
       <p>준비중... 어떤걸 배웠는지... 뭘 구현했는지... 내 역할은 뭔지...</p>
     ),
     readme: ``,
-    features: "",
+    features: "이런 저런 기능",
     fields: [
       {
         title: "FE",
@@ -80,6 +82,7 @@ const teams: team[] = [
         link: "https://www.notion.so/playcoding/8-6-93db189725fc456f8c498d4fb1aab6ac",
       },
     ],
+    colors: ["#f5b120"],
   },
 
   {
@@ -92,11 +95,11 @@ const teams: team[] = [
     pages: [
       {
         id: 0,
-        content: <Image src="/images/sampleCard.png" alt="샘플이미지" />,
+        content: <Image src={imagePath.sample.default} alt="샘플이미지" />,
       },
       {
         id: 1,
-        content: <Image src="/images/sampleCard.png" alt="샘플이미지" />,
+        content: <Image src={imagePath.sample.default} alt="샘플이미지" />,
       },
     ],
     abstract: "개발자를 위한 학습 공유 플랫폼",
@@ -125,8 +128,9 @@ const teams: team[] = [
         link: "https://www.notion.so/playcoding/8-6-93db189725fc456f8c498d4fb1aab6ac",
       },
     ],
+    colors: ["#f5b120"],
   },
 ]
 
-export type { team }
-export default teams
+export type { major }
+export default majors

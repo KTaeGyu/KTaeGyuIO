@@ -1,11 +1,11 @@
 import styled from "styled-components"
-import { theme } from "./../theme.css"
+import { theme } from "../../theme.css"
 
 const Wrapper = styled.li`
   position: relative;
 `
 
-const Icon = styled.div`
+const IconBox = styled.div`
   position: absolute;
   z-index: 1;
   width: 100%;
@@ -118,4 +118,4 @@ const Content = styled.p`
   filter: opacity(0);
 `
 
-export { BackDrop, Content, Hexagon, Icon, Space, Title, Wrapper }
+export { BackDrop, Content, Hexagon, IconBox, Space, Title, Wrapper }

@@ -1,7 +1,9 @@
 import * as React from "react"
-import About from "../components/portfolio/about"
+import About from "../components/portfolio/about/about"
+import Contact from "../components/portfolio/contact"
 import Intro from "../components/portfolio/intro"
-import Skills from "../components/portfolio/skills"
+import Projects from "../components/portfolio/projects/projects"
+import Skills from "../components/portfolio/skills/skills"
 import Layout from "../layouts/portfolio"
 
 export default function Homepage() {
@@ -10,6 +12,8 @@ export default function Homepage() {
       <Intro />
       <About />
       <Skills />
+      <Projects />
+      <Contact />
     </Layout>
   )
 }

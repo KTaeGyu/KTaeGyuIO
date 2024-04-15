@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { theme } from "../theme.css"
 
 const Wrapper = styled.header`
-  z-index: 1;
+  z-index: 3;
   position: fixed;
   transition: 0.4s ease;
   width: 100%;
@@ -16,7 +16,7 @@ const Wrapper = styled.header`
 `
 
 const Content = styled.div`
-  width: 70rem;
+  width: ${theme.sizes.container};
   display: flex;
   align-items: center;
   justify-content: space-between;

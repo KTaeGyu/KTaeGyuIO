@@ -1,10 +1,11 @@
 import styled from "styled-components"
+import { theme } from "../../theme.css"
 
 const Section = styled.section``
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  width: 70rem;
+  width: ${theme.sizes.container};
   display: flex;
   flex-direction: column;
   align-items: center;

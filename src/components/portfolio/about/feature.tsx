@@ -1,22 +1,25 @@
 import React from "react"
-import { feature } from "../../assets/data/features"
+import { feature } from "../../../assets/data/features"
+import IconPath from "../../../assets/iconPath"
 import {
   BackDrop,
   Content,
   Hexagon,
-  Icon,
+  IconBox,
   Space,
   Title,
   Wrapper,
-} from "../../styles/portfolio/feature"
+} from "../../../styles/portfolio/about/feature"
 
 const Feature = ({ icon, title, content }: feature) => {
+  const Icon = IconPath[icon]
+
   return (
     <Wrapper>
-      <Icon>
-        {icon}
+      <IconBox>
+        <Icon />
         <Title>{title}</Title>
-      </Icon>
+      </IconBox>
       <Space>
         <Hexagon>
           <BackDrop></BackDrop>
