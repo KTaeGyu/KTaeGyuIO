@@ -1,20 +1,19 @@
-import * as React from "react"
-import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import Layout from "../components/layout"
+import * as React from "react"
+import SEOHead from "../components/head"
+import Layout from "../layouts/portfolio"
+import * as styles from "./blog-post.css"
 import {
+  Avatar,
+  Box,
   Container,
   Flex,
-  Box,
-  Space,
   Heading,
-  Text,
-  Avatar,
   HomepageImage,
-} from "../components/ui"
-import { avatar as avatarStyle } from "../components/ui.css"
-import * as styles from "./blog-post.css"
-import SEOHead from "../components/head"
+  Space,
+  Text,
+} from "./ui"
+import { avatar as avatarStyle } from "./ui.css"
 
 export interface BlogAuthor {
   id: string

@@ -1,20 +1,20 @@
-import * as React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import Layout from "../components/layout"
+import * as React from "react"
+import SEOHead from "../components/head"
+import Layout from "../layouts/portfolio"
+import { BlogAuthor, BlogPost } from "./blog-post"
 import {
+  BlockLink,
+  Box,
   Container,
   FlexList,
-  Box,
-  Space,
-  BlockLink,
   Heading,
-  Subhead,
-  Kicker,
-  Text,
   HomepageImage,
-} from "../components/ui"
-import { BlogAuthor, BlogPost } from "./blog-post"
-import SEOHead from "../components/head"
+  Kicker,
+  Space,
+  Subhead,
+  Text,
+} from "./ui"
 interface PostCardSmallProps {
   slug: string
   image?: HomepageImage

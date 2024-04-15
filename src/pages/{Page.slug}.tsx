@@ -1,8 +1,6 @@
-import * as React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import { Container, Box, Heading } from "../components/ui"
-import SEOHead from "../components/head"
+import * as React from "react"
+import Layout from "../layouts/portfolio"
 
 interface PageProps {
   data: {
@@ -20,24 +18,7 @@ interface PageProps {
 export default function Page(props: PageProps) {
   const { page } = props.data
 
-  return (
-    <Layout>
-      <Box paddingY={5}>
-        <Container width="narrow">
-          <Heading as="h1">{page.title}</Heading>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: page.html,
-            }}
-          />
-        </Container>
-      </Box>
-    </Layout>
-  )
-}
-export const Head = (props: PageProps) => {
-  const { page } = props.data
-  return <SEOHead {...page} />
+  return <Layout></Layout>
 }
 export const query = graphql`
   query PageContent($id: String!) {
