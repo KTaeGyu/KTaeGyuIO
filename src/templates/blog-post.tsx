@@ -1,7 +1,6 @@
 import { GatsbyImage } from "gatsby-plugin-image"
 import * as React from "react"
 import SEOHead from "../components/head"
-import Layout from "../layouts/portfolio"
 import * as styles from "./blog-post.css"
 import {
   Avatar,
@@ -37,7 +36,7 @@ export interface BlogPost {
 
 export default function BlogPost(props: BlogPost) {
   return (
-    <Layout>
+    <>
       <Container>
         <Box paddingY={5}>
           <Heading as="h1" center>
@@ -82,7 +81,7 @@ export default function BlogPost(props: BlogPost) {
           />
         </Box>
       </Container>
-    </Layout>
+    </>
   )
 }
 export const Head = (props: BlogPost) => {

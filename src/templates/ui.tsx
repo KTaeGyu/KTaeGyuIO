@@ -8,7 +8,7 @@ import {
 } from "gatsby-plugin-image"
 import isAbsoluteURL from "is-absolute-url"
 import * as React from "react"
-import { Radii, SpaceTokens } from "./theme.css"
+import { Radii, SpaceTokens } from "../styles/theme.css"
 import * as styles from "./ui.css"
 
 export const cx = (...args: (string | undefined)[]) =>
