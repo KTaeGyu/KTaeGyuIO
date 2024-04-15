@@ -52,7 +52,7 @@ const imagePath: ImagePath = {
   django: require("./images/django.webp"),
   springboot: require("./images/springboot.webp"),
   express: require("./images/express.webp"),
-  webrtc: require("./images/webrtc.webp"),
+  webrtc: require("./images/web-rtc.webp"),
   mysql: require("./images/mysql.webp"),
   sqlite: require("./images/sqlite.webp"),
   github: require("./images/github.webp"),
