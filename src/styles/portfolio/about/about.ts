@@ -1,7 +1,10 @@
 import styled from "styled-components"
 import { theme } from "../../theme.css"
 
-const Section = styled.section``
+const Section = styled.section`
+  display: flex;
+  height: 100vh;
+`
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -18,12 +21,12 @@ const Title = styled.h1`
 
 const Hr = styled.hr`
   width: 100%;
-  margin: 4rem 0;
+  margin: 2rem 0;
 `
 
 const Content = styled.ul`
   width: 100%;
-  height: 25rem;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,4 +38,11 @@ const Content = styled.ul`
   }
 `
 
-export { Content, Hr, Section, Title, Wrapper }
+const Info = styled.p`
+  width: 100%;
+  text-align: end;
+  font-size: 14px;
+  margin: 1rem 0 0 0;
+`
+
+export { Content, Hr, Info, Section, Title, Wrapper }

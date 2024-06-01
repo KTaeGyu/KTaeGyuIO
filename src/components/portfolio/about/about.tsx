@@ -1,8 +1,10 @@
-import React from "react"
+import React, { useContext } from "react"
 import features from "../../../assets/data/features"
+import { PortfolioContext } from "../../../contexts/PortfolioContext"
 import {
   Content,
   Hr,
+  Info,
   Section,
   Title,
   Wrapper,
@@ -10,8 +12,10 @@ import {
 import Feature from "./feature"
 
 const About = () => {
+  const { aboutRef } = useContext(PortfolioContext) || {}
+
   return (
-    <Section>
+    <Section ref={aboutRef}>
       <Wrapper>
         <Title>About Me</Title>
         <Hr />
@@ -25,6 +29,7 @@ const About = () => {
             />
           ))}
         </Content>
+        <Info>&#8251; 마우스를 올리시면 자세한 포부를 볼 수 있습니다.</Info>
       </Wrapper>
     </Section>
   )

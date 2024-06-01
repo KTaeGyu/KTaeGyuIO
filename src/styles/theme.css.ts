@@ -1,4 +1,4 @@
-import { createGlobalTheme } from "@vanilla-extract/css"
+import { createGlobalTheme, fontFace } from "@vanilla-extract/css"
 import { colors } from "./colors.css"
 
 export type SpaceTokens = 0 | 1 | 2 | 3 | 4 | 5 | 6
@@ -45,10 +45,51 @@ const fontWeights = {
   extrabold: "800",
 }
 
+const maruBuriExtraLight = fontFace({
+  fontVariant: "MaruBuri",
+  fontDisplay: "swap",
+  fontStyle: "normal",
+  fontWeight: "300",
+  src: 'url("/assets/fonts/MaruBuri-ExtraLight.ttf")',
+})
+const maruBuriLight = fontFace({
+  fontVariant: "MaruBuri",
+  fontDisplay: "swap",
+  fontStyle: "normal",
+  fontWeight: "400",
+  src: 'url("/assets/fonts/MaruBuri-Light.ttf")',
+})
+const maruBuriRegular = fontFace({
+  fontVariant: "MaruBuri",
+  fontDisplay: "swap",
+  fontStyle: "normal",
+  fontWeight: "500",
+  src: 'url("/assets/fonts/MaruBuri-Regular.ttf")',
+})
+const maruBuriSemiBold = fontFace({
+  fontVariant: "MaruBuri",
+  fontDisplay: "swap",
+  fontStyle: "normal",
+  fontWeight: "600",
+  src: 'url("/assets/fonts/MaruBuri-SemiBold.ttf")',
+})
+const maruBuriBold = fontFace({
+  fontVariant: "MaruBuri",
+  fontDisplay: "swap",
+  fontStyle: "normal",
+  fontWeight: "700",
+  src: 'url("/assets/fonts/MaruBuri-Bold.ttf")',
+})
+
 const fonts = {
   text: '"DM Sans", sans-serif',
   heading: '"DM Sans", sans-serif',
   mono: "DM Mono, Menlo, monospace",
+  maruBuriBold,
+  maruBuriExtraLight,
+  maruBuriLight,
+  maruBuriRegular,
+  maruBuriSemiBold,
 }
 
 const lineHeights = {

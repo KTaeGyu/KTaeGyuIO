@@ -9,6 +9,7 @@ interface IconPathProps {
   Idea: Icon
   Rocket: Icon
   Timer: Icon
+  Spanner: Icon
   // skills
   Close: Icon
   // projects
@@ -23,6 +24,7 @@ const IconPath: IconPathProps = {
   Idea: require("./icons/Idea.inline.svg"),
   Rocket: require("./icons/Rocket.inline.svg"),
   Timer: require("./icons/Timer.inline.svg"),
+  Spanner: require("./icons/Spanner.inline.svg"),
   // skills
   Close: require("./icons/Close.inline.svg"),
   // projects

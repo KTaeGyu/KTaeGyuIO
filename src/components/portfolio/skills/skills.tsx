@@ -1,6 +1,7 @@
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 import fields, { field } from "../../../assets/data/fields"
 import allSkills, { skill } from "../../../assets/data/skills"
+import { PortfolioContext } from "../../../contexts/PortfolioContext"
 import calcH from "../../../functions/calculateSkillHeight"
 import parseData from "../../../functions/parseSkillTabData"
 import {
@@ -25,6 +26,7 @@ interface Controlls {
 
 const Skills = () => {
   // 데이터
+  const { skillsRef } = useContext(PortfolioContext) || {}
   const [controls, setControls] = useState<Controlls>({
     tab: "",
     skills: allSkills,
@@ -39,7 +41,7 @@ const Skills = () => {
   }
 
   return (
-    <Section>
+    <Section ref={skillsRef}>
       <Wrapper>
         <Title>Skills</Title>
         <Hr />

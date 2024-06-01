@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^15.11.1",
+    "@emailjs/browser": "^4.3.3",
     "@fontsource/dm-mono": "^4.5.9",
     "@fontsource/dm-sans": "^4.5.8",
     "@vanilla-extract/babel-plugin": "^1.2.0",
@@ -25,6 +26,7 @@
     "axios": "^1.6.8",
     "babel-plugin-styled-components": "^2.1.4",
     "gatsby": "^5.13.4",
+    "gatsby-plugin-catch-links": "^5.13.1",
     "gatsby-plugin-image": "^3.0.0",
     "gatsby-plugin-manifest": "^5.0.0",
     "gatsby-plugin-react-svg": "^3.3.0",

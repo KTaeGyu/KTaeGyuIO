@@ -1,5 +1,11 @@
 const colors = {
+  // original
   black: "#000",
+  background: "#fff",
+  text: "#000",
+  muted: "#f5cc00",
+  active: "#004287",
+
   darkgray: "#202020",
   gray: "#5f5f5f",
   lightgray: "#9e9e9e",

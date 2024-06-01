@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useContext } from "react"
+import { PortfolioContext } from "../../../contexts/PortfolioContext"
 import {
   Hr,
   Section,
@@ -9,8 +10,10 @@ import Majors from "./majors"
 import Minis from "./minis"
 
 const Projects = () => {
+  const { projectsRef } = useContext(PortfolioContext) || {}
+
   return (
-    <Section>
+    <Section ref={projectsRef}>
       <Wrapper>
         <Title>Projects</Title>
         <Hr />

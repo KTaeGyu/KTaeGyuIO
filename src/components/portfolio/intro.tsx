@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useContext } from "react"
+import { PortfolioContext } from "../../contexts/PortfolioContext"
 import {
   Button,
   Content,
@@ -9,8 +10,16 @@ import {
 } from "../../styles/portfolio/intro"
 
 const Intro = () => {
+  const { introRef, aboutRef } = useContext(PortfolioContext) || {}
+  const navigationToAbout = () => {
+    window.scrollTo({
+      top: aboutRef.current.getBoundingClientRect().top + window.scrollY,
+      behavior: "smooth",
+    })
+  }
+
   return (
-    <Section>
+    <Section ref={introRef}>
       <Wrapper>
         <Title>
           프론트엔드 개발자
@@ -25,7 +34,7 @@ const Intro = () => {
           <br />
           새로운 것을 두려워하지 않고 도전하는 것이 저의 장점입니다
         </Content>
-        <Button>About Me</Button>
+        <Button onClick={navigationToAbout}>About Me</Button>
       </Wrapper>
     </Section>
   )

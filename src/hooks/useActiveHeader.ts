@@ -6,6 +6,9 @@ interface useActiveHeaderReturn {
 
 const useActiveHeader = (): useActiveHeaderReturn => {
   const [isTop, setIsTop] = useState(false)
+  if (typeof window === "undefined") {
+    return { isTop }
+  }
 
   useEffect(() => {
     const handleScroll = () => {

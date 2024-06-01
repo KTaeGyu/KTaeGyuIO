@@ -17,7 +17,7 @@ const Minis = () => {
   const cards = [...minis.slice(cardLength - 2), ...minis, ...minis]
 
   // 무한 캐러셀
-  const { carouselRef, handleSwipe } = useInfiniteCarousel(cards)
+  const { carouselRef, handleSwipe } = useInfiniteCarousel(cards, cardLength)
 
   return (
     <Wrapper>

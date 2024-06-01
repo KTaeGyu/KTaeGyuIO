@@ -5,12 +5,19 @@ const Wrapper = styled.li`
   width: 33.33%;
   border-radius: 10px;
   cursor: pointer;
+  &:hover {
+    background-color: lightgray;
+  }
   &.active {
     width: 100%;
     overflow: hidden;
     border: 0.8px solid ${theme.colors.border};
     margin: 1rem 0;
     cursor: default;
+
+    &:hover {
+      background-color: transparent;
+    }
     & > div {
       position: relative;
       height: 34rem;

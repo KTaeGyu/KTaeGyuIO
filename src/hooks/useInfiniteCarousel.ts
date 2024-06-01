@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 
-const useInfiniteCarousel = (list: any[]) => {
-  const len = list.length
-
+const useInfiniteCarousel = (list: any[], len: number) => {
   const carouselRef = useRef<HTMLUListElement>(null)
   const [index, setIndex] = useState(2)
 

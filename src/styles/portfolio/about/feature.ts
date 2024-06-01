@@ -17,6 +17,7 @@ const IconBox = styled.div`
 `
 
 const Title = styled.h1`
+  font-family: "MaruBuri";
   color: ${theme.colors.light};
 `
 
@@ -106,6 +107,7 @@ const BackDrop = styled.div`
 
 const Content = styled.p`
   position: absolute;
+  font-family: "MaruBuri";
   z-index: 3;
   width: 100%;
   height: 100%;
@@ -114,6 +116,9 @@ const Content = styled.p`
   justify-content: center;
   color: ${theme.colors.light};
   text-align: center;
+  word-break: keep-all;
+  line-height: 22px;
+  font-size: 16px;
   padding: 1rem;
   filter: opacity(0);
 `

@@ -21,6 +21,7 @@ module.exports = {
         host: process.env.CONTENTFUL_HOST,
       },
     },
+    "gatsby-plugin-catch-links",
     "gatsby-plugin-sharp",
     "gatsby-plugin-image",
     "gatsby-transformer-sharp",
@@ -40,7 +41,6 @@ module.exports = {
         name: "Gatsby Starter Contentful Homepage",
         short_name: "Gatsby",
         start_url: "/",
-        // These can be imported once ESM support lands
         background_color: "#ffe491",
         theme_color: "#004ca3",
         icon: "src/favicon.png",
