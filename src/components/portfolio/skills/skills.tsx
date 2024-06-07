@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react"
 import fields, { field } from "../../../assets/data/fields"
 import allSkills, { skill } from "../../../assets/data/skills"
 import { PortfolioContext } from "../../../contexts/PortfolioContext"
-import calcH from "../../../functions/calculateSkillHeight"
 import parseData from "../../../functions/parseSkillTabData"
 import {
   CardsBox,
@@ -20,7 +19,6 @@ import Skill from "./skill"
 interface Controlls {
   tab: string
   skills: skill[]
-  height: number
   select: number
 }
 
@@ -30,7 +28,6 @@ const Skills = () => {
   const [controls, setControls] = useState<Controlls>({
     tab: "",
     skills: allSkills,
-    height: calcH(allSkills),
     select: -1,
   })
 
@@ -39,6 +36,8 @@ const Skills = () => {
     const result = parseData(controls.tab, data)
     setControls(result)
   }
+
+  // 상세 전환
 
   return (
     <Section ref={skillsRef}>
@@ -56,15 +55,10 @@ const Skills = () => {
             </Field>
           ))}
         </Fields>
-        <CardsBox $height={controls.height}>
+        <CardsBox>
           <SkillCards>
             {controls.skills.map((skill) => (
-              <Skill
-                key={skill.id}
-                skill={skill}
-                controlls={controls}
-                setControls={setControls}
-              />
+              <Skill key={skill.id} skill={skill} />
             ))}
           </SkillCards>
         </CardsBox>

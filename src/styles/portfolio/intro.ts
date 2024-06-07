@@ -1,7 +1,4 @@
 import styled from "styled-components"
-
-// 나중에 graphql로 대체 ?
-import imagePath from "../../assets/imagePath"
 import { theme } from "../theme.css"
 
 const Section = styled.section`
@@ -16,7 +13,7 @@ const Section = styled.section`
   &::before {
     content: "";
     z-index: -1;
-    background: url(${imagePath.profile.default});
+    background: url("images/profile.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: 50%;

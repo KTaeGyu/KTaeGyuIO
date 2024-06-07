@@ -50,35 +50,35 @@ const maruBuriExtraLight = fontFace({
   fontDisplay: "swap",
   fontStyle: "normal",
   fontWeight: "300",
-  src: 'url("/assets/fonts/MaruBuri-ExtraLight.ttf")',
+  src: 'url("/fonts/MaruBuri-ExtraLight.ttf")',
 })
 const maruBuriLight = fontFace({
   fontVariant: "MaruBuri",
   fontDisplay: "swap",
   fontStyle: "normal",
   fontWeight: "400",
-  src: 'url("/assets/fonts/MaruBuri-Light.ttf")',
+  src: 'url("/fonts/MaruBuri-Light.ttf")',
 })
 const maruBuriRegular = fontFace({
   fontVariant: "MaruBuri",
   fontDisplay: "swap",
   fontStyle: "normal",
   fontWeight: "500",
-  src: 'url("/assets/fonts/MaruBuri-Regular.ttf")',
+  src: 'url("/fonts/MaruBuri-Regular.ttf")',
 })
 const maruBuriSemiBold = fontFace({
   fontVariant: "MaruBuri",
   fontDisplay: "swap",
   fontStyle: "normal",
   fontWeight: "600",
-  src: 'url("/assets/fonts/MaruBuri-SemiBold.ttf")',
+  src: 'url("/fonts/MaruBuri-SemiBold.ttf")',
 })
 const maruBuriBold = fontFace({
   fontVariant: "MaruBuri",
   fontDisplay: "swap",
   fontStyle: "normal",
   fontWeight: "700",
-  src: 'url("/assets/fonts/MaruBuri-Bold.ttf")',
+  src: 'url("/fonts/MaruBuri-Bold.ttf")',
 })
 
 const fonts = {

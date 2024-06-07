@@ -1,6 +1,5 @@
 import React from "react"
 import { Image } from "../../styles/portfolio/projects/major"
-import imagePath from "../imagePath"
 
 interface size {
   period: string
@@ -49,11 +48,11 @@ const majors: major[] = [
     pages: [
       {
         id: 0,
-        content: <Image src={imagePath.sample.default} alt="샘플이미지" />,
+        content: <Image src={"images/sample.png"} alt="샘플이미지" />,
       },
       {
         id: 1,
-        content: <Image src={imagePath.sample.default} alt="샘플이미지" />,
+        content: <Image src={"images/sample.png"} alt="샘플이미지" />,
       },
     ],
     abstract: "개발자를 위한 학습 공유 플랫폼",
@@ -95,11 +94,11 @@ const majors: major[] = [
     pages: [
       {
         id: 0,
-        content: <Image src={imagePath.sample.default} alt="샘플이미지" />,
+        content: <Image src={"images/sample.png"} alt="샘플이미지" />,
       },
       {
         id: 1,
-        content: <Image src={imagePath.sample.default} alt="샘플이미지" />,
+        content: <Image src={"images/sample.png"} alt="샘플이미지" />,
       },
     ],
     abstract: "개발자를 위한 학습 공유 플랫폼",

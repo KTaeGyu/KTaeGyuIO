@@ -3,15 +3,19 @@ import { theme } from "../../theme.css"
 
 const Section = styled.section`
   background: aqua;
-  padding: 3rem 0;
+  padding: 5.5rem 0 1rem 0;
+  height: 100vh;
 `
 
 const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   width: ${theme.sizes.container};
   border-radius: 10px;
   background: ${theme.colors.light};
   padding: 3rem;
   margin: 0 auto;
+  height: 100%;
 `
 
 const Title = styled.h1`
@@ -56,11 +60,25 @@ const FieldTitle = styled.h2`
   font-weight: 600;
 `
 
-const CardsBox = styled.div<{ $height: number }>`
+const CardsBox = styled.div`
+  flex: 1;
   width: 100%;
-  height: ${({ $height }) => `${$height}rem`};
   transition: all 1s ease;
-  overflow: hidden;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    border-radius: 2rem;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2rem;
+    background: aqua;
+    min-height: 50px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 2rem;
+  }
 `
 
 const SkillCards = styled.ul`

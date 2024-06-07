@@ -31,6 +31,11 @@ const fields: field[] = [
   },
   {
     id: field_id++,
+    title: "게임",
+    skills: skills.filter((item) => item.field_title === "게임"),
+  },
+  {
+    id: field_id++,
     title: "백엔드",
     skills: skills.filter((item) => item.field_title === "백엔드"),
   },
@@ -38,11 +43,6 @@ const fields: field[] = [
     id: field_id++,
     title: "데이터베이스",
     skills: skills.filter((item) => item.field_title === "데이터베이스"),
-  },
-  {
-    id: field_id++,
-    title: "데이터",
-    skills: skills.filter((item) => item.field_title === "데이터"),
   },
   {
     id: field_id++,

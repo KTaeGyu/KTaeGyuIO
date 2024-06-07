@@ -1,5 +1,4 @@
 import { theme } from "../../styles/theme.css"
-import imagePath from "../imagePath"
 
 interface skill {
   name: string
@@ -31,7 +30,7 @@ let id = 0
 const personals: mini[] = [
   {
     id: id++,
-    cover: imagePath.sample.default,
+    cover: "images/sample.png",
     icon: "💌",
     title: "이런 저런 서비스1",
     descript: "이런 특징을 가진 저런 서비스",
@@ -41,7 +40,7 @@ const personals: mini[] = [
   },
   {
     id: id++,
-    cover: imagePath.sample.default,
+    cover: "images/sample.png",
     icon: "💌",
     title: "이런 저런 서비스2",
     descript: "이런 특징을 가진 저런 서비스",
@@ -51,7 +50,7 @@ const personals: mini[] = [
   },
   {
     id: id++,
-    cover: imagePath.sample.default,
+    cover: "images/sample.png",
     icon: "💌",
     title: "이런 저런 서비스3",
     descript: "이런 특징을 가진 저런 서비스",
@@ -61,7 +60,7 @@ const personals: mini[] = [
   },
   {
     id: id++,
-    cover: imagePath.sample.default,
+    cover: "images/sample.png",
     icon: "💌",
     title: "이런 저런 서비스4",
     descript: "이런 특징을 가진 저런 서비스",
