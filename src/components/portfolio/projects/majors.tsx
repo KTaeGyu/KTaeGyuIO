@@ -10,7 +10,6 @@ import {
   Page,
   Pagenation,
   Prev,
-  Title,
   Wrapper,
 } from "../../../styles/portfolio/projects/majors"
 import { theme } from "../../../styles/theme.css"
@@ -35,7 +34,6 @@ const Majors = () => {
 
   return (
     <Wrapper>
-      <Title>Major Projects</Title>
       <Carousel>
         <Cards ref={carouselRef}>
           {cards.map((major) => (

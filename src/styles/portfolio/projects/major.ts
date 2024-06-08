@@ -1,5 +1,13 @@
 import styled from "styled-components"
+import { NotionColor } from "../../../constants/notionColor"
 import { theme } from "../../theme.css"
+
+interface MajorStyleProps {
+  $color?: string
+  $secondary?: string
+  $isLast?: boolean
+  $colorSet?: NotionColor
+}
 
 const Wrapper = styled.div`
   width: 100%;
@@ -9,13 +17,19 @@ const Wrapper = styled.div`
   align-items: center;
 `
 
-const Title = styled.h3`
+const Title = styled.h3<MajorStyleProps>`
   font-size: 2rem;
+  color: ${({ $color }) => $color};
+  margin-bottom: 1rem;
   padding: 0.5rem 0;
 `
 
-const Size = styled.p`
-  padding: 0 0 1rem 0;
+const Size = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+  font-size: 14px;
 `
 
 const Content = styled.div`
@@ -81,7 +95,7 @@ const Next = styled.button`
   }
 `
 
-const Overview = styled.div<{ $primary: string }>`
+const Overview = styled.div<MajorStyleProps>`
   width: 50%;
   height: 26.625rem;
   overflow-y: scroll;
@@ -95,8 +109,12 @@ const Overview = styled.div<{ $primary: string }>`
   }
   &::-webkit-scrollbar-thumb {
     border-radius: 2rem;
-    background: ${({ $primary }) => $primary};
+    background: ${({ $color }) => $color};
     min-height: 50px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 2rem;
+    background: ${({ $secondary }) => $secondary};
   }
 `
 
@@ -104,9 +122,13 @@ const Abstract = styled.p`
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  color: ${({ $color }) => $color};
 `
 
 const Descript = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
   margin-bottom: 1rem;
 `
 
@@ -127,41 +149,64 @@ const Hr = styled.hr`
   margin: 1rem 0;
 `
 
-const Features = styled.div`
+const Features = styled.ul`
   margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
 `
 
-const SubTitle = styled.h4`
+const Feature = styled.li<MajorStyleProps>`
+  width: 100%;
+  display: flex;
+  font-size: 12px;
+  border: 1px solid lightgray;
+  border-bottom: ${({ $isLast }) => !$isLast && 0};
+`
+
+const FeatTitle = styled.h4<MajorStyleProps>`
+  padding: 5px;
+  width: 20%;
+  border-right: 1px solid lightgray;
+`
+
+const FeatContent = styled.p`
+  padding: 5px;
+  width: 80%;
+`
+
+const SubTitle = styled.h4<MajorStyleProps>`
   margin: 0.5rem 0;
+  color: ${({ $color }) => $color};
 `
 
 const Fields = styled.div`
   display: grid;
   grid-template-columns: 6rem 1fr;
   margin-bottom: 1rem;
+  row-gap: 1rem;
 `
 
 const Field = styled.h4`
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
   font-size: 0.8rem;
 `
 
 const Skills = styled.div`
   display: flex;
   flex-wrap: wrap;
-  column-gap: 1rem;
+  column-gap: 0.5rem;
+  row-gap: 0.4rem;
 `
 
-const Skill = styled.p`
-  font-size: 0.8rem;
-  cursor: pointer;
-  &:hover {
-    & > span {
-      text-decoration: underline;
-    }
-  }
+const Skill = styled.p<MajorStyleProps>`
+  font-size: 12px;
+  color: ${({ $colorSet }) => $colorSet.text};
+  background: ${({ $colorSet }) => $colorSet.bg};
+  border-radius: 6px;
+  padding: 2px 6px;
 `
-
-const SkillName = styled.span``
 
 const Urls = styled.div`
   display: flex;
@@ -199,6 +244,9 @@ export {
   Carousel,
   Content,
   Descript,
+  FeatContent,
+  FeatTitle,
+  Feature,
   Features,
   Field,
   Fields,
@@ -215,7 +263,6 @@ export {
   ReadmeBtn,
   Size,
   Skill,
-  SkillName,
   Skills,
   SubTitle,
   Title,

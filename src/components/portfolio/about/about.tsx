@@ -18,6 +18,7 @@ const About = () => {
     <Section ref={aboutRef}>
       <Wrapper>
         <Title>About Me</Title>
+        <Info>&#8251; 마우스를 올리시면 자세한 포부를 볼 수 있습니다.</Info>
         <Hr />
         <Content>
           {features.map((feature, idx) => (
@@ -29,7 +30,6 @@ const About = () => {
             />
           ))}
         </Content>
-        <Info>&#8251; 마우스를 올리시면 자세한 포부를 볼 수 있습니다.</Info>
       </Wrapper>
     </Section>
   )

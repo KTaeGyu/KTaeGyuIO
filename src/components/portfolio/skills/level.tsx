@@ -8,7 +8,13 @@ interface LevelProps {
 
 const Wrapper = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 0.2rem;
+`
+
+const Lv = styled.p`
+  font-size: small;
 `
 
 const Block = styled.div<{ $block: boolean }>`
@@ -23,6 +29,7 @@ const Level = ({ level }: LevelProps) => {
 
   return (
     <Wrapper>
+      <Lv>Lv. {level}</Lv>
       {blocks.map((block, idx) => (
         <Block key={idx} $block={block} />
       ))}

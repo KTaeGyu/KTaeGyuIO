@@ -2,15 +2,12 @@ import styled, { keyframes } from "styled-components"
 import { theme } from "../../theme.css"
 
 const Wrapper = styled.article`
-  margin-bottom: 4rem;
-`
-
-const Title = styled.h2`
-  margin-bottom: 2rem;
+  flex: 1;
 `
 
 const Carousel = styled.div`
   position: relative;
+  height: 100%;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
@@ -173,6 +170,5 @@ export {
   Page,
   Pagenation,
   Prev,
-  Title,
   Wrapper,
 }
