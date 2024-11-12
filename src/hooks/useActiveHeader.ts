@@ -1,30 +1,26 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
-interface useActiveHeaderReturn {
-  isTop: boolean
-}
-
-const useActiveHeader = (): useActiveHeaderReturn => {
+const useActiveHeader = () => {
   const [isTop, setIsTop] = useState(false)
-  if (typeof window === "undefined") {
-    return { isTop }
-  }
+  const target = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const handleScroll = () => {
-      const position = window.scrollY
-      setIsTop(position > 0)
+    if (!target.current) return
+    const observeCallback: IntersectionObserverCallback = (entries) => {
+      const [entry] = entries
+      setIsTop(entry.isIntersecting)
     }
-
-    window.addEventListener("scroll", handleScroll, { passive: true })
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
+    const observeOptions: IntersectionObserverInit = {
+      rootMargin: "0px 0px 0px 0px",
+      threshold: 1.0,
     }
-  }, [])
+    const observer = new IntersectionObserver(observeCallback, observeOptions)
 
-  return { isTop }
+    observer.observe(target.current)
+    return () => observer.disconnect()
+  }, [target])
+
+  return { isTop, target }
 }
 
-export type { useActiveHeaderReturn }
 export default useActiveHeader

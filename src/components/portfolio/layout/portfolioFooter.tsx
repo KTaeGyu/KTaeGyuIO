@@ -1,5 +1,5 @@
 import React from "react"
-import { Wrapper } from "../../../styles/layouts/portfolioFooter"
+import { Wrapper } from "./portfolioFooter.styles"
 
 const Footer = () => {
   return <Wrapper></Wrapper>

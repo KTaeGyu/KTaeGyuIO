@@ -14,7 +14,7 @@ import {
   Url,
   Urls,
   Wrapper,
-} from "../../../styles/portfolio/projects/mini"
+} from "./mini.styles"
 
 interface MiniProp {
   mini: mini

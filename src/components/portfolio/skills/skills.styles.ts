@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { theme } from "../../theme.css"
+import { theme } from "../../../styles/theme.css"
 
 const Section = styled.section`
   background: aqua;
@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   width: ${theme.sizes.container};
   border-radius: 10px;
-  background: ${theme.colors.light};
+  background: ${theme.colors.bootstrap.light};
   padding: 3rem;
   margin: 0 auto;
   height: 100%;
@@ -40,22 +40,22 @@ const Field = styled.li`
   height: 2.5rem;
   display: flex;
   align-items: center;
-  border: 0.05rem solid ${theme.colors.border};
+  border: 0.05rem solid ${theme.colors.bootstrap.border};
   border-radius: 25px;
-  background: ${theme.colors.light};
+  background: ${theme.colors.bootstrap.light};
   padding: 0 1rem;
   margin-right: 0.5rem;
   cursor: pointer;
   &:hover {
-    border: 0.05rem solid ${theme.colors.primary};
+    border: 0.05rem solid ${theme.colors.bootstrap.primary};
   }
   &.active {
-    border: 0.05rem solid ${theme.colors.primary};
+    border: 0.05rem solid ${theme.colors.bootstrap.primary};
   }
 `
 
 const FieldTitle = styled.h2`
-  color: ${theme.colors.dark_sub};
+  color: ${theme.colors.bootstrap.dark_sub};
   font-size: 0.9rem;
   font-weight: 600;
 `
@@ -90,8 +90,8 @@ const SkillCards = styled.ul`
 export {
   CardsBox,
   Field,
-  FieldTitle,
   Fields,
+  FieldTitle,
   Hr,
   Section,
   SkillCards,

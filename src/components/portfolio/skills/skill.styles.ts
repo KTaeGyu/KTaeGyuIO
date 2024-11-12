@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { theme } from "../../theme.css"
+import { theme } from "../../../styles/theme.css"
 
 const Wrapper = styled.li`
   width: 33.33%;
@@ -11,7 +11,7 @@ const Wrapper = styled.li`
   &.active {
     width: 100%;
     overflow: hidden;
-    border: 0.8px solid ${theme.colors.border};
+    border: 0.8px solid ${theme.colors.bootstrap.border};
     margin: 1rem 0;
     cursor: default;
 
@@ -60,7 +60,7 @@ const Title = styled.div`
 const LogoBox = styled.div`
   height: 3rem;
   aspect-ratio: 1/1;
-  border: 0.05rem solid ${theme.colors.border};
+  border: 0.05rem solid ${theme.colors.bootstrap.border};
   border-radius: 10px;
   overflow: hidden;
   display: flex;

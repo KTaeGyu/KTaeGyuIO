@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { NotionColor } from "../../../constants/notionColor"
-import { theme } from "../../theme.css"
+import { theme } from "../../../styles/theme.css"
 
 interface MajorStyleProps {
   $color?: string
@@ -138,9 +138,9 @@ const ReadmeBtn = styled.button`
   gap: 0.5rem;
   border: none;
   border-radius: 3px;
-  color: ${theme.colors.light};
+  color: ${theme.colors.bootstrap.light};
   font-size: 1rem;
-  background: ${theme.colors.dark};
+  background: ${theme.colors.bootstrap.dark};
   padding: 0.5rem 1rem;
   cursor: pointer;
 `
@@ -217,7 +217,7 @@ const Urls = styled.div`
 
 const Url = styled.div`
   display: flex;
-  border: 1px solid ${theme.colors.border};
+  border: 1px solid ${theme.colors.bootstrap.border};
   border-radius: 10px;
 `
 
@@ -227,7 +227,7 @@ const UrlTitle = styled.h5`
   align-items: center;
   font-size: 0.8rem;
   font-weight: 500;
-  border-right: 1px solid ${theme.colors.border};
+  border-right: 1px solid ${theme.colors.bootstrap.border};
   padding: 0.5rem;
 `
 
@@ -267,7 +267,7 @@ export {
   SubTitle,
   Title,
   Url,
-  UrlTitle,
   Urls,
+  UrlTitle,
   Wrapper,
 }

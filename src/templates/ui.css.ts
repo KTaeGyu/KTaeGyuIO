@@ -481,7 +481,7 @@
 //     button,
 //     {
 //       color: theme.colors.background,
-//       backgroundColor: theme.colors.primary,
+//       backgroundColor: theme.colors.bootstrap.primary,
 //       ":hover": {
 //         backgroundColor: theme.colors.active,
 //       },
@@ -493,7 +493,7 @@
 //   reversed: [
 //     button,
 //     {
-//       color: theme.colors.primary,
+//       color: theme.colors.bootstrap.primary,
 //       backgroundColor: theme.colors.background,
 //       ":hover": {
 //         color: theme.colors.background,
@@ -524,11 +524,11 @@
 //       color: "inherit",
 //       backgroundColor: "transparent",
 //       ":hover": {
-//         color: theme.colors.primary,
+//         color: theme.colors.bootstrap.primary,
 //         backgroundColor: theme.colors.muted,
 //       },
 //       ":focus": {
-//         color: theme.colors.primary,
+//         color: theme.colors.bootstrap.primary,
 //         backgroundColor: theme.colors.muted,
 //       },
 //     },
@@ -540,10 +540,10 @@
 // export const backgrounds: Record<Backgrounds, string> = styleVariants({
 //   primary: {
 //     color: theme.colors.background,
-//     backgroundColor: theme.colors.primary,
+//     backgroundColor: theme.colors.bootstrap.primary,
 //   },
 //   muted: {
-//     color: theme.colors.primary,
+//     color: theme.colors.bootstrap.primary,
 //     backgroundColor: theme.colors.muted,
 //   },
 // })

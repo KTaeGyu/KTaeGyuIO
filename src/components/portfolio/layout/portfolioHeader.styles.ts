@@ -1,17 +1,17 @@
 import styled from "styled-components"
-import { theme } from "../theme.css"
+import { theme } from "../../../styles/theme.css"
 
 const Wrapper = styled.header`
   z-index: 3;
   position: fixed;
   transition: 0.4s ease;
   width: 100%;
-  color: ${theme.colors.white};
+  color: ${theme.colors.original.white};
   background: transparent;
   &.active {
-    color: ${theme.colors.dark};
-    background: ${theme.colors.light};
-    border-bottom: 1px solid ${theme.colors.border};
+    color: ${theme.colors.bootstrap.dark};
+    background: ${theme.colors.bootstrap.light};
+    border-bottom: 1px solid ${theme.colors.bootstrap.border};
   }
 `
 
@@ -28,7 +28,7 @@ const Title = styled.h2`
   font-weight: 600;
   cursor: pointer;
   &:hover {
-    color: ${theme.colors.primary};
+    color: ${theme.colors.bootstrap.primary};
   }
 `
 
@@ -42,8 +42,10 @@ const NavItem = styled.li`
   padding: 0 1rem;
   cursor: pointer;
   &:hover {
-    color: ${theme.colors.primary};
+    color: ${theme.colors.bootstrap.primary};
   }
 `
 
-export { Content, NavItem, Navbar, Title, Wrapper }
+const S = { Content, NavItem, Navbar, Title, Wrapper }
+
+export default S

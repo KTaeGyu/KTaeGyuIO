@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react"
 import majors from "../../../assets/data/majorProjects"
 import Chevron from "../../../assets/icons/Chevron.inline.svg"
+import { theme } from "../../../styles/theme.css"
+import Major from "./major"
 import {
   Card,
   Cards,
@@ -11,9 +13,7 @@ import {
   Pagenation,
   Prev,
   Wrapper,
-} from "../../../styles/portfolio/projects/majors"
-import { theme } from "../../../styles/theme.css"
-import Major from "./major"
+} from "./majors.styles"
 
 const Majors = () => {
   const cardLength = majors.length
@@ -44,10 +44,20 @@ const Majors = () => {
         </Cards>
         <Navigation>
           <Prev onClick={() => handleSwipe(index - 1)}>
-            <Chevron width={30} height={30} stroke={theme.colors.dark} /> Prev
+            <Chevron
+              width={30}
+              height={30}
+              stroke={theme.colors.bootstrap.dark}
+            />{" "}
+            Prev
           </Prev>
           <Next onClick={() => handleSwipe(index + 1)}>
-            Next <Chevron width={30} height={30} stroke={theme.colors.dark} />
+            Next{" "}
+            <Chevron
+              width={30}
+              height={30}
+              stroke={theme.colors.bootstrap.dark}
+            />
           </Next>
         </Navigation>
         <Pagenation>

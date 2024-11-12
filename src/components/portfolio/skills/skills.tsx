@@ -3,6 +3,7 @@ import fields, { field } from "../../../assets/data/fields"
 import allSkills, { skill } from "../../../assets/data/skills"
 import { PortfolioContext } from "../../../contexts/PortfolioContext"
 import parseData from "../../../functions/parseSkillTabData"
+import Skill from "./skill"
 import {
   CardsBox,
   Field,
@@ -13,8 +14,7 @@ import {
   SkillCards,
   Title,
   Wrapper,
-} from "../../../styles/portfolio/skills/skills"
-import Skill from "./skill"
+} from "./skills.styles"
 
 interface Controlls {
   tab: string

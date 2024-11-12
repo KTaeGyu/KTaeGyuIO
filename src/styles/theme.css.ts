@@ -1,40 +1,46 @@
 import { createGlobalTheme, fontFace } from "@vanilla-extract/css"
 import { colors } from "./colors.css"
 
-export type SpaceTokens = 0 | 1 | 2 | 3 | 4 | 5 | 6
-export type Space = Record<SpaceTokens, string>
+// export type SpaceTokens = 0 | 1 | 2 | 3 | 4 | 5 | 6
+// export type Space = Record<SpaceTokens, string>
 
 const space = {
-  0: "0",
-  1: "4px",
-  2: "8px",
-  3: "16px",
-  4: "32px",
-  5: "64px",
-  6: "128px",
+  button: {
+    12: "8px 10px",
+  },
+  // 0: "0",
+  // 1: "4px",
+  // 2: "8px",
+  // 3: "16px",
+  // 4: "32px",
+  // 5: "64px",
+  // 6: "128px",
 }
 
 // add negative margins
-Object.assign(
-  space,
-  Object.entries(space).reduce(
-    (a, [key, val]) => ({
-      ...a,
-      [-1 * Number(key)]: `-${val}`,
-    }),
-    {}
-  )
-)
+// Object.assign(
+//   space,
+//   Object.entries(space).reduce(
+//     (a, [key, val]) => ({
+//       ...a,
+//       [-1 * Number(key)]: `-${val}`,
+//     }),
+//     {}
+//   )
+// )
 
 const fontSizes = {
-  0: "12px",
-  1: "14px",
-  2: "16px",
-  3: "18px",
-  4: "24px",
-  5: "32px",
-  6: "48px",
-  7: "64px",
+  button: {
+    12: "12px",
+  },
+  // 0: "12px",
+  // 1: "14px",
+  // 2: "16px",
+  // 3: "18px",
+  // 4: "24px",
+  // 5: "32px",
+  // 6: "48px",
+  // 7: "64px",
 }
 
 const fontWeights = {
@@ -93,10 +99,13 @@ const fonts = {
 }
 
 const lineHeights = {
-  text: "1.65",
-  heading: "1.25",
-  tight: "1.1",
-  solid: "1",
+  button: {
+    12: "12px",
+  },
+  // text: "1.65",
+  // heading: "1.25",
+  // tight: "1.1",
+  // solid: "1",
 }
 
 const letterSpacings = {

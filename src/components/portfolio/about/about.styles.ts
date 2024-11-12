@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { theme } from "../../theme.css"
+import { theme } from "../../../styles/theme.css"
 
 const Section = styled.section`
   display: flex;

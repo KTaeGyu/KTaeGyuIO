@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { theme } from "../theme.css"
+import { theme } from "../../../styles/theme.css"
 
 const Section = styled.section`
   position: relative;
@@ -13,7 +13,7 @@ const Section = styled.section`
   &::before {
     content: "";
     z-index: -1;
-    background: url("images/profile.jpg");
+    background: url("/images/profile.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: 50%;
@@ -40,7 +40,7 @@ const Title = styled.h1`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${theme.colors.light};
+  color: ${theme.colors.bootstrap.light};
   font-size: 3.75rem;
   text-align: center;
 `
@@ -48,7 +48,7 @@ const Title = styled.h1`
 const Hr = styled.hr`
   width: 5rem;
   margin: 1.5rem auto;
-  border: 3px solid ${theme.colors.primary};
+  border: 3px solid ${theme.colors.bootstrap.primary};
   border-radius: 5px;
 `
 
@@ -57,7 +57,7 @@ const Content = styled.p`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${theme.colors.light};
+  color: ${theme.colors.bootstrap.light};
   font-size: 1.42rem;
   font-weight: 600;
   text-align: center;
@@ -66,13 +66,13 @@ const Content = styled.p`
 
 const Button = styled.button`
   width: auto;
-  color: ${theme.colors.light};
+  color: ${theme.colors.bootstrap.light};
   font-size: 1.05rem;
   font-weight: 600;
   line-height: 1.5rem;
   border: none;
   border-radius: 50px;
-  background: ${theme.colors.primary};
+  background: ${theme.colors.bootstrap.primary};
   padding: 1rem 2rem;
   cursor: pointer;
 `

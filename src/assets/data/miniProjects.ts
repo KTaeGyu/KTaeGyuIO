@@ -20,8 +20,8 @@ interface mini {
 const skills: { [key: string]: skill } = {
   React: {
     name: "React",
-    color: theme.colors.perple,
-    background: theme.colors.perple_bg,
+    color: theme.colors.notion.perple,
+    background: theme.colors.notion.perple_bg,
   },
 }
 

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { theme } from "../../theme.css"
+import { theme } from "../../../styles/theme.css"
 
 const Section = styled.section`
   background: aliceblue;
@@ -14,8 +14,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   border-radius: 10px;
   margin: 0 auto;
-  background: ${theme.colors.light};
-  border: 1px solid ${theme.colors.border};
+  background: ${theme.colors.bootstrap.light};
+  border: 1px solid ${theme.colors.bootstrap.border};
   box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
     rgba(15, 15, 15, 0.4) 2px 2px 4px;
   padding: 3rem;

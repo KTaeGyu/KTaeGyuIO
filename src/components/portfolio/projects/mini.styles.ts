@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { theme } from "../../theme.css"
+import { theme } from "../../../styles/theme.css"
 
 const Wrapper = styled.li`
   width: 18rem;
@@ -86,7 +86,7 @@ const Url = styled.li`
 
 const Link = styled.a`
   font-size: 0.7rem;
-  color: ${theme.colors.dark};
+  color: ${theme.colors.bootstrap.dark};
   text-decoration-color: lightgray;
   text-underline-position: under;
 `

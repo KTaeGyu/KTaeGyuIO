@@ -1,21 +1,11 @@
 import React, { useContext } from "react"
-import { PortfolioContext } from "../../contexts/PortfolioContext"
-import {
-  Button,
-  Content,
-  Hr,
-  Section,
-  Title,
-  Wrapper,
-} from "../../styles/portfolio/intro"
+import { PortfolioContext } from "../../../contexts/PortfolioContext"
+import { Button, Content, Hr, Section, Title, Wrapper } from "./intro.styles"
 
 const Intro = () => {
   const { introRef, aboutRef } = useContext(PortfolioContext) || {}
-  const navigationToAbout = () => {
-    window.scrollTo({
-      top: aboutRef.current.getBoundingClientRect().top + window.scrollY,
-      behavior: "smooth",
-    })
+  const navToAbout = () => {
+    aboutRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
   }
 
   return (
@@ -34,7 +24,7 @@ const Intro = () => {
           <br />
           새로운 것을 두려워하지 않고 도전하는 것이 저의 장점입니다
         </Content>
-        <Button onClick={navigationToAbout}>About Me</Button>
+        <Button onClick={navToAbout}>About Me</Button>
       </Wrapper>
     </Section>
   )

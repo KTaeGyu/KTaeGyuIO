@@ -1,38 +1,6 @@
 import React from "react"
-import About from "../components/portfolio/about/about"
-import Contact from "../components/portfolio/contact"
-import Intro from "../components/portfolio/intro"
-import Layout from "../components/portfolio/layout/portfolioLayout"
-import Projects from "../components/portfolio/projects/projects"
-import Skills from "../components/portfolio/skills/skills"
-import PortfolioContainer from "../contexts/PortfolioContext"
+import Layout from "../components/main/layout/mainLayout"
 
 export default function Homepage() {
-  return (
-    <PortfolioContainer>
-      <Layout>
-        <Intro />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-      </Layout>
-    </PortfolioContainer>
-  )
+  return <Layout>main</Layout>
 }
-
-// export const query = graphql`
-//   {
-//     contentfulEntry {
-//       ... on ContentfulHomepage {
-//         id
-//         title
-//         image {
-//           url
-//           id
-//         }
-//         description
-//       }
-//     }
-//   }
-// `

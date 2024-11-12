@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { theme } from "../../theme.css"
+import { theme } from "../../../styles/theme.css"
 
 const Wrapper = styled.article`
   margin-bottom: 4rem;
@@ -21,7 +21,7 @@ const Cards = styled.ul`
   width: fit-content;
   display: flex;
   gap: 1rem;
-  background: ${theme.colors.light};
+  background: ${theme.colors.bootstrap.light};
   padding: 2rem;
 `
 
@@ -37,9 +37,9 @@ const Navigation = styled.div`
     justify-content: start;
     background: linear-gradient(
       to right,
-      ${theme.colors.dark_sub}aa,
-      ${theme.colors.dark_sub}22 60%,
-      ${theme.colors.dark_sub}00
+      ${theme.colors.bootstrap.dark_sub}aa,
+      ${theme.colors.bootstrap.dark_sub}22 60%,
+      ${theme.colors.bootstrap.dark_sub}00
     );
     & > button {
       rotate: 270deg;
@@ -50,9 +50,9 @@ const Navigation = styled.div`
     justify-content: end;
     background: linear-gradient(
       to left,
-      ${theme.colors.dark_sub}aa,
-      ${theme.colors.dark_sub}22 60%,
-      ${theme.colors.dark_sub}00
+      ${theme.colors.bootstrap.dark_sub}aa,
+      ${theme.colors.bootstrap.dark_sub}22 60%,
+      ${theme.colors.bootstrap.dark_sub}00
     );
     & > button {
       rotate: 90deg;
@@ -68,15 +68,15 @@ const Button = styled.button`
   justify-content: center;
   border: none;
   border-radius: 50%;
-  background: ${theme.colors.light};
+  background: ${theme.colors.bootstrap.light};
   margin: 0.5rem;
   padding: 0 0.21px 1.8px 0;
   cursor: pointer;
   &:hover {
     & path {
-      stroke: ${theme.colors.light};
+      stroke: ${theme.colors.bootstrap.light};
     }
-    background: ${theme.colors.dark_sub};
+    background: ${theme.colors.bootstrap.dark_sub};
   }
 `
 

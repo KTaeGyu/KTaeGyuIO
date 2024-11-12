@@ -1,13 +1,7 @@
 import React, { useContext } from "react"
 import { PortfolioContext } from "../../../contexts/PortfolioContext"
-import {
-  Hr,
-  Info,
-  Section,
-  Title,
-  Wrapper,
-} from "../../../styles/portfolio/projects/projects"
 import Majors from "./majors"
+import { Hr, Info, Section, Title, Wrapper } from "./projects.styles"
 
 const Projects = () => {
   const { projectsRef } = useContext(PortfolioContext) || {}

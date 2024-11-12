@@ -1,14 +1,7 @@
 import React, { useContext } from "react"
 import features from "../../../assets/data/features"
 import { PortfolioContext } from "../../../contexts/PortfolioContext"
-import {
-  Content,
-  Hr,
-  Info,
-  Section,
-  Title,
-  Wrapper,
-} from "../../../styles/portfolio/about/about"
+import { Content, Hr, Info, Section, Title, Wrapper } from "./about.styles"
 import Feature from "./feature"
 
 const About = () => {

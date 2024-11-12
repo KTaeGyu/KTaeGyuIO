@@ -4,6 +4,7 @@ type Icon = (props: SVGProps<ReactSVGElement>) => ReactElement
 
 interface IconPathProps {
   [key: string]: Icon
+  Arrow: Icon
   // about
   Device: Icon
   Idea: Icon
@@ -19,6 +20,7 @@ interface IconPathProps {
 }
 
 const IconPath: IconPathProps = {
+  Arrow: require("./icons/Arrow.inline.svg"),
   // about
   Device: require("./icons/Device.inline.svg"),
   Idea: require("./icons/Idea.inline.svg"),

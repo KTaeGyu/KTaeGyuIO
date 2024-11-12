@@ -3,8 +3,8 @@ import { theme } from "./theme.css"
 
 globalStyle("body", {
   margin: 0,
-  color: theme.colors.text,
-  backgroundColor: theme.colors.background,
+  color: theme.colors.original.text,
+  backgroundColor: theme.colors.original.background,
   WebkitFontSmoothing: "antialiased",
   MozOsxFontSmoothing: "grayscale",
 })
@@ -17,6 +17,16 @@ globalStyle("*", {
 
 globalStyle("li", {
   listStyle: "none",
+})
+
+globalStyle("button", {
+  backgroundColor: "transparent",
+  border: 0,
+  cursor: "pointer",
+  borderRadius: 4,
+})
+globalStyle("button:disabled", {
+  cursor: "auto",
 })
 
 globalKeyframes("zoomInUp", {

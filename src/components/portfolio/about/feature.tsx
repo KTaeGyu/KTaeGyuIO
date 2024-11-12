@@ -9,7 +9,7 @@ import {
   Space,
   Title,
   Wrapper,
-} from "../../../styles/portfolio/about/feature"
+} from "./feature.styles"
 
 const Feature = ({ icon, title, content }: feature) => {
   const Icon = IconPath[icon]

@@ -38,7 +38,7 @@ import {
   UrlTitle,
   Urls,
   Wrapper,
-} from "../../../styles/portfolio/projects/major"
+} from "./major.styles"
 import Readme from "./readme"
 
 interface MajorProp {

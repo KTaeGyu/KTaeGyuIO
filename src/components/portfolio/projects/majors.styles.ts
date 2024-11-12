@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components"
-import { theme } from "../../theme.css"
+import { theme } from "../../../styles/theme.css"
 
 const Wrapper = styled.article`
   flex: 1;
@@ -66,7 +66,7 @@ const Card = styled.li`
   width: 100%;
   height: 100%;
   display: none;
-  background: ${theme.colors.light};
+  background: ${theme.colors.bootstrap.light};
   transform: translateX(20%);
   opacity: 0;
   animation: ${fadeOut} 1s;
@@ -94,7 +94,7 @@ const Prev = styled.button`
   font-weight: 600;
   border: none;
   background: transparent;
-  border-right: 1px solid ${theme.colors.dark};
+  border-right: 1px solid ${theme.colors.bootstrap.dark};
   padding-right: 1rem;
   & > svg {
     rotate: 270deg;
@@ -143,7 +143,7 @@ const Page = styled.button`
   cursor: pointer;
   &:hover {
     &::before {
-      background: ${theme.colors.dark};
+      background: ${theme.colors.bootstrap.dark};
     }
   }
   &::before {
@@ -151,12 +151,12 @@ const Page = styled.button`
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
-    background: ${theme.colors.dark_sub};
+    background: ${theme.colors.bootstrap.dark_sub};
     transition: 0.2s;
   }
   &.active {
     &::before {
-      background: ${theme.colors.dark};
+      background: ${theme.colors.bootstrap.dark};
     }
   }
 `

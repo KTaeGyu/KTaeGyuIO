@@ -2,6 +2,7 @@ import React from "react"
 import minis from "../../../assets/data/miniProjects"
 import IconPath from "../../../assets/iconPath"
 import useInfiniteCarousel from "../../../hooks/useInfiniteCarousel"
+import Mini from "./mini"
 import {
   Button,
   Cards,
@@ -9,8 +10,7 @@ import {
   Navigation,
   Title,
   Wrapper,
-} from "../../../styles/portfolio/projects/minis"
-import Mini from "./mini"
+} from "./minis.styles"
 
 const Minis = () => {
   const cardLength = minis.length

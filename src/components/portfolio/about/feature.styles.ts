@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { theme } from "../../theme.css"
+import { theme } from "../../../styles/theme.css"
 
 const Wrapper = styled.li`
   position: relative;
@@ -18,7 +18,7 @@ const IconBox = styled.div`
 
 const Title = styled.h1`
   font-family: "MaruBuri";
-  color: ${theme.colors.light};
+  color: ${theme.colors.bootstrap.light};
 `
 
 const Space = styled.div`
@@ -36,7 +36,7 @@ const Hexagon = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: ${theme.colors.info};
+  background: ${theme.colors.bootstrap.info};
   &::after {
     content: "";
     z-index: -1;
@@ -46,7 +46,7 @@ const Hexagon = styled.div`
     width: 12.12rem;
     height: 7rem;
     rotate: 60deg;
-    background: ${theme.colors.info};
+    background: ${theme.colors.bootstrap.info};
   }
   &::before {
     content: "";
@@ -57,7 +57,7 @@ const Hexagon = styled.div`
     width: 12.12rem;
     height: 7rem;
     rotate: 120deg;
-    background: ${theme.colors.info};
+    background: ${theme.colors.bootstrap.info};
   }
   cursor: pointer;
   &:hover {
@@ -78,7 +78,7 @@ const BackDrop = styled.div`
   width: 12.12rem;
   height: 7rem;
   display: block;
-  background: ${theme.colors.dark};
+  background: ${theme.colors.bootstrap.dark};
   padding: 2rem;
   filter: opacity(0);
   &::after {
@@ -90,7 +90,7 @@ const BackDrop = styled.div`
     width: 12.12rem;
     height: 7rem;
     rotate: 60deg;
-    background: ${theme.colors.dark};
+    background: ${theme.colors.bootstrap.dark};
   }
   &::before {
     content: "";
@@ -101,7 +101,7 @@ const BackDrop = styled.div`
     width: 12.12rem;
     height: 7rem;
     rotate: 120deg;
-    background: ${theme.colors.dark};
+    background: ${theme.colors.bootstrap.dark};
   }
 `
 
@@ -114,7 +114,7 @@ const Content = styled.p`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${theme.colors.light};
+  color: ${theme.colors.bootstrap.light};
   text-align: center;
   word-break: keep-all;
   line-height: 22px;

@@ -1,14 +1,7 @@
 import React from "react"
 import { skill } from "../../../assets/data/skills"
-import {
-  Container,
-  Logo,
-  LogoBox,
-  Name,
-  Title,
-  Wrapper,
-} from "../../../styles/portfolio/skills/skill"
 import Level from "./level"
+import { Container, Logo, LogoBox, Name, Title, Wrapper } from "./skill.styles"
 
 interface SkillProp {
   skill: skill
