@@ -1,12 +1,18 @@
 import styled from "styled-components"
 import { theme } from "../../../../../styles/theme.css"
 
-const Container = styled.li`
-  border-radius: ${theme.radii.button[12]};
+const Container = styled.li<{ media?: number }>`
+  display: flex;
+  align-items: center;
+  height: 28px;
+  border-radius: ${theme.radii[1]};
   padding: ${theme.space.button[12]};
   &:hover {
     background-color: ${theme.colors.vscode.bg[2]};
   }
+
+  ${({ media }) =>
+    media && `@media (max-width: ${media}px) { display: none; };`}
 `
 
 const Text = styled.p`

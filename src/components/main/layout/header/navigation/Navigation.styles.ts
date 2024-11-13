@@ -4,7 +4,8 @@ import { theme } from "../../../../../styles/theme.css"
 
 const Container = styled.div`
   display: flex;
-  gap: 4px;
+  gap: ${theme.space[1.5]};
+  padding: 0 12px;
 `
 
 const Button = styled.button`
@@ -25,8 +26,8 @@ const Button = styled.button`
 `
 
 const BackIcon = styled(IconPath.Arrow)`
-  width: 16px;
-  height: 16px;
+  width: 16.5px;
+  height: 16.5px;
   stroke: ${theme.colors.vscode.txt[1]};
 `
 

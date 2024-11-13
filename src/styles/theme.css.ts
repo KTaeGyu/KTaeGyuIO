@@ -5,8 +5,12 @@ import { colors } from "./colors.css"
 // export type Space = Record<SpaceTokens, string>
 
 const space = {
+  1: "4px",
+  1.5: "6px",
+  2: "8px",
+  3: "12px",
   button: {
-    12: "8px 10px",
+    12: "0 10px",
   },
   // 0: "0",
   // 1: "4px",
@@ -30,8 +34,9 @@ const space = {
 // )
 
 const fontSizes = {
+  1: "14.5px",
   button: {
-    12: "12px",
+    12: "16px",
   },
   // 0: "12px",
   // 1: "14px",
@@ -100,7 +105,7 @@ const fonts = {
 
 const lineHeights = {
   button: {
-    12: "12px",
+    12: "16px",
   },
   // text: "1.65",
   // heading: "1.25",
@@ -126,12 +131,15 @@ const sizes = {
   navIconSmall: "30px",
 }
 
-export type Radii = "button" | "large" | "circle"
+// export type Radii = "button" | "large" | "circle"
 
-const radii: Record<Radii, string> = {
-  button: "10px",
-  large: "24px",
-  circle: "99999px",
+// const radii: Record<Radii, string> = {
+const radii = {
+  1: "4px",
+  2: "8px",
+  max: "9999px",
+  // large: "24px",
+  // circle: "99999px",
 }
 
 const shadows = {
