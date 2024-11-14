@@ -4,6 +4,7 @@ import { theme } from "../../../../../styles/theme.css"
 
 const Container = styled.div`
   display: none;
+  position: relative;
 
   @media (max-width: 1250px) {
     display: block;
@@ -30,8 +31,6 @@ const HamburgerIcon = styled(IconPath.Hamburger)`
   }
 `
 
-const Menus = styled.ul``
-
-const S = { Container, HamburgerIcon, Menus, MoreIcon }
+const S = { Container, HamburgerIcon, MoreIcon }
 
 export default S

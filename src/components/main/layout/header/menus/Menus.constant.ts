@@ -4,6 +4,7 @@ const Menus: MenuItemType[] = [
   {
     text: "File",
     media: 1020,
+    subsets: [{ text: "Save" }, { text: "Save as ..." }],
   },
   {
     text: "Edit",

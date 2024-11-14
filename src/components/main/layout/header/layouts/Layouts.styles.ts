@@ -12,7 +12,7 @@ const LayoutSettingIcon = styled(IconPath.LayoutSetting)`
   width: 22.5px;
   height: 22.5px;
   stroke: ${theme.colors.vscode.txt[1]};
-  transform: rotate(270deg);
+  rotate: 270deg;
 `
 
 const S = { Container, LayoutSettingIcon }

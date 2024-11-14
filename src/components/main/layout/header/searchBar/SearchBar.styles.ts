@@ -12,6 +12,7 @@ const Container = styled.div`
   background-color: ${theme.colors.vscode.bg[2]};
   border: 1px solid ${theme.colors.vscode.border[1]};
   border-radius: ${theme.radii[2]};
+  overflow: hidden;
   cursor: pointer;
   &:hover {
     background-color: ${theme.colors.vscode.bg[3]};

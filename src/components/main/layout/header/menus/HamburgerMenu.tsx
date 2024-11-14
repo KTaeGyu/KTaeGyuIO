@@ -1,26 +1,20 @@
-import React, { useState } from "react"
+import React from "react"
+import useDropdown from "../../../../../hooks/useDropdown"
+import Dropdown from "./dropdown/Dropdown"
 import S from "./HambergurMenu.styles"
-import HamburgerMenuItem from "./HamburgerMenuItem"
 import ItemS from "./MenuItem.styles"
 import C from "./Menus.constant"
 
 export default function HamburgerMenu() {
-  const [open, setOpen] = useState(false)
-  const toggleOpen = () => {
-    setOpen(!open)
-  }
+  const { ref, isOpen, toggleOpen } = useDropdown()
 
   return (
-    <S.Container>
-      <ItemS.Container onClick={toggleOpen}>
+    <S.Container ref={ref}>
+      <ItemS.Container onClick={toggleOpen} active={isOpen}>
         <S.HamburgerIcon />
         <S.MoreIcon />
       </ItemS.Container>
-      <S.Menus>
-        {C.Menus.map((menu, idx) => (
-          <HamburgerMenuItem key={idx} {...menu} />
-        ))}
-      </S.Menus>
+      {isOpen && <Dropdown subsets={C.Menus} position="down" />}
     </S.Container>
   )
 }

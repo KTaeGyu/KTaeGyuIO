@@ -1,12 +1,17 @@
 import styled from "styled-components"
 import { theme } from "../../../../../styles/theme.css"
+import { ContainerProps } from "./MenuItem.interface"
 
-const Container = styled.li<{ media?: number }>`
+const Container = styled.li<ContainerProps>`
+  position: relative;
   display: flex;
   align-items: center;
   height: 28px;
   border-radius: ${theme.radii[1]};
   padding: ${theme.space.button[12]};
+
+  ${({ active }) => active && `background-color: ${theme.colors.vscode.bg[2]};`}
+
   &:hover {
     background-color: ${theme.colors.vscode.bg[2]};
   }
