@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import IconPath from "../../assets/iconPath"
-import { theme } from "../../styles/theme.css"
+import IconPath from "../../../assets/iconPath"
+import { theme } from "../../../styles/theme.css"
 
 const Container = styled.button`
   display: flex;

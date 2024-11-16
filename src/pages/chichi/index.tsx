@@ -1,24 +1,23 @@
 import { graphql, navigate, PageProps } from "gatsby"
 import React, { useState } from "react"
-import Header from "../../components/chichi/Header"
-import Layout from "../../components/chichi/Layout"
-import Members from "../../components/chichi/Members"
-import NextButton from "../../components/chichi/NextButton"
-
-type Node = Pick<Author, "name" | "nickname" | "username" | "charactor">
+import Header from "../../components/chichi/index/Header"
+import Layout from "../../components/chichi/index/Layout"
+import { Member } from "../../components/chichi/index/MemberItem.interface"
+import Members from "../../components/chichi/index/Members"
+import NextButton from "../../components/chichi/index/NextButton"
 
 interface ChichiPageProps extends PageProps {
   data: {
     allContentfulAuthor: {
-      nodes: Node[]
+      nodes: Member[]
     }
   }
 }
 
 export default function ChichiPage({ data }: ChichiPageProps) {
   const authors = data.allContentfulAuthor.nodes
-  const [selected, setSelected] = useState<Node>()
-  const onClickMember = (target: Node) => {
+  const [selected, setSelected] = useState<Member>()
+  const onClickMember = (target: Member) => {
     setSelected((prev) =>
       prev && prev.username === target.username ? null : target
     )

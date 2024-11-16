@@ -11,10 +11,6 @@ exports.createPages = async ({ graphql, actions }) => {
           posted {
             id
             title
-            author {
-              name
-              nickname
-            }
           }
         }
       }
@@ -23,10 +19,6 @@ exports.createPages = async ({ graphql, actions }) => {
           id
           title
           description
-          author {
-            nickname
-            name
-          }
         }
       }
     }
