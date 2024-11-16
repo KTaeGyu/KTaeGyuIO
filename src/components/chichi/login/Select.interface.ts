@@ -1,9 +1,7 @@
-import { MouseEventHandler } from "react"
-
 interface ComponentProps {
   options: { name: string }[]
   selected: string | null
-  onClick: MouseEventHandler
+  onClick: (option: string) => void
 }
 
 export type { ComponentProps }

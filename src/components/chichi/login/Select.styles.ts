@@ -1,7 +1,9 @@
 import styled from "styled-components"
 import IconPath from "../../../assets/iconPath"
 
-const Container = styled.div``
+const Container = styled.div`
+  background-color: #fff;
+`
 
 const Chevron = styled(IconPath.Chevron)``
 
