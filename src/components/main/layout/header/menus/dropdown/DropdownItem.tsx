@@ -17,7 +17,7 @@ export default function DropdownItem({
     <S.Container
       ref={ref}
       media={media}
-      active={isOpen}
+      className={isOpen ? "active" : ""}
       onClick={subsets ? toggleOpen : onClick}
       onMouseEnter={subsets && onMouseEnter}
       onMouseLeave={subsets && onMouseLeave}

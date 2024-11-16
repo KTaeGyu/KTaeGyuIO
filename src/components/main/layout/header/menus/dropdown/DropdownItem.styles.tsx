@@ -13,8 +13,9 @@ const Container = styled.div<ContainerProps>`
   border-radius: ${theme.radii[2]};
   cursor: pointer;
 
-  ${({ active }) =>
-    active && `background-color: ${theme.colors.vscode.bg.blue};`}
+  &.active {
+    background-color: ${theme.colors.vscode.bg.blue};
+  }
 
   &:hover {
     background-color: ${theme.colors.vscode.bg.blue};

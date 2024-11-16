@@ -1,18 +1,18 @@
 import { globalKeyframes, globalStyle } from "@vanilla-extract/css"
 import { theme } from "./theme.css"
 
+globalStyle("*", {
+  boxSizing: "border-box",
+  padding: 0,
+  margin: 0,
+})
+
 globalStyle("body", {
   margin: 0,
   color: theme.colors.original.text,
   backgroundColor: theme.colors.original.background,
   WebkitFontSmoothing: "antialiased",
   MozOsxFontSmoothing: "grayscale",
-})
-
-globalStyle("*", {
-  boxSizing: "border-box",
-  padding: 0,
-  margin: 0,
 })
 
 globalStyle("li", {

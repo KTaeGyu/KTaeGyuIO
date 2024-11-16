@@ -4,11 +4,16 @@ type Icon = (props: SVGProps<ReactSVGElement>) => ReactElement
 
 interface IconPathProps {
   [key: string]: Icon
+  Account: Icon
   Arrow: Icon
+  Explorer: Icon
+  Extentions: Icon
   More: Icon
   Layout: Icon
   LayoutSetting: Icon
+  RunAndDebug: Icon
   Search: Icon
+  Setting: Icon
   WindowClose: Icon
   WindowMaximize: Icon
   WindowMinimize: Icon
@@ -28,12 +33,17 @@ interface IconPathProps {
 }
 
 const IconPath: IconPathProps = {
+  Account: require("./icons/Account.inline.svg"),
   Arrow: require("./icons/Arrow.inline.svg"),
+  Explorer: require("./icons/Explorer.inline.svg"),
+  Extentions: require("./icons/Extentions.inline.svg"),
   Hamburger: require("./icons/Hamburger.inline.svg"),
   Layout: require("./icons/Layout.inline.svg"),
   LayoutSetting: require("./icons/LayoutSetting.inline.svg"),
   More: require("./icons/More.inline.svg"),
+  RunAndDebug: require("./icons/RunAndDebug.inline.svg"),
   Search: require("./icons/Search.inline.svg"),
+  Setting: require("./icons/Setting.inline.svg"),
   WindowClose: require("./icons/WindowClose.inline.svg"),
   WindowMaximize: require("./icons/WindowMaximize.inline.svg"),
   WindowMinimize: require("./icons/WindowMinimize.inline.svg"),

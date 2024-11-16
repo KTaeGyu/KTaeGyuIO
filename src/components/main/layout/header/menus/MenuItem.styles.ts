@@ -10,7 +10,9 @@ const Container = styled.li<ContainerProps>`
   border-radius: ${theme.radii[1]};
   padding: ${theme.space.button[12]};
 
-  ${({ active }) => active && `background-color: ${theme.colors.vscode.bg[2]};`}
+  &.active {
+    background-color: ${theme.colors.vscode.bg[2]};
+  }
 
   &:hover {
     background-color: ${theme.colors.vscode.bg[2]};

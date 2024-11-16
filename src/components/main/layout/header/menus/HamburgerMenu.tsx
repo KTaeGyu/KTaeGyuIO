@@ -10,7 +10,7 @@ export default function HamburgerMenu() {
 
   return (
     <S.Container ref={ref}>
-      <ItemS.Container onClick={toggleOpen} active={isOpen}>
+      <ItemS.Container className={isOpen ? "active" : ""} onClick={toggleOpen}>
         <S.HamburgerIcon />
         <S.MoreIcon />
       </ItemS.Container>

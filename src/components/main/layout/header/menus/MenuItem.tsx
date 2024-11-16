@@ -16,6 +16,7 @@ export default function MenuItem({
     <S.Container
       ref={ref}
       media={media}
+      className={isOpen ? "active" : ""}
       onClick={subsets ? toggleOpen : onClick}
     >
       <S.Text>{text}</S.Text>

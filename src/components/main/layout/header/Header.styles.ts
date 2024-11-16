@@ -3,8 +3,8 @@ import { theme } from "../../../../styles/theme.css"
 
 const Container = styled.header`
   display: flex;
+  grid-column: span 4;
   align-items: center;
-  height: 44px;
   background-color: ${theme.colors.vscode.bg[1]};
 `
 

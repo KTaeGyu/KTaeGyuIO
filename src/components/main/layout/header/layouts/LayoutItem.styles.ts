@@ -20,9 +20,9 @@ const LayoutIcon = styled(IconPath.Layout)<LayoutIconProps>`
   width: 22.5px;
   height: 22.5px;
   stroke: ${theme.colors.vscode.txt[1]};
-  rotate: ${(props) => props.rotate};
+  rotate: ${({ rotate }) => rotate};
   & path:first-of-type {
-    fill: ${(props) => props.active && theme.colors.vscode.txt[1]};
+    ${({ disabled }) => !disabled && `fill: ${theme.colors.vscode.txt[1]};`}
   }
 `
 

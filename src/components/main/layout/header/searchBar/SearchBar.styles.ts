@@ -21,13 +21,13 @@ const Container = styled.div`
 `
 
 const SearchIcon = styled(IconPath.Search)`
-  width: 20.5px;
-  height: 20.5px;
+  width: 18px;
+  height: 18px;
   stroke: ${theme.colors.vscode.txt[1]};
-  transform: scaleX(-1);
 `
 
 const Title = styled.h1`
+  user-select: none;
   color: ${theme.colors.vscode.txt[1]};
   font-size: ${theme.fontSizes[1]};
   font-weight: ${theme.fontWeights.medium};

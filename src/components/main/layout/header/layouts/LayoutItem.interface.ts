@@ -4,7 +4,7 @@ interface LayoutItemType {
 }
 
 interface LayoutIconProps {
-  active?: boolean
+  disabled?: boolean
 }
 
 export type { LayoutIconProps, LayoutItemType }
