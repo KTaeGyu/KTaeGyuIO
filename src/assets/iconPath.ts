@@ -6,6 +6,7 @@ interface IconPathProps {
   [key: string]: Icon
   Account: Icon
   Arrow: Icon
+  ChevronDouble: Icon
   Explorer: Icon
   Extentions: Icon
   More: Icon
@@ -35,6 +36,7 @@ interface IconPathProps {
 const IconPath: IconPathProps = {
   Account: require("./icons/Account.inline.svg"),
   Arrow: require("./icons/Arrow.inline.svg"),
+  ChevronDouble: require("./icons/ChevronDouble.inline.svg"),
   Explorer: require("./icons/Explorer.inline.svg"),
   Extentions: require("./icons/Extentions.inline.svg"),
   Hamburger: require("./icons/Hamburger.inline.svg"),

@@ -25,6 +25,7 @@
     "@vanilla-extract/webpack-plugin": "^2.1.12",
     "axios": "^1.6.8",
     "babel-plugin-styled-components": "^2.1.4",
+    "framer-motion": "^11.11.17",
     "gatsby": "^5.13.4",
     "gatsby-plugin-catch-links": "^5.13.1",
     "gatsby-plugin-image": "^3.0.0",

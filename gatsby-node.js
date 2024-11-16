@@ -1,3 +1,72 @@
+const path = require("path")
+
+exports.createPages = async ({ graphql, actions }) => {
+  const result = await graphql(`
+    query {
+      allContentfulAuthor {
+        nodes {
+          name
+          nickname
+          username
+          posted {
+            id
+            title
+            author {
+              name
+              nickname
+            }
+          }
+        }
+      }
+      allContentfulPost {
+        nodes {
+          id
+          title
+          description
+          author {
+            nickname
+            name
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) {
+    throw result.errors
+  }
+  // 치치 작성자 페이지
+  const authors = result.data.allContentfulAuthor.nodes
+
+  authors.forEach((author) => {
+    actions.createPage({
+      path: `/chichi/${author.username}`,
+      component: path.resolve(`src/templates/chichi/author.tsx`),
+      context: {
+        nickname: author.nickname,
+        name: author.name,
+        username: author.username,
+        posting: author.posting,
+        posted: author.posted,
+      },
+    })
+  })
+  // 치치 포스트 페이지
+  const posts = result.data.allContentfulPost.nodes
+
+  posts.forEach((post) => {
+    actions.createPage({
+      path: `/${post.author.nickname}/post/${post.id}`,
+      component: path.resolve(`src/templates/chichi/post.tsx`),
+      context: {
+        title: post.title,
+        description: post.description,
+        author: post.author,
+      },
+    })
+  })
+}
+
 // const { documentToHtmlString } = require("@contentful/rich-text-html-renderer")
 // const { getGatsbyImageResolver } = require("gatsby-plugin-image/graphql-utils")
 
