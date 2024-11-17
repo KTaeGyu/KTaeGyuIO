@@ -10,6 +10,8 @@ export interface PostData {
 
 export default async function createPost(postData: PostData) {
   try {
+    console.log(process.env)
+
     const url = `https://api.contentful.com/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master/entries`
     const data = {
       fields: {

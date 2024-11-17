@@ -21,6 +21,8 @@ export default function LoginPage({ data }: LoginPageProps) {
   const onClickOption = (option: Chichi) => {
     setSelected(option)
   }
+  console.log(authors)
+
   const onClickLogin = () => {
     if (typeof window !== "undefined" && !!selected) {
       localStorage.setItem("chichi", selected.name)
