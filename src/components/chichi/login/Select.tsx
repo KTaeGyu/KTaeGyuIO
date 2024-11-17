@@ -1,12 +1,33 @@
-import React from "react"
+import React, { MouseEvent, MouseEventHandler, useState } from "react"
 import { ComponentProps } from "./Select.interface"
 import S from "./Select.styles"
 
-export default function Select({ options, selected }: ComponentProps) {
+export default function Select({ options, selected, onClick }: ComponentProps) {
+  const [opened, setOpended] = useState(false)
+  const onClickSelect: MouseEventHandler = (e) => {
+    setOpended(!opened)
+  }
+  const onClickOption = (e: MouseEvent, option: string) => {
+    e.stopPropagation()
+    onClick(option)
+    setOpended(false)
+  }
+
   return (
-    <S.Container>
-      {selected ? selected : "선택해주세요"}
-      <S.Chevron />
+    <S.Container onClick={onClickSelect}>
+      <S.Text selected={selected}>
+        {selected ? selected : "선택해주세요"}
+      </S.Text>
+      <S.Chevron selected={selected} opened={opened} />
+      {opened && (
+        <S.Options>
+          {options.map(({ name }) => (
+            <S.OptionItem key={name} onClick={(e) => onClickOption(e, name)}>
+              {name}
+            </S.OptionItem>
+          ))}
+        </S.Options>
+      )}
     </S.Container>
   )
 }
