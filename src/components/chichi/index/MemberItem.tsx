@@ -7,9 +7,10 @@ export default function MemberItem({
   username,
   charactor,
   nickname,
+  selected,
 }: ComponentProps) {
   return (
-    <S.Container onClick={onClick}>
+    <S.Container onClick={onClick} className={selected ? "active" : ""}>
       <S.CharactorBox key={username}>
         <S.Charactor src={charactor.file.url} alt="이미지" />
       </S.CharactorBox>

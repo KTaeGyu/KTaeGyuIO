@@ -6,24 +6,22 @@ exports.createPages = async ({ graphql, actions }) => {
       allContentfulAuthor {
         nodes {
           name
-          nickname
-          username
           posted {
             id
             title
+            imgPath
           }
         }
       }
       allContentfulPost {
         nodes {
-          id
           title
           description
           reader {
-            username
+            nickname
           }
           author {
-            username
+            nickname
           }
         }
       }

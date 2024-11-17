@@ -16,6 +16,7 @@ interface ChichiPageProps extends PageProps {
 
 export default function ChichiPage({ data }: ChichiPageProps) {
   const authors = data.allContentfulAuthor.nodes
+  const [chichi, setChichi] = useState<string>()
   const [selected, setSelected] = useState<Member>()
   const onClickMember = (target: Member) => {
     setSelected((prev) =>
@@ -26,13 +27,21 @@ export default function ChichiPage({ data }: ChichiPageProps) {
     navigate(`/chichi/${selected.username}`)
   }
 
-  useEffect(() => {}, [])
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      const chichi = localStorage.getItem("chichi")
+      if (!chichi) {
+        alert("자신이 누구인지 설정해주세요.")
+        navigate("/chichi/login")
+      } else setChichi(chichi)
+    }
+  }, [])
 
   return (
     <Layout>
       <Header />
-      <Members onClick={onClickMember} authors={authors} />
-      <NextButton onClick={onClickButton} selected={selected} />
+      <Members onClick={onClickMember} authors={authors} selected={selected} />
+      <NextButton onClick={onClickButton} selected={selected} chichi={chichi} />
     </Layout>
   )
 }

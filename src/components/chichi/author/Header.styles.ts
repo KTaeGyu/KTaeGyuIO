@@ -1,9 +1,9 @@
 import styled from "styled-components"
 
-const Container = styled.header``
+const Container = styled.header`
+  margin: 32px 16px;
+`
 
-const Title = styled.h1``
-
-const S = { Container, Title }
+const S = { Container }
 
 export default S

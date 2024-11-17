@@ -13,6 +13,7 @@ interface IconPathProps {
   Layout: Icon
   LayoutSetting: Icon
   RunAndDebug: Icon
+  Plus: Icon
   Search: Icon
   Setting: Icon
   WindowClose: Icon
@@ -44,6 +45,7 @@ const IconPath: IconPathProps = {
   LayoutSetting: require("./icons/LayoutSetting.inline.svg"),
   More: require("./icons/More.inline.svg"),
   RunAndDebug: require("./icons/RunAndDebug.inline.svg"),
+  Plus: require("./icons/Plus.inline.svg"),
   Search: require("./icons/Search.inline.svg"),
   Setting: require("./icons/Setting.inline.svg"),
   WindowClose: require("./icons/WindowClose.inline.svg"),

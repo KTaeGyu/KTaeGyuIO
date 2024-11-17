@@ -5,4 +5,5 @@ interface Post {
   publishedAt: string
   author: Author
   reader: Author
+  imgPath: string
 }

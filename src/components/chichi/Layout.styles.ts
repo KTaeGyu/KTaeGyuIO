@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { theme } from "../../styles/theme.css"
 
 const Layout = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;

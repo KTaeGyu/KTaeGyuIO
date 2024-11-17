@@ -2,12 +2,18 @@ import React from "react"
 import { ComponentProps } from "./NextButton.interface"
 import S from "./NextButton.styles"
 
-export default function NextButton({ onClick, selected }: ComponentProps) {
+export default function NextButton({
+  onClick,
+  selected,
+  chichi,
+}: ComponentProps) {
   return (
     <S.Container onClick={onClick} disabled={!selected}>
       {selected ? (
         <>
-          {selected.nickname}의 트리 꾸미러 가기
+          {selected.name === chichi
+            ? "내 트리 보러 가기"
+            : `${selected.nickname}의 트리 꾸미러 가기`}
           <S.ChevronDouble />
         </>
       ) : (

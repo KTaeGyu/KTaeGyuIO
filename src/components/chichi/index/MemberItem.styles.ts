@@ -6,10 +6,8 @@ const Container = styled.li`
   flex-direction: column;
   gap: 4px;
 
-  & > div.active {
-    box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.8),
-      inset 2px 2px 4px rgba(0, 0, 0, 0.2);
-    transform: scale(1.02);
+  &.active > div {
+    transform: scale(1.05);
   }
 `
 
