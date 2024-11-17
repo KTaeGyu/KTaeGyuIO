@@ -1,5 +1,4 @@
 // support for .env, .env.development, and .env.production
-require("dotenv").config()
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -12,6 +11,18 @@ module.exports = {
     description: "A Gatsby Starter for building homepages with Contentful",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        allowList: [
+          "CONTENTFUL_SPACE_ID",
+          "CONTENTFUL_ACCESS_TOKEN",
+          "CONTENTFUL_MANAGEMENT_TOKEN",
+          "CONTENTFUL_DELIVERY_ACCESS_TOKEN",
+          "CONTENTFUL_HOST",
+        ],
+      },
+    },
     {
       resolve: "gatsby-source-contentful",
       options: {
