@@ -19,6 +19,12 @@ exports.createPages = async ({ graphql, actions }) => {
           id
           title
           description
+          reader {
+            username
+          }
+          author {
+            username
+          }
         }
       }
     }
@@ -48,11 +54,12 @@ exports.createPages = async ({ graphql, actions }) => {
 
   posts.forEach((post) => {
     actions.createPage({
-      path: `/${post.author.nickname}/post/${post.id}`,
+      path: `/chichi/post/${post.id}`,
       component: path.resolve(`src/templates/chichi/post.tsx`),
       context: {
         title: post.title,
         description: post.description,
+        reader: post.reader,
         author: post.author,
       },
     })

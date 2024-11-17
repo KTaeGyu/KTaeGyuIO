@@ -1,5 +1,5 @@
 import { graphql, navigate, PageProps } from "gatsby"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import Header from "../../components/chichi/index/Header"
 import Layout from "../../components/chichi/index/Layout"
 import { Member } from "../../components/chichi/index/MemberItem.interface"
@@ -25,6 +25,8 @@ export default function ChichiPage({ data }: ChichiPageProps) {
   const onClickButton = () => {
     navigate(`/chichi/${selected.username}`)
   }
+
+  useEffect(() => {}, [])
 
   return (
     <Layout>
