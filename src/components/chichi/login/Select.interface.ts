@@ -1,8 +1,8 @@
 import { Chichi } from "../../../pages/chichi/login"
 
 interface ComponentProps {
-  options: { name: string }[]
-  selected: string | null
+  options: Chichi[]
+  selected: Chichi | null
   onClick: (option: Chichi) => void
 }
 
