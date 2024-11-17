@@ -16,10 +16,10 @@ export default function Select({ options, selected, onClick }: ComponentProps) {
 
   return (
     <S.Container onClick={onClickSelect}>
-      <S.Text selected={selected.name}>
+      <S.Text selected={selected?.name}>
         {selected ? selected.name : "선택해주세요"}
       </S.Text>
-      <S.Chevron selected={selected.name} opened={opened} />
+      <S.Chevron selected={selected?.name} opened={opened} />
       {opened && (
         <S.Options>
           {options.map((option) => (

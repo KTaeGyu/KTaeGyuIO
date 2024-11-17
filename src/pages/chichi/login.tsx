@@ -35,7 +35,7 @@ export default function LoginPage({ data }: LoginPageProps) {
     <Layout>
       <Header />
       <Select options={authors} selected={selected} onClick={onClickOption} />
-      <LoginButton selected={selected} onClick={onClickLogin} />
+      <LoginButton selected={selected?.name} onClick={onClickLogin} />
     </Layout>
   )
 }
