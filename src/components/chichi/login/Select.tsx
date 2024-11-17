@@ -1,13 +1,14 @@
 import React, { MouseEvent, MouseEventHandler, useState } from "react"
+import { Chichi } from "../../../pages/chichi/login"
 import { ComponentProps } from "./Select.interface"
 import S from "./Select.styles"
 
 export default function Select({ options, selected, onClick }: ComponentProps) {
   const [opened, setOpended] = useState(false)
-  const onClickSelect: MouseEventHandler = (e) => {
+  const onClickSelect: MouseEventHandler = () => {
     setOpended(!opened)
   }
-  const onClickOption = (e: MouseEvent, option: string) => {
+  const onClickOption = (e: MouseEvent, option: Chichi) => {
     e.stopPropagation()
     onClick(option)
     setOpended(false)

@@ -3,7 +3,6 @@ import axios from "axios"
 export interface PostData {
   title: string
   description: string
-  publishedAt: string
   readerId: string
   authorId: string
   imgPath: string
@@ -19,9 +18,6 @@ export default async function createPost(postData: PostData) {
         },
         description: {
           "ko-KR": postData.description,
-        },
-        publishedAt: {
-          "ko-KR": postData.publishedAt,
         },
         reader: {
           "ko-KR": {

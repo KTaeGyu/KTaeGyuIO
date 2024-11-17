@@ -5,7 +5,9 @@ exports.createPages = async ({ graphql, actions }) => {
     query {
       allContentfulAuthor {
         nodes {
+          id
           name
+          username
           posted {
             id
             title
@@ -15,6 +17,7 @@ exports.createPages = async ({ graphql, actions }) => {
       }
       allContentfulPost {
         nodes {
+          id
           title
           description
           reader {
@@ -39,10 +42,9 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `/chichi/${author.username}`,
       component: path.resolve(`src/templates/chichi/author.tsx`),
       context: {
-        nickname: author.nickname,
+        id: author.id,
         name: author.name,
         username: author.username,
-        posting: author.posting,
         posted: author.posted,
       },
     })

@@ -7,11 +7,11 @@ import PostModal from "../../components/chichi/author/PostModal"
 import Posts from "../../components/chichi/author/Posts"
 
 interface AuthorPageProps extends PageProps {
-  pageContext: Omit<Author, "id" | "posting" | "password">
+  pageContext: Omit<Author, "posting" | "password">
 }
 
 export default function AuthorPage({ pageContext }: AuthorPageProps) {
-  const { name, posted } = pageContext
+  const { id, name, posted } = pageContext
   const [chichi, setChichi] = useState<string>()
   const isMe = useMemo(() => name === chichi, [chichi])
   const [modal, setModal] = useState(false)
@@ -42,7 +42,7 @@ export default function AuthorPage({ pageContext }: AuthorPageProps) {
       <Header readerName={name} isMe={isMe} />
       <Posts posts={posted?.slice(0, 10)} isMe={isMe} onClick={onClickRead} />
       <Buttons isMe={isMe} onClickPost={onClickPost} />
-      {modal && <PostModal onClickClose={onClickClose} />}
+      {modal && <PostModal onClickClose={onClickClose} readerId={id} />}
     </Layout>
   )
 }

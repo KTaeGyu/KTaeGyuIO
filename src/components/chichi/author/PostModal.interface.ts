@@ -1,6 +1,7 @@
 import { MouseEventHandler } from "react"
 
 interface ComponentProps {
+  readerId: string
   onClickClose: MouseEventHandler
 }
 
