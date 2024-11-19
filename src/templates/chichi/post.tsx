@@ -22,6 +22,20 @@ export default function PostPage({ pageContext }: PostPageProps) {
     }
   }, [])
 
+  useEffect(() => {
+    const currentDate = new Date()
+    const koreaTime = currentDate.toLocaleString("en-US", {
+      timeZone: "Asia/Seoul",
+    })
+    const koreaDate = new Date(koreaTime)
+    const targetDate = new Date(koreaDate.getFullYear(), 11, 25, 0, 0, 0)
+
+    if (koreaDate < targetDate) {
+      alert("12월 25일 00시 00분에 공개됩니다.")
+      navigate("/", { replace: true })
+    }
+  }, [])
+
   return (
     <Layout>
       <ModalS.Wrapper>
