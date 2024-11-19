@@ -1,5 +1,6 @@
 import axios from "axios"
 import getExistingAuthor from "./getExistingAuthor"
+import publishContent from "./publishContent"
 
 export default async function addPostToAuthor(
   authorId: string,
@@ -20,7 +21,7 @@ export default async function addPostToAuthor(
       },
     },
   ]
-  const updatedData = {
+  const data = {
     fields: {
       ...result.fields,
       posted: {
@@ -34,7 +35,9 @@ export default async function addPostToAuthor(
     "X-Contentful-Version": result.currentVersion,
   }
   // request
-  const updateResponse = await axios.put(url, updatedData, { headers })
+  const response = await axios.put(url, data, { headers })
   // result
-  console.log("Author updated with new post:", updateResponse.data)
+  console.log("Author updated with new post:", response.data)
+  // post request
+  await publishContent(authorId, response.data.sys.version)
 }

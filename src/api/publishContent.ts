@@ -8,7 +8,7 @@ export interface PostData {
   imgPath: string
 }
 
-export default async function publishPost(postId: string, version: string) {
+export default async function publishContent(postId: string, version: string) {
   // config
   const url = `https://api.contentful.com/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master/entries/${postId}/published`
   const data = {}
