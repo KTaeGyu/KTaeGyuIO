@@ -11,7 +11,7 @@ export default async function addPostToAuthor(
   // config
   const url = `https://api.contentful.com/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master/entries/${authorId}`
   const updatedPosted = [
-    ...result.existingPosted,
+    ...result.fields.posted?.["ko-KR"],
     {
       sys: {
         type: "Link",
@@ -22,6 +22,7 @@ export default async function addPostToAuthor(
   ]
   const updatedData = {
     fields: {
+      ...result.fields,
       posted: {
         "ko-KR": updatedPosted,
       },

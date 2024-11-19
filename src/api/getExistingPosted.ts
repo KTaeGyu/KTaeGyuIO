@@ -8,10 +8,10 @@ export default async function getExistingPosted(authorId: string) {
     "Content-Type": "application/vnd.contentful.management.v1+json",
   }
   // request
-  const authorResponse = await axios.get(url, { headers })
+  const response = await axios.get(url, { headers })
   // response
-  const currentVersion = authorResponse.data.sys.version
-  const existingPosted = authorResponse.data.fields.posted?.["ko-KR"] || []
+  const fields = response.data.fields
+  const currentVersion = response.data.sys.version
   // result
-  return { existingPosted, currentVersion }
+  return { fields, currentVersion }
 }

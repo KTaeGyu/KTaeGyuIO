@@ -1,5 +1,6 @@
 import axios from "axios"
 import addPostToAuthor from "./addPostToAuthor"
+import publishPost from "./publishPost"
 
 export interface PostData {
   title: string
@@ -52,6 +53,8 @@ export default async function createPost(postData: PostData) {
   const response = await axios.post(url, data, { headers })
   // result
   console.log("Post created successfully:", response)
-  // post request
-  await addPostToAuthor(postData.readerId, response.data.sys.id)
+  // post requests
+  const createdPostId = response.data.sys.id
+  await publishPost(createdPostId, response.data.sys.version)
+  await addPostToAuthor(postData.readerId, createdPostId)
 }

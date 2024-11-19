@@ -42,7 +42,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `/chichi/${author.username}`,
       component: path.resolve(`src/templates/chichi/author.tsx`),
       context: {
-        id: author.contentful_id,
+        contentful_id: author.contentful_id,
         name: author.name,
         username: author.username,
         posted: author.posted,
