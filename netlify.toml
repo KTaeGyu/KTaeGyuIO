@@ -1,0 +1,3 @@
+[build]
+  command = "rm -rf .cache && gatsby build"
+  publish = "public"
