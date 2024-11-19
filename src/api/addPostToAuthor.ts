@@ -1,12 +1,12 @@
 import axios from "axios"
-import getExistingPosted from "./getexistingPosted"
+import getExistingAuthor from "./getExistingAuthor"
 
 export default async function addPostToAuthor(
   authorId: string,
   postId: string
 ) {
   // pre request
-  const result = await getExistingPosted(authorId)
+  const result = await getExistingAuthor(authorId)
   if (!result) throw new Error("Cannot Get Existing Posted")
   // config
   const url = `https://api.contentful.com/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master/entries/${authorId}`

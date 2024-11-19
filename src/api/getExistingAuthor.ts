@@ -1,6 +1,6 @@
-import axios from "axios"
+import { axios } from "axios"
 
-export default async function getExistingPosted(authorId: string) {
+export default async function getExistingAuthor(authorId: string) {
   // config
   const url = `https://api.contentful.com/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master/entries/${authorId}`
   const headers = {
