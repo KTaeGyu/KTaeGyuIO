@@ -26,15 +26,11 @@ export default function PostModal({ readerId, onClickClose }: ComponentProps) {
       if (!postData.title || !postData.description)
         throw new Error("내용을 채워주세요")
       await createPost(postData)
-
       alert("메세지 보내기에 성공하였습니다.")
       onClickClose(undefined)
     } catch (error) {
-      console.error(
-        "Error creating post:",
-        error.response?.data || error.message
-      )
-      alert(error.message || "다시 시도해주세요.")
+      console.log("Error sending post:", error)
+      alert("다시 시도해주세요.")
     }
   }
 
