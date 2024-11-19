@@ -52,8 +52,6 @@ export default async function createPost(postData: PostData) {
     }
     // request
     const response = await axios.post(url, data, { headers })
-    // result
-    console.log("Post created successfully:", response)
     // post requests
     const createdPostId = response.data.sys.id
     await publishContent(createdPostId, response.data.sys.version)

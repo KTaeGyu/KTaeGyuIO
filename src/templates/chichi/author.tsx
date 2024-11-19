@@ -1,5 +1,5 @@
 import { navigate, PageProps } from "gatsby"
-import React, { useEffect, useId, useMemo, useState } from "react"
+import React, { useEffect, useMemo, useState } from "react"
 import Buttons from "../../components/chichi/author/Buttons"
 import Header from "../../components/chichi/author/Header"
 import Layout from "../../components/chichi/author/Layout"
@@ -18,10 +18,12 @@ export default function AuthorPage({ pageContext }: AuthorPageProps) {
   // 포스트
   const [posts, setPosts] = useState(posted)
   const onClickSend = () => {
-    const id = useId()
     const imgPath = C.IMG_PATHS[Math.floor(Math.random() * C.IMG_PATHS.length)]
     // 더미 데이터로 비주얼 업데이트
-    setPosts((prev) => [...prev, { id, imgPath, title: "dummy" }])
+    setPosts((prev) => [
+      ...prev,
+      { id: prev.length.toString(), imgPath, title: "dummy" },
+    ])
   }
   const onClickRead = (id: string) => {
     navigate(`/chichi/post/${id}`)

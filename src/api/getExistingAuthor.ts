@@ -13,8 +13,6 @@ export default async function getExistingAuthor(authorId: string) {
     // response
     const fields = response.data.fields
     const currentVersion = response.data.sys.version
-    // result
-    console.log("Get Author successfully:", response)
     return { fields, currentVersion }
   } catch (error) {
     console.error("Error getting author:", error)

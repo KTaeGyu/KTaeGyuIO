@@ -37,8 +37,6 @@ export default async function addPostToAuthor(
     }
     // request
     const response = await axios.put(url, data, { headers })
-    // result
-    console.log("Author updated with new post:", response.data)
     // post request
     await publishContent(authorId, response.data.sys.version)
   } catch (error) {

@@ -19,9 +19,7 @@ export default async function publishContent(postId: string, version: string) {
       "X-Contentful-Version": version,
     }
     // request
-    const response = await axios.put(url, data, { headers })
-    // result
-    console.log("Published successfully:", response)
+    await axios.put(url, data, { headers })
   } catch (error) {
     console.error("Error publish content:", error)
   }
