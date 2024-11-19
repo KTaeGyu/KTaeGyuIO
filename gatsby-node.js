@@ -8,7 +8,7 @@ exports.createPages = async ({ graphql, actions }) => {
           contentful_id
           name
           username
-          post {
+          posted {
             id
             title
             imgPath
