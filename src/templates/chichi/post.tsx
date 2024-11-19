@@ -1,5 +1,5 @@
 import { navigate, PageProps } from "gatsby"
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import Layout from "../../components/chichi/author/Layout"
 import ModalS from "../../components/chichi/author/PostModal.styles"
 import getChichi from "../../functions/getChichi"
@@ -21,7 +21,8 @@ export default function PostPage({ pageContext }: PostPageProps) {
       }
     }
   }, [])
-
+  // 공개 일
+  const [isPublished, setIsPublished] = useState(false)
   useEffect(() => {
     const currentDate = new Date()
     const koreaTime = currentDate.toLocaleString("en-US", {
@@ -33,6 +34,8 @@ export default function PostPage({ pageContext }: PostPageProps) {
     if (koreaDate < targetDate) {
       alert("12월 25일 00시 00분에 공개됩니다.")
       navigate("/", { replace: true })
+    } else {
+      setIsPublished(true)
     }
   }, [])
 
@@ -42,10 +45,10 @@ export default function PostPage({ pageContext }: PostPageProps) {
         <ModalS.Container>
           <ModalS.Title>
             <ModalS.TitleText>제목:</ModalS.TitleText>
-            <ModalS.Input value={title} disabled />
+            <ModalS.Input value={isPublished ? title : ""} disabled />
           </ModalS.Title>
           <ModalS.Description>
-            <ModalS.Textarea value={description} disabled />
+            <ModalS.Textarea value={isPublished ? description : ""} disabled />
           </ModalS.Description>
           <ModalS.SubmitButton disabled>
             From.{author.nickname} / To.{reader.nickname}
