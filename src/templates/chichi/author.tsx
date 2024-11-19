@@ -13,8 +13,6 @@ interface AuthorPageProps extends PageProps {
 
 export default function AuthorPage({ pageContext }: AuthorPageProps) {
   const { contentful_id, name, posted } = pageContext
-  const [chichi, setChichi] = useState<string>()
-  const isMe = useMemo(() => name === chichi, [chichi])
 
   // 포스트
   const onClickRead = (id: string) => {
@@ -28,8 +26,9 @@ export default function AuthorPage({ pageContext }: AuthorPageProps) {
   const onClickClose = () => {
     setModal(false)
   }
-
-  // 로그인
+  // 로그인 확인
+  const [chichi, setChichi] = useState<string>()
+  const isMe = useMemo(() => name === chichi, [chichi])
   useEffect(() => {
     if (typeof window !== undefined) {
       const { name } = getChichi()

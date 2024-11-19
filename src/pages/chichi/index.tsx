@@ -17,17 +17,19 @@ interface ChichiPageProps extends PageProps {
 
 export default function ChichiPage({ data }: ChichiPageProps) {
   const authors = data.allContentfulAuthor.nodes
-  const [chichi, setChichi] = useState<string>()
+  // 멤버 선택
   const [selected, setSelected] = useState<Member>()
   const onClickMember = (target: Member) => {
     setSelected((prev) =>
       prev && prev.username === target.username ? null : target
     )
   }
+  // 다음 버튼
   const onClickButton = () => {
     navigate(`/chichi/${selected.username}`)
   }
-
+  // 로그인 확인
+  const [chichi, setChichi] = useState<string>()
   useEffect(() => {
     if (typeof window !== undefined) {
       const { name } = getChichi()
