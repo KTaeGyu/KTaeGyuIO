@@ -45,7 +45,7 @@ exports.createPages = async ({ graphql, actions }) => {
         contentful_id: author.contentful_id,
         name: author.name,
         username: author.username,
-        posted: author.posted,
+        posted: author.posted || [],
       },
     })
   })
