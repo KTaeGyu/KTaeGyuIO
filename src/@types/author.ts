@@ -6,6 +6,5 @@ interface Author {
   password: string
   charactor: Media
   contentful_id: string
-  posting?: Post[]
-  posted?: Post[]
+  posted?: Partial<Post>[]
 }

@@ -1,9 +1,10 @@
 import { navigate, PageProps } from "gatsby"
-import React, { useEffect, useMemo, useState } from "react"
+import React, { useEffect, useId, useMemo, useState } from "react"
 import Buttons from "../../components/chichi/author/Buttons"
 import Header from "../../components/chichi/author/Header"
 import Layout from "../../components/chichi/author/Layout"
 import PostModal from "../../components/chichi/author/PostModal"
+import C from "../../components/chichi/author/PostModal.constant"
 import Posts from "../../components/chichi/author/Posts"
 import getChichi from "../../functions/getChichi"
 
@@ -15,6 +16,13 @@ export default function AuthorPage({ pageContext }: AuthorPageProps) {
   const { contentful_id, name, posted } = pageContext
 
   // 포스트
+  const [posts, setPosts] = useState(posted)
+  const onClickSend = () => {
+    const id = useId()
+    const imgPath = C.IMG_PATHS[Math.floor(Math.random() * C.IMG_PATHS.length)]
+    // 더미 데이터로 비주얼 업데이트
+    setPosts((prev) => [...prev, { id, imgPath, title: "dummy" }])
+  }
   const onClickRead = (id: string) => {
     navigate(`/chichi/post/${id}`)
   }
@@ -32,7 +40,7 @@ export default function AuthorPage({ pageContext }: AuthorPageProps) {
   useEffect(() => {
     if (typeof window !== undefined) {
       const { name } = getChichi()
-      if (!chichi) {
+      if (!name) {
         alert("자신이 누구인지 설정해주세요.")
         navigate("/chichi/login")
       } else setChichi(name)
@@ -42,10 +50,14 @@ export default function AuthorPage({ pageContext }: AuthorPageProps) {
   return (
     <Layout>
       <Header readerName={name} isMe={isMe} />
-      <Posts posts={posted?.slice(0, 10)} isMe={isMe} onClick={onClickRead} />
+      <Posts posts={posts.slice(0, 10)} isMe={isMe} onClick={onClickRead} />
       <Buttons isMe={isMe} onClickPost={onClickPost} />
       {modal && (
-        <PostModal onClickClose={onClickClose} readerId={contentful_id} />
+        <PostModal
+          onClickClose={onClickClose}
+          onClickSend={onClickSend}
+          readerId={contentful_id}
+        />
       )}
     </Layout>
   )

@@ -5,7 +5,7 @@ import S from "./Posts.styles"
 export default function Posts({ posts, isMe, onClick }: ComponentProps) {
   // 데이터 row 별로 나누기
   const rows = () => {
-    let result: (Post | null)[][] = []
+    let result: (Partial<Post> | null)[][] = []
     if (!posts?.length) return result
     let chunkSize = 1
     for (let i = 0; i < posts.length; i += chunkSize - 1) {

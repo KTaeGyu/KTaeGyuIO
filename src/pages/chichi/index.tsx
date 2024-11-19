@@ -33,7 +33,7 @@ export default function ChichiPage({ data }: ChichiPageProps) {
   useEffect(() => {
     if (typeof window !== undefined) {
       const { name } = getChichi()
-      if (!chichi) {
+      if (!name) {
         alert("자신이 누구인지 설정해주세요.")
         navigate("/chichi/login")
       } else setChichi(name)

@@ -31,8 +31,12 @@ export default function LoginPage({ data }: LoginPageProps) {
   return (
     <Layout>
       <Header />
-      <Select options={authors} selected={selected} onClick={onClickOption} />
-      <LoginButton selected={selected?.name} onClick={onClickLogin} />
+      <Select
+        options={authors}
+        selected={selected?.name || ""}
+        onClick={onClickOption}
+      />
+      <LoginButton selected={!!selected?.name} onClick={onClickLogin} />
     </Layout>
   )
 }

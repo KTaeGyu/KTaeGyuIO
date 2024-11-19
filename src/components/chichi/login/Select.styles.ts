@@ -23,7 +23,7 @@ const Text = styled.span<TextProps>`
 const Chevron = styled(IconPath.Chevron)<ChevronProps>`
   stroke: ${({ selected }) =>
     selected ? theme.colors.original.black : theme.colors.original.lightgray};
-  rotate: ${(props) => (props["data-opened"] ? "0" : "180deg")};
+  rotate: ${({ "data-opened": opened }) => (opened ? "0" : "180deg")};
 `
 
 const Options = styled.ul`

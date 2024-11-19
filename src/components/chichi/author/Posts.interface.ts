@@ -1,5 +1,5 @@
 interface ComponentProps {
-  posts?: Post[]
+  posts?: Partial<Post>[]
   isMe: boolean
   onClick: (id: string) => void
 }

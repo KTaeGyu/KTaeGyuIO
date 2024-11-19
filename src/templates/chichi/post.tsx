@@ -2,6 +2,7 @@ import { navigate, PageProps } from "gatsby"
 import React, { useEffect } from "react"
 import Layout from "../../components/chichi/author/Layout"
 import ModalS from "../../components/chichi/author/PostModal.styles"
+import getChichi from "../../functions/getChichi"
 
 interface PostPageProps extends PageProps {
   pageContext: Post
@@ -13,7 +14,7 @@ export default function PostPage({ pageContext }: PostPageProps) {
   // 로그인
   useEffect(() => {
     if (typeof window !== undefined) {
-      const chichi = localStorage.getItem("chichi")
+      const chichi = getChichi()
       if (!chichi) {
         alert("자신이 누구인지 설정해주세요.")
         navigate("/chichi/login")

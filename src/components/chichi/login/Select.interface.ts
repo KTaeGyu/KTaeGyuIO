@@ -2,17 +2,17 @@ import { Chichi } from "../../../pages/chichi/login"
 
 interface ComponentProps {
   options: Chichi[]
-  selected: Chichi | null
+  selected: string
   onClick: (option: Chichi) => void
 }
 
 interface TextProps {
-  selected: string | null
+  selected: boolean
 }
 
 interface ChevronProps {
-  selected: string | null
-  "data-opened": boolean
+  selected?: boolean
+  "data-opened"?: boolean
 }
 
 export type { ChevronProps, ComponentProps, TextProps }

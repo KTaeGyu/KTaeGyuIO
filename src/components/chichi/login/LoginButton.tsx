@@ -4,7 +4,7 @@ import S from "./LoginButton.styles"
 
 export default function LoginButton({ selected, onClick }: ComponentProps) {
   return (
-    <S.Container selected={selected} onClick={onClick} disabled={!selected}>
+    <S.Container onClick={onClick} disabled={!selected}>
       트리 꾸미러 가기
     </S.Container>
   )

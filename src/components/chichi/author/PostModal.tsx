@@ -5,7 +5,11 @@ import C from "./PostModal.constant"
 import { ComponentProps } from "./PostModal.interface"
 import S from "./PostModal.styles"
 
-export default function PostModal({ readerId, onClickClose }: ComponentProps) {
+export default function PostModal({
+  readerId,
+  onClickClose,
+  onClickSend,
+}: ComponentProps) {
   const { contentful_id } = getChichi()
   const [postData, setPostData] = useState<PostData>({
     title: "",
@@ -21,13 +25,14 @@ export default function PostModal({ readerId, onClickClose }: ComponentProps) {
   const onChangeDescription: ChangeEventHandler<HTMLTextAreaElement> = (e) => {
     setPostData((prev) => ({ ...prev, description: e.target.value }))
   }
-  const onClickSend = async () => {
+  const onClick = async () => {
     try {
       if (!postData.title || !postData.description)
         throw new Error("내용을 채워주세요")
       await createPost(postData)
       alert("메세지 보내기에 성공하였습니다.")
       onClickClose(undefined)
+      onClickSend()
     } catch (error) {
       console.log("Error sending post:", error)
       alert("다시 시도해주세요.")
@@ -52,7 +57,7 @@ export default function PostModal({ readerId, onClickClose }: ComponentProps) {
             placeholder="내용을 작성해 주세요."
           />
         </S.Description>
-        <S.SubmitButton onClick={onClickSend}>보내기</S.SubmitButton>
+        <S.SubmitButton onClick={onClick}>보내기</S.SubmitButton>
       </S.Container>
       <S.ExitButton onClick={onClickClose}>
         <S.ExitIcon />

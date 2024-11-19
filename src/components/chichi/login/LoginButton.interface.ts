@@ -1,11 +1,8 @@
 import { MouseEventHandler } from "react"
 
-interface ComponentProps extends ContainerProps {
+interface ComponentProps {
+  selected: boolean
   onClick: MouseEventHandler
 }
 
-interface ContainerProps {
-  selected: string | null
-}
-
-export type { ComponentProps, ContainerProps }
+export type { ComponentProps }
