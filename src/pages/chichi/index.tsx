@@ -5,6 +5,7 @@ import Layout from "../../components/chichi/index/Layout"
 import { Member } from "../../components/chichi/index/MemberItem.interface"
 import Members from "../../components/chichi/index/Members"
 import NextButton from "../../components/chichi/index/NextButton"
+import getChichi from "../../functions/getChichi"
 
 interface ChichiPageProps extends PageProps {
   data: {
@@ -29,11 +30,11 @@ export default function ChichiPage({ data }: ChichiPageProps) {
 
   useEffect(() => {
     if (typeof window !== undefined) {
-      const chichi = localStorage.getItem("chichi")
+      const { name } = getChichi()
       if (!chichi) {
         alert("자신이 누구인지 설정해주세요.")
         navigate("/chichi/login")
-      } else setChichi(chichi)
+      } else setChichi(name)
     }
   }, [])
 
