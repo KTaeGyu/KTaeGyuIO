@@ -5,6 +5,7 @@ interface Author {
   username: string
   password: string
   charactor: Media
+  contentful_id: string
   posting?: Post[]
   posted?: Post[]
 }

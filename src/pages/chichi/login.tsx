@@ -5,7 +5,7 @@ import Header from "../../components/chichi/login/Header"
 import LoginButton from "../../components/chichi/login/LoginButton"
 import Select from "../../components/chichi/login/Select"
 
-export type Chichi = Pick<Author, "id" | "name">
+export type Chichi = Pick<Author, "contentful_id" | "name">
 
 interface LoginPageProps extends PageProps {
   data: {
@@ -21,12 +21,9 @@ export default function LoginPage({ data }: LoginPageProps) {
   const onClickOption = (option: Chichi) => {
     setSelected(option)
   }
-  console.log(authors)
-
   const onClickLogin = () => {
     if (typeof window !== "undefined" && !!selected) {
-      localStorage.setItem("chichi", selected.name)
-      localStorage.setItem("chichiId", selected.id)
+      localStorage.setItem("chichi", JSON.stringify(selected))
       navigate("/chichi")
     }
   }
@@ -44,7 +41,7 @@ export const query = graphql`
   query {
     allContentfulAuthor {
       nodes {
-        id
+        contentful_id
         name
       }
     }

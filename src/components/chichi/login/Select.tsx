@@ -4,14 +4,14 @@ import { ComponentProps } from "./Select.interface"
 import S from "./Select.styles"
 
 export default function Select({ options, selected, onClick }: ComponentProps) {
-  const [opened, setOpended] = useState(false)
+  const [opened, setOpened] = useState(false)
   const onClickSelect: MouseEventHandler = () => {
-    setOpended(!opened)
+    setOpened(!opened)
   }
   const onClickOption = (e: MouseEvent, option: Chichi) => {
     e.stopPropagation()
     onClick(option)
-    setOpended(false)
+    setOpened(false)
   }
 
   return (
@@ -19,7 +19,7 @@ export default function Select({ options, selected, onClick }: ComponentProps) {
       <S.Text selected={selected?.name}>
         {selected ? selected.name : "선택해주세요"}
       </S.Text>
-      <S.Chevron selected={selected?.name} opened={opened} />
+      <S.Chevron selected={selected?.name} data-opened={opened} />
       {opened && (
         <S.Options>
           {options.map((option) => (

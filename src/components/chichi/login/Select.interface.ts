@@ -12,7 +12,7 @@ interface TextProps {
 
 interface ChevronProps {
   selected: string | null
-  opened: boolean
+  "data-opened": boolean
 }
 
 export type { ChevronProps, ComponentProps, TextProps }

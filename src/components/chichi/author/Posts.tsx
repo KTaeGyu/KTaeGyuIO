@@ -18,8 +18,8 @@ export default function Posts({ posts, isMe, onClick }: ComponentProps) {
   return (
     <S.Wrapper>
       <S.Container>
-        {rows().map((row) => (
-          <S.Row>
+        {rows().map((row, idx) => (
+          <S.Row key={idx}>
             {row?.map(({ id, imgPath, title }) => (
               <S.Cell key={id} onClick={isMe ? () => onClick(id) : undefined}>
                 <S.Decoration src={imgPath} alt={title} />

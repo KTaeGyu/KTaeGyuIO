@@ -1,15 +1,17 @@
 import React, { ChangeEventHandler, useState } from "react"
-import createPost, { PostData } from "../../../api/postPost"
+import createPost, { PostData } from "../../../api/createPost"
+import getChichi from "../../../functions/getChichi"
 import C from "./PostModal.constant"
 import { ComponentProps } from "./PostModal.interface"
 import S from "./PostModal.styles"
 
 export default function PostModal({ readerId, onClickClose }: ComponentProps) {
+  const { contentful_id } = getChichi()
   const [postData, setPostData] = useState<PostData>({
     title: "",
     description: "",
     readerId,
-    authorId: localStorage.getItem("chichiId"),
+    authorId: contentful_id,
     imgPath: C.IMG_PATHS[Math.floor(Math.random() * C.IMG_PATHS.length)],
   })
 
@@ -20,15 +22,20 @@ export default function PostModal({ readerId, onClickClose }: ComponentProps) {
     setPostData((prev) => ({ ...prev, description: e.target.value }))
   }
   const onClickSend = async () => {
-    if (!postData.title || !postData.description) {
-      alert("내용을 채워주세요.")
-      return
-    }
-    const result = await createPost(postData)
-    if (result) {
+    try {
+      if (!postData.title || !postData.description)
+        throw new Error("내용을 채워주세요")
+      await createPost(postData)
+
       alert("메세지 보내기에 성공하였습니다.")
       onClickClose(undefined)
-    } else alert("다시 시도하여 주십시오.")
+    } catch (error) {
+      console.error(
+        "Error creating post:",
+        error.response?.data || error.message
+      )
+      alert(error.message || "다시 시도해주세요.")
+    }
   }
 
   return (
