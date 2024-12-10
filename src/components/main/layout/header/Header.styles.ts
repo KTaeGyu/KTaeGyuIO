@@ -5,7 +5,7 @@ const Container = styled.header`
   display: flex;
   grid-column: span 4;
   align-items: center;
-  background-color: ${theme.colors.vscode.bg[1]};
+  background-color: ${theme.colors.vscode.bg.black[1]};
 `
 
 const Logo = styled.img`

@@ -9,13 +9,13 @@ const Container = styled.div`
   gap: ${theme.space[1]};
   flex: 1.48;
   height: 30px;
-  background-color: ${theme.colors.vscode.bg[2]};
+  background-color: ${theme.colors.vscode.bg.black[2]};
   border: 1px solid ${theme.colors.vscode.border[1]};
   border-radius: ${theme.radii[2]};
   overflow: hidden;
   cursor: pointer;
   &:hover {
-    background-color: ${theme.colors.vscode.bg[3]};
+    background-color: ${theme.colors.vscode.bg.black[3]};
     border: 1px solid ${theme.colors.vscode.border[2]};
   }
 `

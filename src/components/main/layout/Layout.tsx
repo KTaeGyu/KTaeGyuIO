@@ -1,5 +1,6 @@
 import React, { PropsWithChildren, useState } from "react"
 import ActivityBar from "./activityBar/ActivityBar"
+import Footer from "./footer/Footer"
 import Header from "./header/Header"
 import { ContainerProps } from "./Layout.interface"
 import S from "./Layout.styles"
@@ -16,6 +17,7 @@ export default function Layout({ children }: PropsWithChildren) {
       <Header />
       <ActivityBar />
       {children}
+      <Footer />
     </S.Container>
   )
 }

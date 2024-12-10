@@ -1,13 +1,5 @@
 import axios from "axios"
 
-export interface PostData {
-  title: string
-  description: string
-  readerId: string
-  authorId: string
-  imgPath: string
-}
-
 export default async function publishContent(postId: string, version: string) {
   try {
     // config

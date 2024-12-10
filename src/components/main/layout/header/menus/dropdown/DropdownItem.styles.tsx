@@ -14,11 +14,11 @@ const Container = styled.div<ContainerProps>`
   cursor: pointer;
 
   &.active {
-    background-color: ${theme.colors.vscode.bg.blue};
+    background-color: ${theme.colors.vscode.bg.blue[1]};
   }
 
   &:hover {
-    background-color: ${theme.colors.vscode.bg.blue};
+    background-color: ${theme.colors.vscode.bg.blue[1]};
   }
 
   ${({ media }) =>

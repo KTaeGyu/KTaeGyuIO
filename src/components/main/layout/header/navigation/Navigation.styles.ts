@@ -15,7 +15,7 @@ const Button = styled.button`
   width: 28px;
   height: 28px;
   &:hover {
-    background-color: ${theme.colors.vscode.bg[2]};
+    background-color: ${theme.colors.vscode.bg.black[2]};
   }
   &:disabled:hover {
     background-color: transparent;

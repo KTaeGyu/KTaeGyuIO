@@ -7,7 +7,7 @@ const Container = styled.ul<ContainerProps>`
   display: flex;
   flex-direction: column;
   padding: 6px;
-  background-color: ${theme.colors.vscode.bg[5]};
+  background-color: ${theme.colors.vscode.bg.black[5]};
   border: 1px solid ${theme.colors.vscode.border[3]};
   border-radius: ${theme.radii[2]};
 

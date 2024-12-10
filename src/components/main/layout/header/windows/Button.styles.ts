@@ -6,7 +6,7 @@ const Button = styled.div`
   align-items: center;
   padding: 0 22px;
   &:hover {
-    background-color: ${theme.colors.vscode.bg[4]};
+    background-color: ${theme.colors.vscode.bg.black[4]};
   }
   & > svg {
     width: 12px;
@@ -17,7 +17,7 @@ const Button = styled.div`
 
 const CloseButton = styled(Button)`
   &:hover {
-    background-color: ${theme.colors.vscode.bg.red};
+    background-color: ${theme.colors.vscode.bg.red[1]};
   }
 `
 

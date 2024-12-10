@@ -1,17 +1,19 @@
 import { ReactElement, ReactSVGElement, SVGProps } from "react"
 
-type Icon = (props: SVGProps<ReactSVGElement>) => ReactElement
+export type Icon = (props: SVGProps<ReactSVGElement>) => ReactElement
 
 interface IconPathProps {
   [key: string]: Icon
   Account: Icon
   Arrow: Icon
+  Bell: Icon
   ChevronDouble: Icon
   Explorer: Icon
   Extentions: Icon
   More: Icon
   Layout: Icon
   LayoutSetting: Icon
+  RemoteWindow: Icon
   RunAndDebug: Icon
   Plus: Icon
   Search: Icon
@@ -37,6 +39,7 @@ interface IconPathProps {
 const IconPath: IconPathProps = {
   Account: require("./icons/Account.inline.svg"),
   Arrow: require("./icons/Arrow.inline.svg"),
+  Bell: require("./icons/Bell.Inline.svg"),
   ChevronDouble: require("./icons/ChevronDouble.inline.svg"),
   Explorer: require("./icons/Explorer.inline.svg"),
   Extentions: require("./icons/Extentions.inline.svg"),
@@ -44,6 +47,7 @@ const IconPath: IconPathProps = {
   Layout: require("./icons/Layout.inline.svg"),
   LayoutSetting: require("./icons/LayoutSetting.inline.svg"),
   More: require("./icons/More.inline.svg"),
+  RemoteWindow: require("./icons/RemoteWindow.inline.svg"),
   RunAndDebug: require("./icons/RunAndDebug.inline.svg"),
   Plus: require("./icons/Plus.inline.svg"),
   Search: require("./icons/Search.inline.svg"),

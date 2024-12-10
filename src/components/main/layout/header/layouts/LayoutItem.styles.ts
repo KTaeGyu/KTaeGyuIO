@@ -12,7 +12,7 @@ const Container = styled.li`
   border-radius: ${theme.radii[1]};
   cursor: pointer;
   &:hover {
-    background-color: ${theme.colors.vscode.bg[2]};
+    background-color: ${theme.colors.vscode.bg.black[2]};
   }
 `
 

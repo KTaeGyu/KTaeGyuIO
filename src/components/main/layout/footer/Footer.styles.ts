@@ -1,11 +1,10 @@
 import styled from "styled-components"
 import { theme } from "../../../../styles/theme.css"
 
-const Container = styled.div`
-  grid-row: span 2;
+const Container = styled.footer`
   display: flex;
-  flex-direction: column;
-  background-color: ${theme.colors.vscode.bg.black[6]};
+  grid-column: span 4;
+  background-color: ${theme.colors.vscode.bg.blue[2]};
 `
 
 const S = { Container }

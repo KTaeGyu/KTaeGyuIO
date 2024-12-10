@@ -3,7 +3,7 @@ import { ContainerProps } from "./Layout.interface"
 
 const Container = styled.div<ContainerProps>`
   display: grid;
-  grid-template-rows: 44px 1fr ${({ pannelheight }) => `${pannelheight}px`} 26px;
+  grid-template-rows: 44px 1fr ${({ pannelheight }) => `${pannelheight}px`} 28px;
   grid-template-columns:
     60px
     ${({ primarysidebarwidht }) => `${primarysidebarwidht}px`}

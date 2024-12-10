@@ -11,11 +11,11 @@ const Container = styled.li<ContainerProps>`
   padding: ${theme.space.button[12]};
 
   &.active {
-    background-color: ${theme.colors.vscode.bg[2]};
+    background-color: ${theme.colors.vscode.bg.black[2]};
   }
 
   &:hover {
-    background-color: ${theme.colors.vscode.bg[2]};
+    background-color: ${theme.colors.vscode.bg.black[2]};
   }
 
   ${({ media }) =>
