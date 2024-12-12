@@ -9,7 +9,7 @@ interface IconPathProps {
   Bell: Icon
   ChevronDouble: Icon
   Explorer: Icon
-  Extentions: Icon
+  Extensions: Icon
   More: Icon
   Layout: Icon
   LayoutSetting: Icon
@@ -42,7 +42,7 @@ const IconPath: IconPathProps = {
   Bell: require("./icons/Bell.Inline.svg"),
   ChevronDouble: require("./icons/ChevronDouble.inline.svg"),
   Explorer: require("./icons/Explorer.inline.svg"),
-  Extentions: require("./icons/Extentions.inline.svg"),
+  Extensions: require("./icons/Extensions.inline.svg"),
   Hamburger: require("./icons/Hamburger.inline.svg"),
   Layout: require("./icons/Layout.inline.svg"),
   LayoutSetting: require("./icons/LayoutSetting.inline.svg"),

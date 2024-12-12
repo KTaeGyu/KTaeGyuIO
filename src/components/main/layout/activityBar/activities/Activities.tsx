@@ -7,7 +7,7 @@ export default function Activities() {
   return (
     <S.Container>
       {C.Activites.map((activity, idx) => (
-        <ActivityItem key={idx} {...activity} selected={idx === 1} />
+        <ActivityItem key={idx} {...activity} />
       ))}
     </S.Container>
   )

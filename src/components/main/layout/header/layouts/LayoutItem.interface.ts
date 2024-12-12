@@ -1,5 +1,7 @@
+type LayoutItemTitle = "Primary Side Bar" | "Pannel" | "Secondary Side Bar"
+
 interface LayoutItemType {
-  name: string
+  title: LayoutItemTitle
   rotate: string | number
 }
 
@@ -7,4 +9,4 @@ interface LayoutIconProps {
   disabled?: boolean
 }
 
-export type { LayoutIconProps, LayoutItemType }
+export type { LayoutIconProps, LayoutItemTitle, LayoutItemType }

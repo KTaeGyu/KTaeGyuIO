@@ -4,6 +4,7 @@ import { ContainerProps } from "./MenuItem.interface"
 
 const Container = styled.li<ContainerProps>`
   position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   height: 28px;

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { theme } from "../../../../../../styles/theme.css"
+import { theme } from "../../../../styles/theme.css"
 import { ContainerProps } from "./Dropdown.interface"
 
 const Container = styled.ul<ContainerProps>`

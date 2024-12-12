@@ -3,16 +3,20 @@ import { ActivityItemType } from "./ActivityItem.interface"
 
 const Activites: ActivityItemType[] = [
   {
+    title: "Explorer",
     Icon: IconPath.Explorer,
   },
   {
+    title: "Search",
     Icon: IconPath.Search,
   },
   {
+    title: "Run and Debug",
     Icon: IconPath.RunAndDebug,
   },
   {
-    Icon: IconPath.Extentions,
+    title: "Extensions",
+    Icon: IconPath.Extensions,
   },
 ]
 

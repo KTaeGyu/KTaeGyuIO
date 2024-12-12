@@ -34,6 +34,7 @@ const space = {
 // )
 
 const fontSizes = {
+  0: "13.5px",
   1: "14.5px",
   button: {
     12: "16px",

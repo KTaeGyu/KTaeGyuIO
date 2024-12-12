@@ -1,0 +1,15 @@
+import styled from "styled-components"
+import { theme } from "../../../../styles/theme.css"
+import { ContainerProps } from "./Pannel.interface"
+
+const Container = styled.div<ContainerProps>`
+  grid-row-start: 3;
+  grid-column-start: ${({ primarySideBarState }) =>
+    primarySideBarState ? 3 : 2};
+  grid-column-end: 4;
+  background-color: ${theme.colors.vscode.bg.black[7]};
+`
+
+const S = { Container }
+
+export default S

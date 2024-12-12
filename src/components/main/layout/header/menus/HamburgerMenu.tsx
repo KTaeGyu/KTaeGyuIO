@@ -1,6 +1,6 @@
 import React from "react"
 import useDropdown from "../../../../../hooks/useDropdown"
-import Dropdown from "./dropdown/Dropdown"
+import Dropdown from "../../../common/dropdown/Dropdown"
 import S from "./HambergurMenu.styles"
 import ItemS from "./MenuItem.styles"
 import C from "./Menus.constant"

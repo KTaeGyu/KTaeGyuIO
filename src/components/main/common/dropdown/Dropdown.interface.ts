@@ -1,4 +1,4 @@
-import { MenuItemType } from "../MenuItem.interface"
+import { MenuItemType } from "../../layout/header/menus/MenuItem.interface"
 
 interface ContainerProps {
   position: "right" | "down"

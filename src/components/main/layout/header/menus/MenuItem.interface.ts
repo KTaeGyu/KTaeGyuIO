@@ -5,10 +5,17 @@ interface MenuItemType {
   media?: number
   onClick?: MouseEventHandler
   subsets?: MenuItemType[]
+  disabled?: boolean
+  checked?: boolean
 }
 
 interface ContainerProps {
   media?: number
+  disabled?: boolean
 }
 
-export type { ContainerProps, MenuItemType }
+interface TextProps {
+  disabled?: boolean
+}
+
+export type { ContainerProps, MenuItemType, TextProps }

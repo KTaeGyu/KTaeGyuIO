@@ -12,7 +12,7 @@ const Container = styled.li`
 `
 
 const Text = styled.p`
-  color: ${theme.colors.original.white};
+  color: ${theme.colors.vscode.txt.white};
   font-size: ${theme.fontSizes[1]};
 `
 

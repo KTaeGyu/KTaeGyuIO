@@ -5,6 +5,7 @@ import { theme } from "../../../../../styles/theme.css"
 const Container = styled.div`
   display: none;
   position: relative;
+  z-index: 2;
 
   @media (max-width: 1250px) {
     display: block;

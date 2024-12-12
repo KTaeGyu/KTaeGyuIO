@@ -2,15 +2,15 @@ import { LayoutItemType } from "./LayoutItem.interface"
 
 const Layouts: LayoutItemType[] = [
   {
-    name: "Primary Side Bar",
+    title: "Primary Side Bar",
     rotate: 0,
   },
   {
-    name: "Pannel",
+    title: "Pannel",
     rotate: "270deg",
   },
   {
-    name: "Secondary Side Bar",
+    title: "Secondary Side Bar",
     rotate: "180deg",
   },
 ]

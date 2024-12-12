@@ -4,10 +4,11 @@ interface ContainerProps {
   selected?: boolean
 }
 
+type ActivityItemTitle = "Explorer" | "Search" | "Run and Debug" | "Extensions"
+
 interface ActivityItemType {
+  title: ActivityItemTitle
   Icon: (props: SVGProps<ReactSVGElement>) => ReactElement
 }
 
-type ComponentProps = ContainerProps & ActivityItemType
-
-export type { ActivityItemType, ComponentProps, ContainerProps }
+export type { ActivityItemTitle, ActivityItemType, ContainerProps }

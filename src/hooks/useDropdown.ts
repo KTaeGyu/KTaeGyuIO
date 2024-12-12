@@ -1,22 +1,32 @@
 import { useEffect, useRef, useState } from "react"
+import { Options } from "./useDropdown.interface"
 
-export default function useDropdown() {
+export default function useDropdoWwn(options?: Options) {
   const ref = useRef<HTMLDivElement & HTMLLIElement>()
   const [isOpen, setIsOpen] = useState(false)
   const toggleOpen = () => {
     setIsOpen(!isOpen)
+    if (options) {
+      const { setSelect, value, select } = options
+      setSelect(value === select ? "" : value)
+    }
   }
 
   const [timeOutId, setTimeOutId] = useState<NodeJS.Timeout>()
   const onMouseEnter = () => {
-    const id = setTimeout(() => setIsOpen(true), 500)
+    const id = setTimeout(() => {
+      setIsOpen(true)
+      if (options) {
+        const { setSelect, value } = options
+        setSelect(value)
+      }
+    }, 500)
     setTimeOutId(id)
   }
   const onMouseLeave = () => {
     if (timeOutId) {
       clearTimeout(timeOutId)
       setTimeOutId(null)
-      setIsOpen(false)
     }
   }
 
@@ -24,6 +34,9 @@ export default function useDropdown() {
     const handleClickOutside = (e: MouseEvent) => {
       if (ref.current && !ref.current.contains(e.target as Node)) {
         setIsOpen(false)
+        if (options) {
+          options.setSelect("")
+        }
       }
     }
 
