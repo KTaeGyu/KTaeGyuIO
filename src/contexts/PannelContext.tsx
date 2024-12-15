@@ -24,7 +24,7 @@ export default function PannelProvider({ children }: PropsWithChildren) {
   )
 }
 
-export function usePannelConext() {
+export function usePannelContext() {
   const context = useContext(PannelContext)
   if (!context) throw new Error("useContext must be used within an Provider")
   return context

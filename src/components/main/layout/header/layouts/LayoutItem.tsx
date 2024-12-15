@@ -1,25 +1,25 @@
 import React from "react"
-import { usePannelConext } from "../../../../../contexts/PannelContext"
-import { usePrimarySideBarConext } from "../../../../../contexts/PrimarySideBarCotext"
+import { usePannelContext } from "../../../../../contexts/PannelContext"
+import { usePrimarySideBarContext } from "../../../../../contexts/PrimarySideBarCotext"
 import { LayoutItemType } from "./LayoutItem.interface"
 import S from "./LayoutItem.styles"
 
 export default function LayoutItem({ rotate, title }: LayoutItemType) {
-  const { state: primarySideBarState, setState: setPrimarySideBarState } =
-    usePrimarySideBarConext()
-  const { state: pannelState, setState: setPannelState } = usePannelConext()
+  const { state: PSB_State, setState: setPrimarySideBarState } =
+    usePrimarySideBarContext()
+  const { state: P_State, setState: setPannelState } = usePannelContext()
 
   const disabled =
     title === "Primary Side Bar"
-      ? !primarySideBarState
+      ? !PSB_State
       : title === "Pannel"
-      ? !pannelState
+      ? !P_State
       : true
 
   const onClick = () => {
     if (title === "Primary Side Bar")
-      setPrimarySideBarState(primarySideBarState ? null : "Explorer")
-    if (title === "Pannel") setPannelState(!pannelState)
+      setPrimarySideBarState(PSB_State ? null : "Explorer")
+    if (title === "Pannel") setPannelState(!P_State)
   }
 
   return (

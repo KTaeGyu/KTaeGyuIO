@@ -7,5 +7,6 @@ declare namespace NodeJS {
     readonly CONTENTFUL_DELIVERY_ACCESS_TOKEN: string
     readonly CONTENTFUL_HOST: string
     readonly NETLIFY_AUTH_TOKEN: string
+    readonly PROJECT_NAME: string
   }
 }

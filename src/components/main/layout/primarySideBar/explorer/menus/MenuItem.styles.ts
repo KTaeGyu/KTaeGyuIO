@@ -9,10 +9,13 @@ const Container = styled.li`
 const TitleBox = styled.div`
   display: flex;
   align-items: center;
+  padding: 2px;
   cursor: pointer;
 `
 
 const ChevronIcon = styled(IconPath.Chevron)`
+  width: 22px;
+  height: 22px;
   stroke: ${theme.colors.vscode.txt[1]};
   rotate: 90deg;
 `

@@ -1,7 +1,7 @@
-import { MenuItemType } from "../../layout/header/menus/MenuItem.interface"
+import { ExplorerMoreItem } from "../../layout/primarySideBar/explorer/Explorer.interface"
 
 interface ComponentProps {
-  items: MenuItemType[]
+  items: ExplorerMoreItem[]
 }
 
 export type { ComponentProps }

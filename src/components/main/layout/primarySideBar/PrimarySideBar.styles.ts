@@ -16,6 +16,7 @@ const TitleBox = styled.div`
 const Title = styled.h4`
   font-size: ${theme.fontSizes[0]};
   font-weight: ${theme.fontWeights.normal};
+  user-select: none;
 `
 
 const TitleButtonBox = styled.div`

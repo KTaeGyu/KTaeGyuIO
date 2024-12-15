@@ -2,9 +2,9 @@ import styled from "styled-components"
 import { ContainerProps } from "./Main.interface"
 
 const Container = styled.main<ContainerProps>`
-  grid-row: ${({ pannelState }) => (pannelState ? "span 1" : "span 2")};
-  grid-column: ${({ primarySideBarState }) =>
-    primarySideBarState ? "span 1" : "span 2"};
+  grid-row: ${({ $pannel }) => ($pannel ? "span 1" : "span 2")};
+  grid-column: ${({ $primarysidebar }) =>
+    $primarysidebar ? "span 1" : "span 2"};
   background-color: aliceblue;
 `
 

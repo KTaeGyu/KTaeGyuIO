@@ -27,7 +27,7 @@ export default function PrimarySideBarProvider({
   )
 }
 
-export function usePrimarySideBarConext() {
+export function usePrimarySideBarContext() {
   const context = useContext(PrimarySideBarContext)
   if (!context) throw new Error("useContext must be used within an Provider")
   return context

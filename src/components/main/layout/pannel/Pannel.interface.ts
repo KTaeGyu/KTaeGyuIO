@@ -1,5 +1,5 @@
 interface ContainerProps {
-  primarySideBarState: string | null
+  $primarysidebar: string | null
 }
 
 export type { ContainerProps }

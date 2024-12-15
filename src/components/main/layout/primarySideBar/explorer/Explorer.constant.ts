@@ -1,6 +1,6 @@
-import { MenuItemType } from "../../header/menus/MenuItem.interface"
+import { ExplorerMoreItem } from "./Explorer.interface"
 
-const MORE_ITEMS: MenuItemType[] = [
+const MORE_ITEMS: ExplorerMoreItem[] = [
   {
     text: "Open Editors",
   },
