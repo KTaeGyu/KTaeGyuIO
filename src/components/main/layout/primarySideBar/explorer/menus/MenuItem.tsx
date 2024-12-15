@@ -1,11 +1,12 @@
 import React, { useState } from "react"
+import PROJECT_NAME from "../../../../../../constants/projectName"
 import { ExplorerMoreItem } from "../Explorer.interface"
 import Content from "./Content"
 import S from "./MenuItem.styles"
 
 export default function MenuItem({ text, isFirst }: ExplorerMoreItem) {
   const isFolder = text === "Folders"
-  const title = isFolder ? process.env.PROJECT_NAME : text
+  const title = isFolder ? PROJECT_NAME : text
   const [isOpen, setIsOpen] = useState(isFolder)
 
   return (
