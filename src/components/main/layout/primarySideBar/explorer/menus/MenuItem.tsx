@@ -5,7 +5,7 @@ import S from "./MenuItem.styles"
 
 export default function MenuItem({ text, isFirst }: ExplorerMoreItem) {
   const isFolder = text === "Folders"
-  const title = isFolder ? "KTaeGyuIO" : text
+  const title = isFolder ? process.env.PROJECT_NAME : text
   const [isOpen, setIsOpen] = useState(isFolder)
 
   return (

@@ -5,7 +5,7 @@ export default function SearchBar() {
   return (
     <S.Container>
       <S.SearchIcon />
-      <S.Title>KTaeGyuIO</S.Title>
+      <S.Title>{process.env.PROJECT_NAME}</S.Title>
     </S.Container>
   )
 }
