@@ -1,11 +1,13 @@
 import IconPath from "../../../../../assets/iconPath"
-import { ActivityItemType } from "../activities/ActivityItem.interface"
+import { SettingItemType } from "./SettingItem.interface"
 
-const Settings: ActivityItemType[] = [
+const Settings: SettingItemType[] = [
   {
+    title: "Accounts",
     Icon: IconPath.Account,
   },
   {
+    title: "Manage",
     Icon: IconPath.Setting,
   },
 ]

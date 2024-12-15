@@ -1,9 +1,11 @@
 import styled from "styled-components"
 import IconPath from "../../../../../../assets/iconPath"
 import { theme } from "../../../../../../styles/theme.css"
+import { ChevronIconProps, ContainerProps } from "./MenuItem.interface"
 
-const Container = styled.li`
-  border-bottom: 1px solid ${theme.colors.vscode.border[3]};
+const Container = styled.li<ContainerProps>`
+  ${({ $isfirst }) =>
+    !$isfirst && `border-top: 1px solid ${theme.colors.vscode.border[3]};`}
 `
 
 const TitleBox = styled.div`
@@ -13,11 +15,11 @@ const TitleBox = styled.div`
   cursor: pointer;
 `
 
-const ChevronIcon = styled(IconPath.Chevron)`
+const ChevronIcon = styled(IconPath.Chevron)<ChevronIconProps>`
   width: 22px;
   height: 22px;
   stroke: ${theme.colors.vscode.txt[1]};
-  rotate: 90deg;
+  rotate: ${({ $isopen }) => ($isopen ? "180deg" : "90deg")};
 `
 
 const Title = styled.h5`

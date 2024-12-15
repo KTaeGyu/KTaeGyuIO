@@ -30,6 +30,7 @@ export default function DropdownItem({
       onClick={disabled ? undefined : subsets ? toggleOpen : onClick}
       onMouseEnter={!disabled ? onMouseEnter : undefined}
       onMouseLeave={!disabled ? onMouseLeave : undefined}
+      $isSelect={isSelect}
     >
       {checked && <S.CheckIcon />}
       <S.Text disabled={disabled}>{text}</S.Text>

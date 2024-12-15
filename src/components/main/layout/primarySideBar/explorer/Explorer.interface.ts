@@ -9,6 +9,7 @@ type ExplorerItemText =
 
 interface ExplorerMoreItem extends MenuItemType {
   text: ExplorerItemText
+  isFirst?: boolean
 }
 
 export type { ExplorerItemText, ExplorerMoreItem }

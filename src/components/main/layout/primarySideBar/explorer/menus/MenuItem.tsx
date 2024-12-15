@@ -1,19 +1,20 @@
-import React from "react"
-import IconPath from "../../../../../../assets/iconPath"
+import React, { useState } from "react"
 import { ExplorerMoreItem } from "../Explorer.interface"
 import Content from "./Content"
 import S from "./MenuItem.styles"
 
-export default function MenuItem({ text }: ExplorerMoreItem) {
-  const title = text === "Folders" ? "KTaeGyuIO" : text
+export default function MenuItem({ text, isFirst }: ExplorerMoreItem) {
+  const isFolder = text === "Folders"
+  const title = isFolder ? "KTaeGyuIO" : text
+  const [isOpen, setIsOpen] = useState(isFolder)
 
   return (
-    <S.Container>
-      <S.TitleBox>
-        <IconPath.Chevron />
+    <S.Container $isfirst={isFirst}>
+      <S.TitleBox onClick={() => setIsOpen(!isOpen)}>
+        <S.ChevronIcon $isopen={isOpen} />
         <S.Title>{title.toUpperCase()}</S.Title>
       </S.TitleBox>
-      <Content type={text} />
+      {isOpen && <Content type={text} />}
     </S.Container>
   )
 }

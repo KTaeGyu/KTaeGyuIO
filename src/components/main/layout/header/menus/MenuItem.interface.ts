@@ -12,6 +12,7 @@ interface MenuItemType {
 interface ContainerProps {
   media?: number
   disabled?: boolean
+  $isSelect?: boolean
 }
 
 interface TextProps {

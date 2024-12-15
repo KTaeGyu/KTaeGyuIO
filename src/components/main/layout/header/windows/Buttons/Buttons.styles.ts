@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { theme } from "../../../../../styles/theme.css"
+import { theme } from "./../../../../../../styles/theme.css"
 
 const Button = styled.div`
   display: flex;
@@ -9,9 +9,9 @@ const Button = styled.div`
     background-color: ${theme.colors.vscode.bg.black[4]};
   }
   & > svg {
-    width: 12px;
-    height: 12px;
-    fill: ${theme.colors.vscode.txt[1]};
+    scale: 0.5;
+    stroke: ${theme.colors.vscode.txt[1]};
+    stroke-width: 2px;
   }
 `
 

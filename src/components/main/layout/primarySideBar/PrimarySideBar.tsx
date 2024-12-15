@@ -13,7 +13,7 @@ export default function PrimarySideBar() {
     <Search />
   ) : state === "Run and Debug" ? (
     <RunAndDebug />
-  ) : state === "Extensions" ? (
-    <Extensions />
-  ) : null
+  ) : (
+    state === "Extensions" && <Extensions />
+  )
 }

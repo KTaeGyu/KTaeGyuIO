@@ -21,9 +21,9 @@ const Container = styled.div`
 `
 
 const SearchIcon = styled(IconPath.Search)`
-  width: 18px;
-  height: 18px;
+  scale: 0.75;
   stroke: ${theme.colors.vscode.txt[1]};
+  stroke-width: 1.5px;
 `
 
 const Title = styled.h1`

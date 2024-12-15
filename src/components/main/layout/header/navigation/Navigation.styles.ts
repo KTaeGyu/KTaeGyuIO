@@ -26,9 +26,9 @@ const Button = styled.button`
 `
 
 const BackIcon = styled(IconPath.Arrow)`
-  width: 16.5px;
-  height: 16.5px;
+  scale: 0.6777;
   stroke: ${theme.colors.vscode.txt[1]};
+  stroke-width: 2px;
 `
 
 const ForwardIcon = styled(BackIcon)`

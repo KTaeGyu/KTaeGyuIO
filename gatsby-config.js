@@ -38,14 +38,7 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-vanilla-extract",
     "gatsby-plugin-styled-components",
-    {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-        rule: {
-          include: /\.inline\.svg$/,
-        },
-      },
-    },
+    "gatsby-plugin-svgr",
     {
       resolve: "gatsby-plugin-manifest",
       options: {

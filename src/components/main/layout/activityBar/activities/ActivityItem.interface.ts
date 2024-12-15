@@ -1,4 +1,4 @@
-import { ReactElement, ReactSVGElement, SVGProps } from "react"
+import { ActivityType } from "../Common.interface"
 
 interface ContainerProps {
   selected?: boolean
@@ -6,9 +6,8 @@ interface ContainerProps {
 
 type ActivityItemTitle = "Explorer" | "Search" | "Run and Debug" | "Extensions"
 
-interface ActivityItemType {
+interface ActivityItemType extends ActivityType {
   title: ActivityItemTitle
-  Icon: (props: SVGProps<ReactSVGElement>) => ReactElement
 }
 
 export type { ActivityItemTitle, ActivityItemType, ContainerProps }

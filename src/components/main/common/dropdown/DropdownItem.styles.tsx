@@ -1,3 +1,4 @@
+import React from "react"
 import styled from "styled-components"
 import IconPath from "../../../../assets/iconPath"
 import { theme } from "../../../../styles/theme.css"
@@ -21,19 +22,28 @@ const Container = styled.div<ContainerProps>`
       disabled ? "transparent" : theme.colors.vscode.bg.blue[1]};
   }
 
+  background-color: ${({ $isSelect }) =>
+    $isSelect && theme.colors.vscode.bg.blue[1]};
   ${({ media }) =>
     media && `@media (max-width: ${media}px) { display: flex; };`}
 `
 
-const CheckIcon = styled(IconPath.Check)`
+const CheckIconBox = styled.div`
   position: absolute;
-  inset: 8px 0;
-  left: 8px;
-  width: 20px;
-  height: 20px;
-  scale: 0.9 1;
-  stroke: ${theme.colors.vscode.txt[1]};
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  left: 6px;
+  scale: 0.8 1;
 `
+
+const CheckIcon = () => {
+  return (
+    <CheckIconBox>
+      <IconPath.Check stroke={theme.colors.vscode.txt[1]} strokeWidth={2} />
+    </CheckIconBox>
+  )
+}
 
 const Text = styled.p<TextProps>`
   margin-right: 48px;

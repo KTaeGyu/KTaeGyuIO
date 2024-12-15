@@ -4,11 +4,13 @@ import { ComponentProps } from "./Menus.interface"
 import S from "./Menus.styles"
 
 export default function Menus({ items }: ComponentProps) {
+  const checkedItem = items.filter((item) => item.checked)
+
   return (
     <S.Container>
-      {items.map((item) =>
-        item.checked ? <MenuItem key={item.text} {...item} /> : null
-      )}
+      {checkedItem.map((item, idx) => (
+        <MenuItem key={item.text} isFirst={!idx} {...item} />
+      ))}
     </S.Container>
   )
 }

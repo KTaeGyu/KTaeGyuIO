@@ -3,6 +3,9 @@ import IconPath from "../../../../../assets/iconPath"
 import { theme } from "../../../../../styles/theme.css"
 
 const Container = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   background-color: ${theme.colors.vscode.bg.green[1]};
   &:hover {
@@ -11,9 +14,9 @@ const Container = styled.button`
 `
 
 const Icon = styled(IconPath.RemoteWindow)`
-  stroke: ${theme.colors.original.white};
-  width: 18px;
-  height: 18px;
+  stroke: ${theme.colors.vscode.txt.white};
+  stroke-width: 2px;
+  scale: 0.8333;
 `
 
 const S = { Container, Icon }

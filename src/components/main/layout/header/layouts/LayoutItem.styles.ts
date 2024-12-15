@@ -17,12 +17,13 @@ const Container = styled.li`
 `
 
 const LayoutIcon = styled(IconPath.Layout)<LayoutIconProps>`
-  width: 22.5px;
-  height: 22.5px;
-  stroke: ${theme.colors.vscode.txt[1]};
   rotate: ${({ rotate }) => rotate};
   & path:first-of-type {
     ${({ disabled }) => !disabled && `fill: ${theme.colors.vscode.txt[1]};`}
+  }
+  & path:last-of-type {
+    stroke: ${theme.colors.vscode.txt[1]};
+    stroke-width: 1.5px;
   }
 `
 
