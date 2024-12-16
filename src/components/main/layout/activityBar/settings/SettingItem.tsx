@@ -1,8 +1,8 @@
 import React from "react"
-import { ActivityItemType } from "../activities/ActivityItem.interface"
+import { SettingItemType } from "./SettingItem.interface"
 import S from "./SettingItem.styles"
 
-export default function SettingItem({ Icon }: ActivityItemType) {
+export default function SettingItem({ Icon }: SettingItemType) {
   return (
     <S.Container>
       <Icon />

@@ -15,9 +15,10 @@ const Container = styled.li`
   }
 
   & > svg {
-    width: 30px;
-    height: 30px;
+    margin: 3px;
+    scale: 1.25;
     stroke: ${theme.colors.vscode.txt[2]};
+    stroke-width: 1.5px;
   }
 `
 

@@ -1,12 +1,10 @@
 import styled from "styled-components"
 import SettingS from "../settings/SettingItem.styles"
 import { theme } from "./../../../../../styles/theme.css"
-import { ContainerProps } from "./ActivityItem.interface"
+import { ContainerProps, HignlightProps } from "./ActivityItem.interface"
 
 const Container = styled(SettingS.Container)<ContainerProps>`
-  border-color: ${theme.colors.vscode.border.white};
-  border-width: 0 0 0 2px;
-  border-style: ${({ selected }) => selected && "solid"};
+  position: relative;
 
   & > svg {
     stroke: ${({ selected }) =>
@@ -14,6 +12,16 @@ const Container = styled(SettingS.Container)<ContainerProps>`
   }
 `
 
-const S = { Container }
+const Highlight = styled.div<HignlightProps>`
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: ${({ selected }) => (selected ? "block" : "none")};
+  background-color: ${theme.colors.vscode.border.white};
+  width: 2px;
+  height: 100%;
+`
+
+const S = { Container, Highlight }
 
 export default S
