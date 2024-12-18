@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { NotionColor } from "../../../constants/notionColor"
-import { theme } from "../../../styles/theme.css"
+import { theme } from "../../../styles/theme.styles"
 
 interface MajorStyleProps {
   $color?: string

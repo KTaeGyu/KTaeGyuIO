@@ -1,10 +1,10 @@
 import styled from "styled-components"
-import { theme } from "./../../../../../../styles/theme.css"
+import { theme } from "../../../../../../styles/theme.styles"
 
 const Button = styled.div`
   display: flex;
   align-items: center;
-  padding: 0 22px;
+  padding: 0 16px;
   &:hover {
     background-color: ${theme.colors.vscode.bg.black[4]};
   }

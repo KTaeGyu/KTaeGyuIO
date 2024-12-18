@@ -1,6 +1,5 @@
 import React, { PropsWithChildren } from "react"
-import PannelProvider from "../../../contexts/PannelContext"
-import PrimarySideBarProvider from "../../../contexts/PrimarySideBarCotext"
+import LayoutProvider from "../../../contexts/LayoutContext"
 import S from "./Layout.styles"
 import ActivityBar from "./activityBar/ActivityBar"
 import Footer from "./footer/Footer"
@@ -17,17 +16,15 @@ export default function Layout({ children }: PropsWithChildren) {
   } // 나중에 컨택스트로 만들기
 
   return (
-    <S.Container {...dimmensions}>
-      <PrimarySideBarProvider>
-        <PannelProvider>
-          <Header />
-          <ActivityBar />
-          <PrimarySideBar />
-          <Main>{children}</Main>
-          <Pannel />
-        </PannelProvider>
-      </PrimarySideBarProvider>
-      <Footer />
-    </S.Container>
+    <LayoutProvider>
+      <S.Container {...dimmensions}>
+        <Header />
+        <ActivityBar />
+        <PrimarySideBar />
+        <Main>{children}</Main>
+        <Pannel />
+        <Footer />
+      </S.Container>
+    </LayoutProvider>
   )
 }

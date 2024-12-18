@@ -1,29 +1,4 @@
-import { MenuItemType } from "./MenuItem.interface"
+const MEDIA: number[] = [960, 960, 960, 1160, 1310, 1480, 1760, 1800]
+const BREAKPOINTS: number[] = [0, 3, 4, 5, 6, 7]
 
-const Menus: MenuItemType[] = [
-  {
-    text: "File",
-    media: 1020,
-    subsets: [{ text: "Save" }, { text: "Save as ..." }],
-  },
-  {
-    text: "Edit",
-    media: 1020,
-  },
-  {
-    text: "View",
-    media: 1020,
-  },
-  {
-    text: "Option",
-    media: 1225,
-  },
-  {
-    text: "Help",
-    media: 1250,
-  },
-]
-
-const C = { Menus }
-
-export default C
+export { BREAKPOINTS, MEDIA }

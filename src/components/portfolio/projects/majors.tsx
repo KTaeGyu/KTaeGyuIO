@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react"
 import majors from "../../../assets/data/majorProjects"
 import { ReactComponent as Chevron } from "../../../assets/icons/Chevron.inline.svg"
-import { theme } from "../../../styles/theme.css"
+import { theme } from "../../../styles/theme.styles"
 import Major from "./major"
 import {
   Card,

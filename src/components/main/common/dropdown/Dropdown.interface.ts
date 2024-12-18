@@ -1,11 +1,9 @@
-import { MenuItemType } from "../../layout/header/menus/MenuItem.interface"
-
 interface ContainerProps {
-  position: "right" | "down"
+  position?: "right" | "down"
 }
 
 interface ComponentProps extends ContainerProps {
-  subsets: MenuItemType[]
+  subsets: LayoutItem[][]
 }
 
 export type { ComponentProps, ContainerProps }

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import IconPath from "../../../../assets/iconPath"
-import { theme } from "../../../../styles/theme.css"
+import { theme } from "../../../../styles/theme.styles"
 import {
   ContainerProps,
   TextProps,
@@ -9,8 +9,8 @@ import {
 
 const Container = styled.div<ContainerProps>`
   position: relative;
-  display: ${({ media }) => (media ? "none" : "flex")};
   gap: 48px;
+  display: flex;
   align-items: center;
   padding: 0 16px 0 32px;
   height: 35px;
@@ -24,8 +24,6 @@ const Container = styled.div<ContainerProps>`
 
   background-color: ${({ $isSelect }) =>
     $isSelect && theme.colors.vscode.bg.blue[1]};
-  ${({ media }) =>
-    media && `@media (max-width: ${media}px) { display: flex; };`}
 `
 
 const CheckIconBox = styled.div`

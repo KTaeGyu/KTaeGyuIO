@@ -1,4 +1,4 @@
-import { theme } from "../../styles/theme.css"
+import { theme } from "../../styles/theme.styles"
 
 interface skill {
   name: string

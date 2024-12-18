@@ -1,9 +1,11 @@
 import styled from "styled-components"
 import IconPath from "../../../../../assets/iconPath"
-import { theme } from "../../../../../styles/theme.css"
+import { theme } from "../../../../../styles/theme.styles"
 
 const Container = styled.ul`
   display: flex;
+  flex: 1;
+  justify-content: end;
   gap: ${theme.space[1.5]};
   padding: 0 4px;
 `

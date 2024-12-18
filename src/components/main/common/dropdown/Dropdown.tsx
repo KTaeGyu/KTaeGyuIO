@@ -1,23 +1,23 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { ComponentProps } from "./Dropdown.interface"
 import S from "./Dropdown.styles"
-import DropdownItem from "./DropdownItem"
+import DropdownGrop from "./DropdownGroup"
 
-export default function Dropdown({ subsets, position }: ComponentProps) {
+export default function Dropdown({
+  subsets,
+  position = "right",
+}: ComponentProps) {
   const [select, setSelect] = useState("")
-
-  useEffect(() => {
-    console.log(select)
-  }, [select])
 
   return (
     <S.Container position={position}>
-      {subsets.map((menu, idx) => (
-        <DropdownItem
+      {subsets.map((subset, idx) => (
+        <DropdownGrop
           key={idx}
-          {...menu}
+          subset={subset}
           select={select}
           setSelect={setSelect}
+          isEnd={idx === subsets.length - 1}
         />
       ))}
     </S.Container>

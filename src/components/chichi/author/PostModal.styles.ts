@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import IconPath from "../../../assets/iconPath"
-import { theme } from "../../../styles/theme.css"
+import { theme } from "../../../styles/theme.styles"
 
 const Wrapper = styled.div`
   position: absolute;

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { theme } from "../../../../styles/theme.css"
+import { theme } from "../../../../styles/theme.styles"
 import { ContainerProps } from "./Dropdown.interface"
 
 const Container = styled.ul<ContainerProps>`
@@ -12,7 +12,9 @@ const Container = styled.ul<ContainerProps>`
   border-radius: ${theme.radii[2]};
 
   ${({ position }) =>
-    position === "down" ? "left: 0; top: 100%;" : "left: 100%; top: 0;"}
+    position === "down"
+      ? "left: -6px; top: calc(100% + 6px);"
+      : "left: calc(100% + 6px); top: -6px;"}
 `
 const S = { Container }
 

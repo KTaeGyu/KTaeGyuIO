@@ -5,27 +5,24 @@ import { ComponentProps } from "./DropdownItem.interface"
 import S from "./DropdownItem.styles"
 
 export default function DropdownItem({
-  text,
-  media,
+  title,
   subsets,
   onClick,
-  position,
   checked,
   disabled,
   select,
   setSelect,
 }: ComponentProps) {
   const { ref, isOpen, toggleOpen, onMouseEnter, onMouseLeave } = useDropdown({
-    value: text,
+    value: title,
     select,
     setSelect,
   })
-  const isSelect = text === select && isOpen
+  const isSelect = title === select && isOpen
 
   return (
     <S.Container
       ref={ref}
-      media={media}
       disabled={disabled}
       onClick={disabled ? undefined : subsets ? toggleOpen : onClick}
       onMouseEnter={!disabled ? onMouseEnter : undefined}
@@ -33,11 +30,9 @@ export default function DropdownItem({
       $isSelect={isSelect}
     >
       {checked && <S.CheckIcon />}
-      <S.Text disabled={disabled}>{text}</S.Text>
+      <S.Text disabled={disabled}>{title}</S.Text>
       {subsets && <S.ChevronIcon />}
-      {subsets && isSelect && (
-        <Dropdown subsets={subsets} position={position} />
-      )}
+      {subsets && isSelect && <Dropdown subsets={subsets} />}
     </S.Container>
   )
 }

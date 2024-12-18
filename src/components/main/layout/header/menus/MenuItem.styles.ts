@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { theme } from "../../../../../styles/theme.css"
+import { theme } from "../../../../../styles/theme.styles"
 import { ContainerProps } from "./MenuItem.interface"
 
 const Container = styled.li<ContainerProps>`
@@ -19,8 +19,8 @@ const Container = styled.li<ContainerProps>`
     background-color: ${theme.colors.vscode.bg.black[2]};
   }
 
-  ${({ media }) =>
-    media && `@media (max-width: ${media}px) { display: none; };`}
+  ${({ $media }) =>
+    $media && `@media (max-width: ${$media}px) { display: none; };`}
 `
 
 const Text = styled.p`

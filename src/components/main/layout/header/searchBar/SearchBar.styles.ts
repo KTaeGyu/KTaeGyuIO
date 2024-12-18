@@ -1,13 +1,13 @@
 import styled from "styled-components"
 import IconPath from "../../../../../assets/iconPath"
-import { theme } from "../../../../../styles/theme.css"
+import { theme } from "../../../../../styles/theme.styles"
 
 const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   gap: ${theme.space[1]};
-  flex: 1.48;
+  flex: 1;
   height: 30px;
   background-color: ${theme.colors.vscode.bg.black[2]};
   border: 1px solid ${theme.colors.vscode.border[1]};

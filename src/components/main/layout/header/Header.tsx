@@ -9,13 +9,18 @@ import Windows from "./windows/Windows"
 export default function Header() {
   return (
     <S.Container>
-      <S.Logo src="/images/charactor_s_removebg.png" />
-      <Menus />
-      <Navigation />
-      <SearchBar />
-      <S.Space />
-      <Layouts />
-      <Windows />
+      <S.Left>
+        <S.Logo src="/images/charactor_s_removebg.png" />
+        <Menus />
+      </S.Left>
+      <S.Center>
+        <Navigation />
+        <SearchBar />
+      </S.Center>
+      <S.Right>
+        <Layouts />
+        <Windows />
+      </S.Right>
     </S.Container>
   )
 }

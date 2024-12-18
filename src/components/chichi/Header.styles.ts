@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { theme } from "../../styles/theme.css"
+import { theme } from "../../styles/theme.styles"
 
 const Container = styled.header`
   display: flex;

@@ -1,8 +1,8 @@
 import React from "react"
 import { ComponentProps } from "./Content.interface"
-import Folders from "./Folders/Folders"
-import Outline from "./Outline/Outline"
-import Timeline from "./Timeline/Timeline"
+import Folders from "./folders/Folders"
+import Outline from "./outline/Outline"
+import Timeline from "./timeline/Timeline"
 
 export default function Content({ type }: ComponentProps) {
   return type === "Open Editors" ? null : type === "Folders" ? (

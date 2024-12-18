@@ -1,22 +1,15 @@
-import { MouseEventHandler } from "react"
-
-interface MenuItemType {
-  text: string
-  media?: number
-  onClick?: MouseEventHandler
-  subsets?: MenuItemType[]
-  disabled?: boolean
-  checked?: boolean
+type ComponentProps = LayoutItem & {
+  media: number
 }
 
 interface ContainerProps {
-  media?: number
   disabled?: boolean
   $isSelect?: boolean
+  $media?: number
 }
 
 interface TextProps {
   disabled?: boolean
 }
 
-export type { ContainerProps, MenuItemType, TextProps }
+export type { ComponentProps, ContainerProps, TextProps }

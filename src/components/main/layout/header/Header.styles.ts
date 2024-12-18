@@ -1,10 +1,9 @@
 import styled from "styled-components"
-import { theme } from "../../../../styles/theme.css"
+import { theme } from "../../../../styles/theme.styles"
 
 const Container = styled.header`
   display: flex;
   grid-column: span 4;
-  align-items: center;
   background-color: ${theme.colors.vscode.bg.black[1]};
 `
 
@@ -14,10 +13,23 @@ const Logo = styled.img`
   margin: 12px;
 `
 
-const Space = styled.div`
-  flex: 0.51;
+const Section = styled.div`
+  display: flex;
+  align-items: center;
 `
 
-const S = { Container, Logo, Space }
+const Left = styled(Section)`
+  width: 28%;
+`
+
+const Right = styled(Section)`
+  flex: 1;
+`
+
+const Center = styled(Section)`
+  width: 42%;
+`
+
+const S = { Container, Logo, Left, Right, Center }
 
 export default S

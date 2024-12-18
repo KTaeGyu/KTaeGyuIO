@@ -1,6 +1,6 @@
 import styled from "styled-components"
+import { theme } from "../../../../../styles/theme.styles"
 import SettingS from "../settings/SettingItem.styles"
-import { theme } from "./../../../../../styles/theme.css"
 import { ContainerProps, HignlightProps } from "./ActivityItem.interface"
 
 const Container = styled(SettingS.Container)<ContainerProps>`

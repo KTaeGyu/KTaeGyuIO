@@ -7,12 +7,12 @@ import S from "./Layouts.styles"
 export default function Layouts() {
   return (
     <S.Container>
-      {C.Layouts.map((layout, idx) => (
-        <LayoutItem key={idx} {...layout} />
-      ))}
       <ItemS.Container>
         <S.LayoutSettingIcon />
       </ItemS.Container>
+      {C.Layouts.map((layout, idx) => (
+        <LayoutItem key={idx} {...layout} />
+      ))}
     </S.Container>
   )
 }

@@ -1,7 +1,12 @@
-import { useEffect, useRef, useState } from "react"
-import { Options } from "./useDropdown.interface"
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react"
 
-export default function useDropdoWwn(options?: Options) {
+interface Options {
+  value: string
+  select: string
+  setSelect: Dispatch<SetStateAction<string>>
+}
+
+export default function useDropdown(options?: Options) {
   const ref = useRef<HTMLDivElement & HTMLLIElement>()
   const [isOpen, setIsOpen] = useState(false)
   const toggleOpen = () => {
@@ -20,7 +25,7 @@ export default function useDropdoWwn(options?: Options) {
         const { setSelect, value } = options
         setSelect(value)
       }
-    }, 500)
+    }, 100)
     setTimeOutId(id)
   }
   const onMouseLeave = () => {

@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components"
-import { theme } from "../../../styles/theme.css"
+import { theme } from "../../../styles/theme.styles"
 
 const Wrapper = styled.article`
   flex: 1;
