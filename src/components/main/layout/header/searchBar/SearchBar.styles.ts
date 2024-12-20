@@ -6,12 +6,13 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: ${theme.space[1]};
+  gap: 4px;
   flex: 1;
-  height: 30px;
+  height: ${theme.sizes.token[1]};
   background-color: ${theme.colors.vscode.bg.black[2]};
   border: 1px solid ${theme.colors.vscode.border[1]};
   border-radius: ${theme.radii[2]};
+  box-sizing: content-box;
   overflow: hidden;
   cursor: pointer;
   &:hover {
@@ -21,7 +22,8 @@ const Container = styled.div`
 `
 
 const SearchIcon = styled(IconPath.Search)`
-  scale: 0.75;
+  width: ${theme.sizes.icon[14]};
+  height: ${theme.sizes.icon[14]};
   stroke: ${theme.colors.vscode.txt[1]};
   stroke-width: 1.5px;
 `

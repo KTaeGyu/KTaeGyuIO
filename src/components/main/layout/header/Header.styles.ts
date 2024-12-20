@@ -5,12 +5,13 @@ const Container = styled.header`
   display: flex;
   grid-column: span 4;
   background-color: ${theme.colors.vscode.bg.black[1]};
+  border-bottom: 1px solid ${theme.colors.vscode.bg.black[1]};
 `
 
 const Logo = styled.img`
-  width: 20px;
-  height: 20px;
-  margin: 12px;
+  width: ${theme.sizes.header.height};
+  height: ${theme.sizes.header.height};
+  padding: ${theme.space.token[5]};
 `
 
 const Section = styled.div`
@@ -19,15 +20,19 @@ const Section = styled.div`
 `
 
 const Left = styled(Section)`
-  width: 28%;
+  width: 31.67%;
 `
 
 const Right = styled(Section)`
-  flex: 1;
+  display: flex;
+  width: 31.67%;
+  gap: ${theme.space.token[4]};
 `
 
 const Center = styled(Section)`
-  width: 42%;
+  display: flex;
+  flex: 1;
+  gap: ${theme.space.token[5]};
 `
 
 const S = { Container, Logo, Left, Right, Center }

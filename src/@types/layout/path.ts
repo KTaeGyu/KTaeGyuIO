@@ -1,0 +1,1 @@
+type PathKey = "LAYOUTS" | "ACTIVITIES"

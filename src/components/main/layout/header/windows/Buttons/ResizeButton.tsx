@@ -8,7 +8,11 @@ export default function ResizeButton() {
 
   return (
     <S.Button onClick={isFull ? exitFull : requestFull}>
-      {isFull ? <IconPath.WindowRestore /> : <IconPath.WindowMaximize />}
+      {isFull ? (
+        <IconPath.WindowRestore viewBox="0 0 24 24" />
+      ) : (
+        <IconPath.WindowMaximize viewBox="0 0 24 24" />
+      )}
     </S.Button>
   )
 }

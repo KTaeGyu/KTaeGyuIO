@@ -1,8 +1,6 @@
-import { ActivityType } from "../Common.interface"
-
 type SettingItemTitle = "Accounts" | "Manage"
 
-interface SettingItemType extends ActivityType {
+interface SettingItemType {
   title: SettingItemTitle
 }
 

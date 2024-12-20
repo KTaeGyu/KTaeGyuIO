@@ -1,5 +1,5 @@
 interface ContainerProps {
-  position?: "right" | "down"
+  position?: "right" | "down" | "just-right" | "just-down"
 }
 
 interface ComponentProps extends ContainerProps {

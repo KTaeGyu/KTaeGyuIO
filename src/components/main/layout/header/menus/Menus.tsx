@@ -6,12 +6,12 @@ import { MEDIA } from "./Menus.constant"
 import S from "./Menus.styles"
 
 export default function Menus() {
-  const { state: menus } = useLayoutContext()
+  const { state } = useLayoutContext()
 
   return (
     <S.Container>
       <S.MenuItemBox>
-        {menus.map((menu, idx) => (
+        {state.menus.map((menu, idx) => (
           <MenuItem key={menu.title} {...menu} media={MEDIA[idx]} />
         ))}
         <HamburgerMenu />

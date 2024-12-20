@@ -5,7 +5,7 @@ const Container = styled.li`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  padding: ${theme.space.token[6]} 0;
   cursor: pointer;
 
   &:hover {
@@ -15,8 +15,6 @@ const Container = styled.li`
   }
 
   & > svg {
-    margin: 3px;
-    scale: 1.25;
     stroke: ${theme.colors.vscode.txt[2]};
     stroke-width: 1.5px;
   }

@@ -12,11 +12,12 @@ const Container = styled.div`
 const TitleBox = styled.div`
   display: flex;
   align-items: center;
-  padding: 8px 14px 8px 24px;
+  padding: ${theme.space.token[3]} ${theme.space.token[6]}
+    ${theme.space.token[3]} ${theme.space.token[10]};
 `
 
 const Title = styled.h4`
-  font-size: ${theme.fontSizes[0]};
+  font-size: ${theme.fontSizes[2]};
   font-weight: ${theme.fontWeights.normal};
   user-select: none;
 `

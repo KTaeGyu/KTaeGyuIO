@@ -8,19 +8,20 @@ import {
 } from "./PathItem.interface"
 
 const Container = styled.div<ContainerProps>`
-  border-left: ${({ $isroot }) =>
-    !$isroot && `1px solid ${theme.colors.vscode.border[3]}`};
+  padding-left: ${({ $isRoot }) => $isRoot && "4px"};
+  border-left: ${({ $isRoot }) =>
+    !$isRoot && `1px solid ${theme.colors.vscode.border[3]}`};
 `
 
 const TitleBox = styled.div<TitleBoxProps>`
   display: flex;
   align-items: center;
-  height: 28px;
-  padding-left: ${({ $subsets }) => !$subsets && "24px"};
+  height: 24px;
+  padding-left: ${({ $subsets }) => !$subsets && "18px"};
   user-select: none;
   cursor: pointer;
   &::before {
-    ${({ $islocation }) => $islocation && `content: "";`}
+    ${({ $isLocation }) => $isLocation && `content: "";`}
     position: absolute;
     z-index: 0;
     width: 100%;
@@ -36,18 +37,22 @@ const TitleBox = styled.div<TitleBoxProps>`
 `
 
 const ChevronIcon = styled(IconPath.Chevron)<ChevronIconProps>`
+  width: ${theme.sizes.icon[18]};
+  height: ${theme.sizes.icon[18]};
   stroke: ${theme.colors.vscode.txt[1]};
-  rotate: ${({ $isopen }) => ($isopen ? "180deg" : "90deg")};
+  rotate: ${({ $isOpen }) => ($isOpen ? "180deg" : "90deg")};
+  stroke-width: 1.5px;
 `
 
 const Icon = styled.img`
-  width: 16px;
-  height: 16px;
+  width: 13px;
+  height: 13px;
+  margin: 0 ${theme.space.token[3]};
 `
 
 const Title = styled.p`
-  line-height: ${theme.lineHeights.button};
-  margin: 0 6px;
+  font-size: ${theme.fontSizes[1]};
+  line-height: ${theme.fontSizes[1]};
 `
 
 const S = { Container, TitleBox, ChevronIcon, Icon, Title }

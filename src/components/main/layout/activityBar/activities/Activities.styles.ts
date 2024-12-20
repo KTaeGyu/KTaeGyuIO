@@ -1,7 +1,8 @@
 import styled from "styled-components"
-import SettingsS from "../settings/Settings.styles"
 
-const Container = styled(SettingsS.Container)`
+const Container = styled.ul`
+  display: flex;
+  flex-direction: column;
   flex: 1;
 `
 

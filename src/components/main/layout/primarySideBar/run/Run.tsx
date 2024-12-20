@@ -2,7 +2,7 @@ import React from "react"
 import More from "../../../common/more/More"
 import CommonS from "../PrimarySideBar.styles"
 
-export default function RunAndDebug() {
+export default function Run() {
   return (
     <CommonS.Container>
       <CommonS.TitleBox>

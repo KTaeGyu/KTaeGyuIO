@@ -1,12 +1,8 @@
-type LayoutItemTitle = "Primary Side Bar" | "Pannel" | "Secondary Side Bar"
+type ComponentProps = LayoutItem<LayoutsTitle>
 
-interface LayoutItemType {
-  title: LayoutItemTitle
-  rotate: string | number
+interface ContainerProps {
+  $checked?: boolean
+  $rotate?: number
 }
 
-interface LayoutIconProps {
-  disabled?: boolean
-}
-
-export type { LayoutIconProps, LayoutItemTitle, LayoutItemType }
+export type { ComponentProps, ContainerProps }

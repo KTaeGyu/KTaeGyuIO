@@ -1,16 +1,13 @@
 import React, {
   createContext,
-  Dispatch,
   PropsWithChildren,
-  SetStateAction,
   useContext,
   useState,
 } from "react"
-import { ActivityItemTitle } from "../components/main/layout/activityBar/activities/ActivityItem.interface"
 
 interface PrimarySideBarValue {
-  state: ActivityItemTitle
-  setState: Dispatch<SetStateAction<ActivityItemTitle>>
+  state: ActivityTitle
+  onClickActivity: (title: string) => void
 }
 
 const PrimarySideBarContext = createContext<PrimarySideBarValue>(null)
@@ -18,10 +15,13 @@ const PrimarySideBarContext = createContext<PrimarySideBarValue>(null)
 export default function PrimarySideBarProvider({
   children,
 }: PropsWithChildren) {
-  const [state, setState] = useState<ActivityItemTitle>("Explorer")
+  const [state, setState] = useState<ActivityTitle>("Explorer")
+  const onClickActivity = (title: ActivityTitle) => {
+    setState(title)
+  }
 
   return (
-    <PrimarySideBarContext.Provider value={{ state, setState }}>
+    <PrimarySideBarContext.Provider value={{ state, onClickActivity }}>
       {children}
     </PrimarySideBarContext.Provider>
   )

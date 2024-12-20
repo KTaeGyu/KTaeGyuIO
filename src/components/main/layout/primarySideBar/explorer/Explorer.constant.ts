@@ -1,25 +1,11 @@
 import { ExplorerMoreItem } from "./Explorer.interface"
 
 const MORE_ITEMS: ExplorerMoreItem[] = [
-  {
-    text: "Open Editors",
-  },
-  {
-    text: "Folders",
-    disabled: true,
-    checked: true,
-  },
-  {
-    text: "Outline",
-    checked: true,
-  },
-  {
-    text: "Timeline",
-    checked: true,
-  },
-  {
-    text: "NPM Scripts",
-  },
+  { title: "Open Editors" },
+  { title: "Folders", disabled: true, checked: true },
+  { title: "Outline", checked: true },
+  { title: "Timeline", checked: true },
+  { title: "NPM Scripts" },
 ]
 
 const C = { MORE_ITEMS }

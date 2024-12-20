@@ -25,7 +25,7 @@ export default function useDropdown(options?: Options) {
         const { setSelect, value } = options
         setSelect(value)
       }
-    }, 100)
+    }, 300)
     setTimeOutId(id)
   }
   const onMouseLeave = () => {

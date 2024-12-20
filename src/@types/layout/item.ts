@@ -1,8 +1,8 @@
-interface LayoutItem<T = string> {
+interface LayoutItem<T = string, S = string> {
   title: T
   shortcut?: string
   checked?: boolean
   disabled?: boolean
-  subsets?: LayoutItem[][]
+  subsets?: LayoutItem<S>[][]
   onClick?: React.MouseEventHandler
 }

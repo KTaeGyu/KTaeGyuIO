@@ -12,7 +12,7 @@ const Activites: ActivityItemType[] = [
   },
   {
     title: "Run and Debug",
-    Icon: IconPath.RunAndDebug,
+    Icon: IconPath.Run,
   },
   {
     title: "Extensions",

@@ -1,21 +1,21 @@
 import React, { useState } from "react"
 import PROJECT_NAME from "../../../../../../constants/projectName"
-import { ExplorerMoreItem } from "../Explorer.interface"
 import Content from "./Content"
+import { ComponentProps } from "./MenuItem.interface"
 import S from "./MenuItem.styles"
 
-export default function MenuItem({ text, isFirst }: ExplorerMoreItem) {
-  const isFolder = text === "Folders"
-  const title = isFolder ? PROJECT_NAME : text
+export default function MenuItem({ title, isFirst }: ComponentProps) {
+  const isFolder = title === "Folders"
+  const filteredTitle = isFolder ? PROJECT_NAME : title
   const [isOpen, setIsOpen] = useState(isFolder)
 
   return (
-    <S.Container $isfirst={isFirst} $isfolder={isFolder} $isopen={isOpen}>
+    <S.Container $isfirst={isFirst} $isfolder={isFolder} $isOpen={isOpen}>
       <S.TitleBox onClick={() => setIsOpen(!isOpen)}>
-        <S.ChevronIcon $isopen={isOpen} />
-        <S.Title>{title.toUpperCase()}</S.Title>
+        <S.ChevronIcon $isOpen={isOpen} viewBox="0 0 24 24" />
+        <S.Title>{filteredTitle.toUpperCase()}</S.Title>
       </S.TitleBox>
-      {isOpen && <Content type={text} />}
+      {isOpen && <Content type={title} />}
     </S.Container>
   )
 }

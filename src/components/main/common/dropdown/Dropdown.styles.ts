@@ -6,7 +6,6 @@ const Container = styled.ul<ContainerProps>`
   position: absolute;
   display: flex;
   flex-direction: column;
-  padding: 6px;
   background-color: ${theme.colors.vscode.bg.black[5]};
   border: 1px solid ${theme.colors.vscode.border[3]};
   border-radius: ${theme.radii[2]};
@@ -14,7 +13,11 @@ const Container = styled.ul<ContainerProps>`
   ${({ position }) =>
     position === "down"
       ? "left: -6px; top: calc(100% + 6px);"
-      : "left: calc(100% + 6px); top: -6px;"}
+      : position === "right"
+      ? "left: calc(100% + 6px); top: -6px;"
+      : position === "just-down"
+      ? "left: 0; top: 100%;"
+      : position === "just-right" && "left: 100%; top: 0;"}
 `
 const S = { Container }
 

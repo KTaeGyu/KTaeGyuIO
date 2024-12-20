@@ -113,7 +113,7 @@ const ExitButton = styled.button`
   width: 48px;
   height: 48px;
   background-color: #ffffff;
-  border-radius: ${theme.radii.max};
+  border-radius: ${theme.radii[99]};
 `
 
 const ExitIcon = styled(IconPath.WindowClose)`

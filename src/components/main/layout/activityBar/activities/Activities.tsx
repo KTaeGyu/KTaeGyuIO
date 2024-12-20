@@ -1,13 +1,15 @@
 import React from "react"
-import C from "./Activities.constant"
+import { useLayoutContext } from "../../../../../contexts/LayoutContext"
 import S from "./Activities.styles"
 import ActivityItem from "./ActivityItem"
 
 export default function Activities() {
+  const { state: layoutState } = useLayoutContext()
+
   return (
     <S.Container>
-      {C.Activites.map((activity, idx) => (
-        <ActivityItem key={idx} {...activity} />
+      {layoutState.activities.map((activity) => (
+        <ActivityItem key={activity.title} {...activity} />
       ))}
     </S.Container>
   )

@@ -34,13 +34,13 @@ export default function PathItem({
   const isLocation = location.pathname === filteredRoute + "/"
 
   return (
-    <S.Container $isroot={isRoot}>
+    <S.Container $isRoot={isRoot}>
       <S.TitleBox
         $subsets={!!subsets}
-        $islocation={isLocation}
+        $isLocation={isLocation}
         onClick={clickHandler}
       >
-        {subsets && <S.ChevronIcon $isopen={isOpen} />}
+        {subsets && <S.ChevronIcon $isOpen={isOpen} viewBox="0 0 24 24" />}
         <S.Icon src={`/images/path/${src}.png`} />
         <S.Title>{title}</S.Title>
       </S.TitleBox>

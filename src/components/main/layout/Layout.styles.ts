@@ -1,11 +1,13 @@
 import styled from "styled-components"
+import { theme } from "../../../styles/theme.styles"
 import { ContainerProps } from "./Layout.interface"
 
 const Container = styled.div<ContainerProps>`
   display: grid;
-  grid-template-rows: 44px 1fr ${({ $pannelheight }) => `${$pannelheight}px`} 28px;
+  grid-template-rows: ${theme.sizes.header.height} 1fr ${({ $pannelheight }) =>
+      `${$pannelheight}px`} ${theme.sizes.token[1]};
   grid-template-columns:
-    60px
+    ${theme.sizes.activity.width}
     ${({ $primarysidebarwidht }) => `${$primarysidebarwidht}px`}
     1fr
     ${({ $secondarysidebarwidth }) => `${$secondarysidebarwidth}px`};

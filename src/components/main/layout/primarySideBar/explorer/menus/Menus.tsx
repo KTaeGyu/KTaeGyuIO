@@ -9,7 +9,7 @@ export default function Menus({ items }: ComponentProps) {
   return (
     <S.Container>
       {checkedItem.map((item, idx) => (
-        <MenuItem key={item.text} isFirst={!idx} {...item} />
+        <MenuItem key={item.title} isFirst={!idx} {...item} />
       ))}
     </S.Container>
   )

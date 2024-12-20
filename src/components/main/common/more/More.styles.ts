@@ -3,23 +3,20 @@ import IconPath from "../../../../assets/iconPath"
 import { theme } from "../../../../styles/theme.styles"
 
 const Container = styled.div`
-  z-index: 1;
   position: relative;
-  border-radius: ${theme.radii[1]};
+  z-index: 1;
+`
 
-  & > button.active {
+const Button = styled.button`
+  ${theme.buttons.icon[22]}
+
+  .active {
     background-color: ${theme.colors.vscode.bg.black[8]};
   }
 
   &:hover {
     background-color: ${theme.colors.vscode.bg.black[8]};
   }
-`
-
-const Button = styled.button`
-  line-height: 0;
-  padding: 6px 0;
-  cursor: pointer;
 `
 
 const Icon = styled(IconPath.More)`

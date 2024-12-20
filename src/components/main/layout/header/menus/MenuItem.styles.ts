@@ -7,9 +7,10 @@ const Container = styled.li<ContainerProps>`
   z-index: 2;
   display: flex;
   align-items: center;
-  height: 28px;
+  height: ${theme.sizes.token[1]};
   border-radius: ${theme.radii[1]};
-  padding: ${theme.space.button[12]};
+  ${theme.buttons.text[22]}
+  transform: translateY(1px);
 
   &.active {
     background-color: ${theme.colors.vscode.bg.black[2]};
@@ -26,9 +27,8 @@ const Container = styled.li<ContainerProps>`
 const Text = styled.p`
   user-select: none;
   color: ${theme.colors.vscode.txt[1]};
-  font-size: ${theme.fontSizes.button[12]};
-  line-height: ${theme.fontSizes.button[12]};
   font-weight: ${theme.fontWeights.medium};
+  transform: translateY(-1px);
 `
 
 const S = { Container, Text }

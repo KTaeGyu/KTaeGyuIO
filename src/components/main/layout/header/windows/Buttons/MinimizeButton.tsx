@@ -5,7 +5,7 @@ import S from "./Buttons.styles"
 export default function MinimizeButton() {
   return (
     <S.Button>
-      <IconPath.WindowMinimize />
+      <IconPath.WindowMinimize viewBox="0 0 24 24" />
     </S.Button>
   )
 }

@@ -35,7 +35,7 @@ const Decoration = styled.img`
 const EmptyCell = styled.div`
   width: 100%;
   aspect-ratio: 1/1;
-  border-radius: ${theme.radii.max};
+  border-radius: ${theme.radii[99]};
   border: 5px dashed ${theme.colors.notion.perple};
 `
 

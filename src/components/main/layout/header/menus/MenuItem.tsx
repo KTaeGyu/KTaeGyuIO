@@ -15,7 +15,7 @@ export default function MenuItem({ title, subsets, media }: ComponentProps) {
       onClick={toggleOpen}
     >
       <S.Text>{title}</S.Text>
-      {isOpen && <Dropdown subsets={subsets} position="down" />}
+      {isOpen && <Dropdown subsets={subsets} position="just-down" />}
     </S.Container>
   )
 }

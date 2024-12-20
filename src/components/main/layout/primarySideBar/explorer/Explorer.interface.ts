@@ -1,15 +1,12 @@
-import { MenuItemType } from "../../header/menus/MenuItem.interface"
-
-type ExplorerItemText =
+type ExplorerItemTitle =
   | "Open Editors"
   | "Folders"
   | "Outline"
   | "Timeline"
   | "NPM Scripts"
 
-interface ExplorerMoreItem extends MenuItemType {
-  text: ExplorerItemText
-  isFirst?: boolean
+interface ExplorerMoreItem extends LayoutItem {
+  title: ExplorerItemTitle
 }
 
-export type { ExplorerItemText, ExplorerMoreItem }
+export type { ExplorerItemTitle, ExplorerMoreItem }

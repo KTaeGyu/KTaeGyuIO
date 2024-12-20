@@ -1,7 +1,7 @@
-import { ExplorerItemText } from "../Explorer.interface"
+import { ExplorerItemTitle } from "../Explorer.interface"
 
 interface ComponentProps {
-  type: ExplorerItemText
+  type: ExplorerItemTitle
 }
 
 export type { ComponentProps }

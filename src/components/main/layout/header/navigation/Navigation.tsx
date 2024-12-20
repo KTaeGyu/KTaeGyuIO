@@ -22,10 +22,10 @@ export default function Navigation() {
   return (
     <S.Container>
       <S.Button onClick={() => navigate(-1)} disabled={!canBack}>
-        <S.BackIcon />
+        <S.BackIcon viewBox="0 0 24 24" />
       </S.Button>
       <S.Button onClick={() => history.forward()} disabled={!canForward}>
-        <S.ForwardIcon />
+        <S.ForwardIcon viewBox="0 0 24 24" />
       </S.Button>
     </S.Container>
   )

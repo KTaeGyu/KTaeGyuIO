@@ -1,16 +1,6 @@
-import IconPath from "../../../../../assets/iconPath"
 import { SettingItemType } from "./SettingItem.interface"
 
-const Settings: SettingItemType[] = [
-  {
-    title: "Accounts",
-    Icon: IconPath.Account,
-  },
-  {
-    title: "Manage",
-    Icon: IconPath.Setting,
-  },
-]
+const Settings: SettingItemType[] = [{ title: "Accounts" }, { title: "Manage" }]
 
 const C = { Settings }
 

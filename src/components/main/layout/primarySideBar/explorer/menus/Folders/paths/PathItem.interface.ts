@@ -6,16 +6,16 @@ interface ComponentProps extends Path {
 }
 
 interface ContainerProps {
-  $isroot?: boolean
+  $isRoot?: boolean
 }
 
 interface TitleBoxProps {
   $subsets?: boolean
-  $islocation?: boolean
+  $isLocation?: boolean
 }
 
 interface ChevronIconProps {
-  $isopen?: boolean
+  $isOpen?: boolean
 }
 
 export type { ChevronIconProps, ComponentProps, ContainerProps, TitleBoxProps }

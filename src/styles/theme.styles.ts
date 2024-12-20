@@ -1,21 +1,17 @@
 import { colors } from "./colors.styles"
 
+const spaceToken = 2
+const tokenCount = 30
 const space = {
-  1: "4px",
-  1.5: "6px",
-  2: "8px",
-  3: "12px",
-  button: {
-    12: "0 10px",
-  },
+  token: {},
+}
+for (let i = 1; i <= tokenCount; i++) {
+  space.token[i] = `${spaceToken * i}px`
 }
 
 const fontSizes = {
-  0: "13.5px",
-  1: "14.5px",
-  button: {
-    12: "16px",
-  },
+  1: "13px",
+  2: "11px",
 }
 
 const fontWeights = {
@@ -26,6 +22,69 @@ const fontWeights = {
   extrabold: "800",
 }
 
+const sizes = {
+  token: {
+    1: "22px",
+    2: "26px",
+  },
+  container: "1280px",
+  header: {
+    height: "35px",
+    itemHeight: "22px",
+  },
+  activity: {
+    width: "48px",
+  },
+  icon: {
+    10: "10px",
+    12: "12px",
+    14: "14px",
+    18: "18px",
+    20: "20px",
+  },
+}
+
+const radii = {
+  1: "4px",
+  2: "8px",
+  99: "9999px",
+}
+
+const buttons = {
+  text: {
+    22: `
+    padding: 0 8px;
+    font-size: 13px;
+    line-height: 13px;`,
+  },
+  icon: {
+    22: `
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    & > svg {
+      width: 20px;
+      height: 20px;
+    }
+    `,
+  },
+}
+
+export const theme = {
+  colors,
+  space,
+  fontSizes,
+  fontWeights,
+  sizes,
+  radii,
+  buttons,
+}
+
+// Font Example
+
 // const maruBuriExtraLight = fontFace({
 //   fontVariant: "MaruBuri",
 //   fontDisplay: "swap",
@@ -34,57 +93,6 @@ const fontWeights = {
 //   src: 'url("/fonts/MaruBuri-ExtraLight.ttf")',
 // })
 
-const fonts = {
-  text: '"DM Sans", sans-serif',
-  heading: '"DM Sans", sans-serif',
-  mono: "DM Mono, Menlo, monospace",
-  // maruBuriExtraLight
-}
-
-const lineHeights = {
-  button: {
-    12: "16px",
-  },
-}
-
-const letterSpacings = {
-  normal: "0",
-  tight: "-0.02em",
-  wide: "0.08em",
-}
-
-const sizes = {
-  container: "1280px",
-  narrow: "1024px",
-  wide: "1440px",
-  tight: "848px",
-  avatar: "48px",
-  navGroupBoxMin: "300px",
-  navGroupBoxMax: "400px",
-  navIcon: "32px",
-  navIconSmall: "30px",
-}
-
-const radii = {
-  1: "4px",
-  2: "8px",
-  max: "9999px",
-}
-
-const shadows = {
-  large:
-    "0px 4px 8px 0px #2E29330A, 0px 4px 24px 0px #2E293314, 0px 8px 24px 0px #473F4F29",
-}
-
-export const theme = {
-  colors,
-  space,
-  fontSizes,
-  fontWeights,
-  fonts,
-  lineHeights,
-  letterSpacings,
-  sizes,
-  radii,
-  shadows,
-}
+// const fonts = {
+//   maruBuriExtraLight,
+// }

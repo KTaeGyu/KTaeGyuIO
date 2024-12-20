@@ -7,7 +7,7 @@ export default function CloseButton() {
 
   return (
     <S.CloseButton>
-      <IconPath.WindowClose />
+      <IconPath.WindowClose viewBox="0 0 24 24" />
     </S.CloseButton>
   )
 }

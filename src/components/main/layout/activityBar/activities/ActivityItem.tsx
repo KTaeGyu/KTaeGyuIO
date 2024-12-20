@@ -1,19 +1,17 @@
 import React from "react"
+import IconPath from "../../../../../assets/iconPath"
 import { usePrimarySideBarContext } from "../../../../../contexts/PrimarySideBarCotext"
-import { ActivityItemType } from "./ActivityItem.interface"
+import { ComponentProps } from "./ActivityItem.interface"
 import S from "./ActivityItem.styles"
 
-export default function ActivityItem({ title, Icon }: ActivityItemType) {
-  const { state, setState } = usePrimarySideBarContext()
-  const selected = title === state
-  const onClick = () => {
-    setState(selected ? null : title)
-  }
+export default function ActivityItem({ title }: ComponentProps) {
+  const Icon = IconPath[title]
+  const { state, onClickActivity } = usePrimarySideBarContext()
+  const selected = state === title
 
   return (
-    <S.Container selected={selected} onClick={onClick}>
-      <S.Highlight selected={selected} />
-      <Icon />
+    <S.Container $selected={selected} onClick={() => onClickActivity(title)}>
+      <Icon viewBox="0 0 24 24" />
     </S.Container>
   )
 }

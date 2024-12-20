@@ -18,19 +18,19 @@ const PaletteSubset: LayoutItem[] = [
   { title: "Open View..." },
 ]
 // View-Layout
-const WindowSubset: LayoutItem[] = [{ title: "Full Screen", shortcut: "F11" }]
-const PrimarySideBarSubset: LayoutItem[] = [
+const ViewportSubset: LayoutItem[] = [{ title: "Full Screen", shortcut: "F11" }]
+const LayoutsSubset: LayoutItem<LayoutsTitle>[] = [
   { title: "Menu Bar", disabled: true },
   { title: "Primary Side Bar", shortcut: "Ctrl+B", checked: true },
   { title: "Status Bar", disabled: true },
   { title: "Pannel", shortcut: "Ctrl+J", checked: true },
 ]
-const AppearanceSubsets: LayoutItem[][] = [WindowSubset, PrimarySideBarSubset]
-const LayoutSubset: LayoutItem[] = [
+const AppearanceSubsets: LayoutItem[][] = [ViewportSubset, LayoutsSubset]
+const WindowSubset: LayoutItem[] = [
   { title: "Appearance", subsets: AppearanceSubsets },
 ]
 // View-Activities
-const ActivitySubset: LayoutItem[] = [
+const ActivitySubset: LayoutItem<ActivityTitle>[] = [
   { title: "Explorer", shortcut: "Ctrl+Shift+E" },
   { title: "Search", shortcut: "Ctrl+Shift+F" },
   { title: "Run", shortcut: "Ctrl+Shift+D" },
@@ -46,7 +46,7 @@ const PannelTabSubset: LayoutItem[] = [
 // View
 const ViewSubsets: LayoutItem[][] = [
   PaletteSubset,
-  LayoutSubset,
+  WindowSubset,
   ActivitySubset,
   PannelTabSubset,
 ]
@@ -71,7 +71,7 @@ const LinkSubsets: LayoutItem[] = [
 ]
 const HelpSubsets: LayoutItem[][] = [WelcomeSubset, LinkSubsets]
 
-const LAYOUT_ITEMS: LayoutItem[] = [
+const LAYOUT_ITEMS: LayoutItem<MenusTitle>[] = [
   { title: "File", subsets: FileSubsets },
   { title: "Edit", subsets: Preparing },
   { title: "Selection", subsets: Preparing },
@@ -82,4 +82,5 @@ const LAYOUT_ITEMS: LayoutItem[] = [
   { title: "Help", subsets: HelpSubsets },
 ]
 
+export { LayoutsSubset }
 export default LAYOUT_ITEMS

@@ -5,6 +5,7 @@ import { ContainerProps } from "./DropdownGroup.interface"
 const Container = styled.div<ContainerProps>`
   display: flex;
   flex-direction: column;
+  padding: ${theme.space.token[3]};
   border-bottom: ${({ $isEnd }) =>
     !$isEnd && `1px solid ${theme.colors.vscode.border[3]}`};
 `

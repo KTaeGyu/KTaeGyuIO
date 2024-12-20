@@ -1,7 +1,7 @@
-import { ExplorerMoreItem } from "../../layout/primarySideBar/explorer/Explorer.interface"
+import { ExplorerItemTitle } from "../../layout/primarySideBar/explorer/Explorer.interface"
 
 interface ComponentProps {
-  items: ExplorerMoreItem[]
+  items: LayoutItem<ExplorerItemTitle>[][]
 }
 
 export type { ComponentProps }

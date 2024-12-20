@@ -1,22 +1,7 @@
-import { ActivityType } from "../Common.interface"
+type ComponentProps = LayoutItem<ActivityTitle>
 
 interface ContainerProps {
-  selected?: boolean
+  $selected?: boolean
 }
 
-interface HignlightProps {
-  selected?: boolean
-}
-
-type ActivityItemTitle = "Explorer" | "Search" | "Run and Debug" | "Extensions"
-
-interface ActivityItemType extends ActivityType {
-  title: ActivityItemTitle
-}
-
-export type {
-  ActivityItemTitle,
-  ActivityItemType,
-  ContainerProps,
-  HignlightProps,
-}
+export type { ComponentProps, ContainerProps }

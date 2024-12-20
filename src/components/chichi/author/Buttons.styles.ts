@@ -17,7 +17,7 @@ const Button = styled.button`
   justify-content: center;
   width: 60px;
   height: 60px;
-  border-radius: ${theme.radii.max};
+  border-radius: ${theme.radii[99]};
 `
 
 const BackButton = styled(Button)`

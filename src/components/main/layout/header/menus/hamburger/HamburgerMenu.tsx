@@ -7,7 +7,7 @@ import { BREAKPOINTS, MEDIA } from "../Menus.constant"
 import S from "./HamburgerMenu.styles"
 
 export default function HamburgerMenu() {
-  const { state: menus } = useLayoutContext()
+  const { state } = useLayoutContext()
   const { ref, isOpen, toggleOpen } = useDropdown()
   const [breakpoint, setBreakpoint] = useState(3)
   const breakpointHandler = () => {
@@ -48,7 +48,10 @@ export default function HamburgerMenu() {
         <S.MoreIcon />
       </ItemS.Container>
       {isOpen && (
-        <Dropdown subsets={[menus.slice(breakpoint)]} position="down" />
+        <Dropdown
+          subsets={[state.menus.slice(breakpoint)]}
+          position="just-down"
+        />
       )}
     </S.Container>
   )

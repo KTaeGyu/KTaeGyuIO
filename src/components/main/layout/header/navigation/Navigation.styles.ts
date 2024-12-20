@@ -4,16 +4,15 @@ import { theme } from "../../../../../styles/theme.styles"
 
 const Container = styled.div`
   display: flex;
-  gap: ${theme.space[1.5]};
-  padding: 0 12px;
+  gap: ${theme.space.token[2]};
 `
 
 const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: ${theme.sizes.token[1]};
+  height: ${theme.sizes.token[1]};
   &:hover {
     background-color: ${theme.colors.vscode.bg.black[2]};
   }
@@ -26,7 +25,8 @@ const Button = styled.button`
 `
 
 const BackIcon = styled(IconPath.Arrow)`
-  scale: 0.6777;
+  width: ${theme.sizes.icon[12]};
+  height: ${theme.sizes.icon[12]};
   stroke: ${theme.colors.vscode.txt[1]};
   stroke-width: 2px;
 `

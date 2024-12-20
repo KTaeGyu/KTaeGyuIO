@@ -1,11 +1,17 @@
+import { ExplorerMoreItem } from "../Explorer.interface"
+
+interface ComponentProps extends ExplorerMoreItem {
+  isFirst?: boolean
+}
+
 interface ContainerProps {
   $isfirst?: boolean
   $isfolder?: boolean
-  $isopen?: boolean
+  $isOpen?: boolean
 }
 
 interface ChevronIconProps {
-  $isopen?: boolean
+  $isOpen?: boolean
 }
 
-export type { ChevronIconProps, ContainerProps }
+export type { ChevronIconProps, ComponentProps, ContainerProps }
