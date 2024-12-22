@@ -24,3 +24,19 @@ globalStyle("button", {
 globalStyle("button:disabled", {
   cursor: "auto",
 })
+// input
+globalStyle("input", {
+  backgroundColor: "transparent",
+  border: "none",
+})
+globalStyle("input:focus", {
+  outline: "none",
+})
+// textarea
+globalStyle("textarea", {
+  backgroundColor: "transparent",
+  border: "none",
+})
+globalStyle("textarea:focus", {
+  outline: "none",
+})

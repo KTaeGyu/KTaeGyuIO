@@ -6,7 +6,7 @@ const Container = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
+  width: ${theme.sizes.token[3]};
   background-color: ${theme.colors.vscode.bg.green[1]};
   &:hover {
     background-color: ${theme.colors.vscode.bg.green[2]};
@@ -14,9 +14,10 @@ const Container = styled.button`
 `
 
 const Icon = styled(IconPath.RemoteWindow)`
+  width: ${theme.sizes.icon[16]};
+  height: ${theme.sizes.icon[16]};
   stroke: ${theme.colors.vscode.txt.white};
   stroke-width: 2px;
-  scale: 0.8333;
 `
 
 const S = { Container, Icon }

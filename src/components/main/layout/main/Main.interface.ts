@@ -1,7 +1,5 @@
-import { ActivityItemTitle } from "../activityBar/activities/ActivityItem.interface"
-
 interface ContainerProps {
-  $primarysidebar: ActivityItemTitle | null
+  $primarySideBar: boolean
   $pannel: boolean
 }
 

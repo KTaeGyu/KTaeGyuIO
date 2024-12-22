@@ -3,7 +3,9 @@ import { colors } from "./colors.styles"
 const spaceToken = 2
 const tokenCount = 30
 const space = {
-  token: {},
+  token: {
+    2.5: "5px",
+  },
 }
 for (let i = 1; i <= tokenCount; i++) {
   space.token[i] = `${spaceToken * i}px`
@@ -12,6 +14,7 @@ for (let i = 1; i <= tokenCount; i++) {
 const fontSizes = {
   1: "13px",
   2: "11px",
+  3: "12px",
 }
 
 const fontWeights = {
@@ -26,19 +29,18 @@ const sizes = {
   token: {
     1: "22px",
     2: "26px",
+    3: "34px",
+    4: "48px",
   },
   container: "1280px",
   header: {
     height: "35px",
-    itemHeight: "22px",
-  },
-  activity: {
-    width: "48px",
   },
   icon: {
     10: "10px",
     12: "12px",
     14: "14px",
+    16: "16px",
     18: "18px",
     20: "20px",
   },
@@ -46,28 +48,27 @@ const sizes = {
 
 const radii = {
   1: "4px",
-  2: "8px",
   99: "9999px",
 }
 
 const buttons = {
   text: {
     22: `
-    padding: 0 8px;
-    font-size: 13px;
-    line-height: 13px;`,
+    padding: 0 ${space.token[4]};
+    font-size: ${fontSizes[1]};
+    line-height: ${fontSizes[1]};`,
   },
   icon: {
     22: `
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 22px;
-    height: 22px;
-    border-radius: 4px;
+    width: ${sizes.token[1]};
+    height: ${sizes.token[1]};
+    border-radius: ${radii[1]};
     & > svg {
-      width: 20px;
-      height: 20px;
+      width: ${sizes.icon[20]};
+      height: ${sizes.icon[20]};
     }
     `,
   },

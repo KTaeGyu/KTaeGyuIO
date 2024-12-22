@@ -27,7 +27,7 @@ export default function LayoutProvider({ children }: PropsWithChildren) {
   }
   function getSubset<T>(key: PathKey): LayoutItem<T>[] {
     const path = PATH[key]
-    return reduceSubset(layout, path)
+    return reduceSubset(menus, path)
   }
   // setter
   const setItem = (
@@ -69,31 +69,48 @@ export default function LayoutProvider({ children }: PropsWithChildren) {
   }
 
   // states
-  const [layout, setLayout] = useState(LAYOUT_ITEMS)
+  const [menus, setMenus] = useState(LAYOUT_ITEMS)
   const layouts = getSubset<LayoutsTitle>("LAYOUTS")
   const activities = getSubset<ActivityTitle>("ACTIVITIES")
+  const [primarySideBar, setPrimary] = useState<ActivityTitle>("Explorer")
+  const pannelTabs = getSubset<PannelTabTitle>("PANNELTAB")
+  const [pannel, setPannelTab] = useState<PannelTabTitle>("Terminal")
 
-  // setStates
-  const setLayoutsChecked = (idx: number) => {
-    const path = [...PATH.LAYOUTS, idx]
-    setLayout((prev) =>
-      prev.map((item, i) =>
-        setItem(
-          item,
-          i,
-          path,
-          "checked",
-          !layout[3].subsets[1][0].subsets[1][idx].checked
-        )
-      )
-    )
+  // getItem
+  function getItem<T = string>(subset: LayoutItem<T>[], title: T) {
+    return subset.find((item) => item.title === title)
   }
 
-  const state = { menus: layout, layouts, activities }
-  const setState = { setLayoutsChecked }
+  // setStates
+  const setLayoutsChecked = (idx: number, value?: boolean) => {
+    const path = [...PATH.LAYOUTS, idx]
+    setMenus((prev) =>
+      prev.map((item, i) => setItem(item, i, path, "checked", value))
+    )
+  }
+  const setPrimarySideBar = (title: ActivityTitle) => {
+    setPrimary((prev) => {
+      const willOpen = prev !== title
+      setLayoutsChecked(1, willOpen)
+      return willOpen ? title : null
+    })
+  }
+  const setPannel = (title: PannelTabTitle) => {
+    setPannelTab(title)
+  }
+
+  const state = {
+    menus,
+    layouts,
+    activities,
+    primarySideBar,
+    pannelTabs,
+    pannel,
+  }
+  const setState = { setLayoutsChecked, setPrimarySideBar, setPannel }
 
   return (
-    <LayoutContext.Provider value={{ state, setState }}>
+    <LayoutContext.Provider value={{ state, setState, getItem }}>
       {children}
     </LayoutContext.Provider>
   )

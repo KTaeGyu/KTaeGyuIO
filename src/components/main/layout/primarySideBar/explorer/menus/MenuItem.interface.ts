@@ -5,8 +5,8 @@ interface ComponentProps extends ExplorerMoreItem {
 }
 
 interface ContainerProps {
-  $isfirst?: boolean
-  $isfolder?: boolean
+  $isFirst?: boolean
+  $isFolder?: boolean
   $isOpen?: boolean
 }
 

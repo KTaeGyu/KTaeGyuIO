@@ -1,6 +1,6 @@
 interface ContainerProps {
   $pannelheight: number
-  $primarysidebarwidht: number
+  $primarySideBarwidht: number
   $secondarysidebarwidth: number
 }
 

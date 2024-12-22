@@ -1,1 +1,1 @@
-type PathKey = "LAYOUTS" | "ACTIVITIES"
+type PathKey = "LAYOUTS" | "ACTIVITIES" | "PANNELTAB"

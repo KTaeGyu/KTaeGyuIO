@@ -11,4 +11,8 @@ interface ComponentProps {
   route?: string
 }
 
-export type { ComponentProps, Path }
+interface ContainerProps {
+  $isRoot?: boolean
+}
+
+export type { ComponentProps, ContainerProps, Path }

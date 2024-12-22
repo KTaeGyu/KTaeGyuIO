@@ -11,7 +11,7 @@ const Container = styled.div`
   height: ${theme.sizes.token[1]};
   background-color: ${theme.colors.vscode.bg.black[2]};
   border: 1px solid ${theme.colors.vscode.border[1]};
-  border-radius: ${theme.radii[2]};
+  border-radius: ${theme.radii[1]};
   box-sizing: content-box;
   overflow: hidden;
   cursor: pointer;

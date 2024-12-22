@@ -8,7 +8,7 @@ const Container = styled.ul<ContainerProps>`
   flex-direction: column;
   background-color: ${theme.colors.vscode.bg.black[5]};
   border: 1px solid ${theme.colors.vscode.border[3]};
-  border-radius: ${theme.radii[2]};
+  border-radius: ${theme.radii[1]};
 
   ${({ position }) =>
     position === "down"

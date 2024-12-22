@@ -9,8 +9,8 @@ const Container = styled.header`
 `
 
 const Logo = styled.img`
-  width: ${theme.sizes.header.height};
-  height: ${theme.sizes.header.height};
+  width: ${theme.sizes.token[3]};
+  height: ${theme.sizes.token[3]};
   padding: ${theme.space.token[5]};
 `
 

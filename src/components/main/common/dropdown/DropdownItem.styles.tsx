@@ -13,7 +13,7 @@ const Container = styled.div<ContainerProps>`
   align-items: center;
   padding: 0 ${theme.space.token[7]} 0 ${theme.space.token[13]};
   height: ${theme.sizes.token[2]};
-  border-radius: ${theme.radii[2]};
+  border-radius: ${theme.radii[1]};
   cursor: ${({ disabled }) => (disabled ? "auto" : "pointer")};
 
   &:hover {

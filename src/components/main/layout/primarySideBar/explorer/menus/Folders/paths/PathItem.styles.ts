@@ -1,17 +1,9 @@
 import styled from "styled-components"
 import IconPath from "../../../../../../../../assets/iconPath"
 import { theme } from "../../../../../../../../styles/theme.styles"
-import {
-  ChevronIconProps,
-  ContainerProps,
-  TitleBoxProps,
-} from "./PathItem.interface"
+import { ChevronIconProps, TitleBoxProps } from "./PathItem.interface"
 
-const Container = styled.div<ContainerProps>`
-  padding-left: ${({ $isRoot }) => $isRoot && "4px"};
-  border-left: ${({ $isRoot }) =>
-    !$isRoot && `1px solid ${theme.colors.vscode.border[3]}`};
-`
+const Container = styled.div``
 
 const TitleBox = styled.div<TitleBoxProps>`
   display: flex;
@@ -20,6 +12,7 @@ const TitleBox = styled.div<TitleBoxProps>`
   padding-left: ${({ $subsets }) => !$subsets && "18px"};
   user-select: none;
   cursor: pointer;
+
   &::before {
     ${({ $isLocation }) => $isLocation && `content: "";`}
     position: absolute;

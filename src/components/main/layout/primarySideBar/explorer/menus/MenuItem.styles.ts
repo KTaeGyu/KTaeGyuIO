@@ -5,9 +5,9 @@ import { ChevronIconProps, ContainerProps } from "./MenuItem.interface"
 
 const Container = styled.li<ContainerProps>`
   position: relative;
-  border-top: ${({ $isfirst }) =>
-    !$isfirst && `1px solid ${theme.colors.vscode.border[3]}`};
-  flex: ${({ $isfolder, $isOpen }) => $isOpen && $isfolder && "1"};
+  border-top: ${({ $isFirst }) =>
+    !$isFirst && `1px solid ${theme.colors.vscode.border[3]}`};
+  flex: ${({ $isFolder, $isOpen }) => $isOpen && $isFolder && "1"};
   /* 드래그로 변경가능하게 수정할 것 */
   min-height: ${({ $isOpen }) => ($isOpen ? "160px" : theme.sizes.token[1])};
   overflow-y: hidden;

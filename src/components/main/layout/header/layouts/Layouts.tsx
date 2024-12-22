@@ -19,7 +19,7 @@ export default function Layouts() {
             <LayoutItem
               key={idx}
               {...layout}
-              onClick={() => setState.setLayoutsChecked(idx)}
+              onClick={() => setState.setLayoutsChecked(idx, !layout.checked)}
             />
           )
       )}

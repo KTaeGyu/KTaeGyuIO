@@ -1,5 +1,5 @@
 interface ContainerProps {
-  $primarysidebar: string | null
+  $primarySideBar?: boolean
 }
 
 export type { ContainerProps }

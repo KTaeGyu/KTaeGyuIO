@@ -7,7 +7,7 @@ export default function Extensions() {
   return (
     <CommonS.Container>
       <CommonS.TitleBox>
-        <CommonS.Title>EXPLORER</CommonS.Title>
+        <CommonS.Title>EXTENSIONS</CommonS.Title>
         <CommonS.TitleButtonBox>
           <RefreshButton />
           <More items={[]} />

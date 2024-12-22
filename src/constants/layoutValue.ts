@@ -23,7 +23,7 @@ const LayoutsSubset: LayoutItem<LayoutsTitle>[] = [
   { title: "Menu Bar", disabled: true },
   { title: "Primary Side Bar", shortcut: "Ctrl+B", checked: true },
   { title: "Status Bar", disabled: true },
-  { title: "Pannel", shortcut: "Ctrl+J", checked: true },
+  { title: "Pannel", shortcut: "Ctrl+J", checked: false },
 ]
 const AppearanceSubsets: LayoutItem[][] = [ViewportSubset, LayoutsSubset]
 const WindowSubset: LayoutItem[] = [

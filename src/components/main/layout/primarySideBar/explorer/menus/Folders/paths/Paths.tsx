@@ -5,9 +5,9 @@ import S from "./Paths.styles"
 
 export default function Paths({ items, isRoot, route }: ComponentProps) {
   return (
-    <S.Container>
+    <S.Container $isRoot={isRoot}>
       {items.map((path) => (
-        <PathItem key={path.title} {...path} isRoot={isRoot} route={route} />
+        <PathItem key={path.title} {...path} route={route} />
       ))}
     </S.Container>
   )

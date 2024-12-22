@@ -1,14 +1,14 @@
 import React, { PropsWithChildren } from "react"
-import { usePannelContext } from "../../../../contexts/PannelContext"
-import { usePrimarySideBarContext } from "../../../../contexts/PrimarySideBarCotext"
+import { useLayoutContext } from "../../../../contexts/LayoutContext"
 import S from "./Main.styles"
 
 export default function Main({ children }: PropsWithChildren) {
-  const { state: PSB_State } = usePrimarySideBarContext()
-  const { state: P_State } = usePannelContext()
+  const { state, getItem } = useLayoutContext()
+  const PSB_isOpen = getItem(state.layouts, "Primary Side Bar").checked
+  const pannelIsOpen = getItem(state.layouts, "Pannel").checked
 
   return (
-    <S.Container $primarysidebar={PSB_State} $pannel={P_State}>
+    <S.Container $primarySideBar={PSB_isOpen} $pannel={pannelIsOpen}>
       {children}
     </S.Container>
   )
