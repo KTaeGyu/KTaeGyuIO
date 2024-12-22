@@ -6,6 +6,7 @@ interface ContainerProps {
   disabled?: boolean
   $isSelect?: boolean
   $media?: number
+  $hasSubset?: boolean
 }
 
 interface TextProps {

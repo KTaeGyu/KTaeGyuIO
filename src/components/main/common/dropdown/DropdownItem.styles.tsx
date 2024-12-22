@@ -11,7 +11,7 @@ const Container = styled.div<ContainerProps>`
   display: flex;
   min-width: 152px;
   align-items: center;
-  padding: 0 ${theme.space.token[7]} 0 ${theme.space.token[13]};
+  padding: 0 ${theme.space.token[4]} 0 ${theme.space.token[13]};
   height: ${theme.sizes.token[2]};
   border-radius: ${theme.radii[1]};
   cursor: ${({ disabled }) => (disabled ? "auto" : "pointer")};
@@ -31,6 +31,10 @@ const Container = styled.div<ContainerProps>`
 
   background-color: ${({ $isSelect }) =>
     $isSelect && theme.colors.vscode.bg.blue[1]};
+
+  & > .textBox > p:nth-child(2) {
+    margin-right: ${({ $hasSubset }) => !$hasSubset && theme.space.token[8]};
+  }
 `
 
 const CheckIcon = styled(IconPath.Check)`

@@ -29,13 +29,14 @@ export default function DropdownItem({
       onMouseEnter={!disabled ? onMouseEnter : undefined}
       onMouseLeave={!disabled ? onMouseLeave : undefined}
       $isSelect={subsets && isSelect}
+      $hasSubset={!!subsets}
     >
       {checked && <S.CheckIcon viewBox="0 0 24 24" />}
-      <S.TextBox>
+      <S.TextBox className="textBox">
         <S.Text disabled={disabled}>{title}</S.Text>
         {shortcut && <S.Text>{shortcut}</S.Text>}
       </S.TextBox>
-      {subsets && <S.ChevronIcon viewBox="0 0 24 24" />}
+      {subsets && <S.ChevronIcon className="open" viewBox="0 0 24 24" />}
       {subsets && isSelect && <Dropdown subsets={subsets} />}
     </S.Container>
   )
