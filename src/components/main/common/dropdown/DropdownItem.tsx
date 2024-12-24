@@ -14,7 +14,7 @@ export default function DropdownItem({
   select,
   setSelect,
 }: ComponentProps) {
-  const { ref, isOpen, toggleOpen, onMouseEnter, onMouseLeave } = useDropdown({
+  const { ref, isOpen, open, onMouseEnter, onMouseLeave } = useDropdown({
     value: title,
     select,
     setSelect,
@@ -25,7 +25,7 @@ export default function DropdownItem({
     <S.Container
       ref={ref}
       disabled={disabled}
-      onClick={disabled ? undefined : subsets ? toggleOpen : onClick}
+      onClick={disabled ? undefined : subsets ? open : onClick}
       onMouseEnter={!disabled ? onMouseEnter : undefined}
       onMouseLeave={!disabled ? onMouseLeave : undefined}
       $isSelect={subsets && isSelect}
@@ -34,7 +34,7 @@ export default function DropdownItem({
       {checked && <S.CheckIcon viewBox="0 0 24 24" />}
       <S.TextBox className="textBox">
         <S.Text disabled={disabled}>{title}</S.Text>
-        {shortcut && <S.Text>{shortcut}</S.Text>}
+        {shortcut && <S.Text>{shortcut.join("+")}</S.Text>}
       </S.TextBox>
       {subsets && <S.ChevronIcon className="open" viewBox="0 0 24 24" />}
       {subsets && isSelect && <Dropdown subsets={subsets} />}

@@ -3,7 +3,7 @@ import { useFoldersContext } from "../../../../../../../contexts/FoldersContext"
 import Paths from "./paths/Paths"
 
 export default function Folders() {
-  const { state } = useFoldersContext()
+  const { folders } = useFoldersContext()
 
-  return <Paths items={state} isRoot />
+  return <Paths items={folders} isRoot />
 }

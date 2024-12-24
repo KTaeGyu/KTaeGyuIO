@@ -8,7 +8,7 @@ import S from "./HamburgerMenu.styles"
 
 export default function HamburgerMenu() {
   const { state } = useLayoutContext()
-  const { ref, isOpen, toggleOpen } = useDropdown()
+  const { ref, isOpen, open } = useDropdown()
   const [breakpoint, setBreakpoint] = useState(3)
   const breakpointHandler = () => {
     const width = window.innerWidth
@@ -43,7 +43,7 @@ export default function HamburgerMenu() {
 
   return (
     <S.Container ref={ref}>
-      <ItemS.Container className={isOpen && "active"} onClick={toggleOpen}>
+      <ItemS.Container className={isOpen && "active"} onClick={open}>
         <S.HamburgerIcon />
         <S.MoreIcon />
       </ItemS.Container>

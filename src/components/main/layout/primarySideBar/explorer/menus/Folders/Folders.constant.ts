@@ -112,6 +112,10 @@ const PATH: Path[] = [
     ],
   },
   {
+    title: "Welcome.tsx",
+    isOpen: false,
+  },
+  {
     title: "README.md",
     isOpen: false,
   },

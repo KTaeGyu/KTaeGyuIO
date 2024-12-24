@@ -9,22 +9,24 @@ interface Options {
 export default function useDropdown(options?: Options) {
   const ref = useRef<HTMLDivElement & HTMLLIElement>()
   const [isOpen, setIsOpen] = useState(false)
-  const toggleOpen = () => {
-    setIsOpen(!isOpen)
+  const open = () => {
+    setIsOpen(true)
     if (options) {
-      const { setSelect, value, select } = options
-      setSelect(value === select ? "" : value)
+      const { setSelect, value } = options
+      setSelect(value)
+    }
+  }
+  const close = () => {
+    setIsOpen(false)
+    if (options) {
+      options.setSelect("")
     }
   }
 
   const [timeOutId, setTimeOutId] = useState<NodeJS.Timeout>()
   const onMouseEnter = () => {
     const id = setTimeout(() => {
-      setIsOpen(true)
-      if (options) {
-        const { setSelect, value } = options
-        setSelect(value)
-      }
+      open()
     }, 300)
     setTimeOutId(id)
   }
@@ -38,10 +40,7 @@ export default function useDropdown(options?: Options) {
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (ref.current && !ref.current.contains(e.target as Node)) {
-        setIsOpen(false)
-        if (options) {
-          options.setSelect("")
-        }
+        close()
       }
     }
 
@@ -54,7 +53,7 @@ export default function useDropdown(options?: Options) {
     return () => {
       document.removeEventListener("click", handleClickOutside)
     }
-  }, [isOpen])
+  }, [isOpen, close])
 
-  return { ref, isOpen, toggleOpen, onMouseEnter, onMouseLeave }
+  return { ref, isOpen, open, close, onMouseEnter, onMouseLeave }
 }

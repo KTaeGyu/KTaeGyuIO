@@ -1,6 +1,6 @@
 interface LayoutItem<T = string, S = string> {
   title: T
-  shortcut?: string
+  shortcut?: string[]
   checked?: boolean
   disabled?: boolean
   subsets?: LayoutItem<S>[][]

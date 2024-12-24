@@ -9,7 +9,6 @@ import Folders from "./Paths"
 export default function PathItem({
   title,
   subsets,
-  isRoot,
   isOpen,
   href,
   route,
@@ -34,7 +33,7 @@ export default function PathItem({
   const isLocation = location.pathname === filteredRoute + "/"
 
   return (
-    <S.Container $isRoot={isRoot}>
+    <S.Container>
       <S.TitleBox
         $subsets={!!subsets}
         $isLocation={isLocation}

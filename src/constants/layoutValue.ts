@@ -1,10 +1,12 @@
+import SHORTCUTS from "./shortcuts"
+
 // Prepareing-Edit, Selection, Go, Run, Terminal
 const Preparing: LayoutItem[][] = [[{ title: "Preparing...", disabled: true }]]
 
 // File
 const SaveSubset: LayoutItem[] = [
-  { title: "Save", shortcut: "Ctrl+S" },
-  { title: "Save As...", shortcut: "Ctrl+Shift+S" },
+  { title: "Save", shortcut: SHORTCUTS["Save"] },
+  { title: "Save As...", shortcut: SHORTCUTS["Save As..."] },
 ]
 const ShareSubset: LayoutItem[] = [
   { title: "Share", subsets: [[{ title: "Copy kteagyu-io Link" }]] },
@@ -14,16 +16,22 @@ const FileSubsets: LayoutItem[][] = [SaveSubset, ShareSubset]
 // 스크립트-브라우저 모드, Activities, Layouts, Appearence 등
 // View-Palette
 const PaletteSubset: LayoutItem[] = [
-  { title: "Command Palette...", shortcut: "Ctrl+Shift+P" },
+  { title: "Command Palette...", shortcut: SHORTCUTS["Command Palette..."] },
   { title: "Open View..." },
 ]
 // View-Layout
-const ViewportSubset: LayoutItem[] = [{ title: "Full Screen", shortcut: "F11" }]
+const ViewportSubset: LayoutItem[] = [
+  { title: "Full Screen", shortcut: SHORTCUTS["Full Screen"] },
+]
 const LayoutsSubset: LayoutItem<LayoutsTitle>[] = [
   { title: "Menu Bar", disabled: true },
-  { title: "Primary Side Bar", shortcut: "Ctrl+B", checked: true },
+  {
+    title: "Primary Side Bar",
+    shortcut: SHORTCUTS["Primary Side Bar"],
+    checked: true,
+  },
   { title: "Status Bar", disabled: true },
-  { title: "Pannel", shortcut: "Ctrl+J", checked: false },
+  { title: "Pannel", shortcut: SHORTCUTS["Pannel"], checked: false },
 ]
 const AppearanceSubsets: LayoutItem[][] = [ViewportSubset, LayoutsSubset]
 const WindowSubset: LayoutItem[] = [
@@ -31,17 +39,17 @@ const WindowSubset: LayoutItem[] = [
 ]
 // View-Activities
 const ActivitySubset: LayoutItem<ActivityTitle>[] = [
-  { title: "Explorer", shortcut: "Ctrl+Shift+E" },
-  { title: "Search", shortcut: "Ctrl+Shift+F" },
-  { title: "Run", shortcut: "Ctrl+Shift+D" },
-  { title: "Extensions", shortcut: "Ctrl+Shift+X" },
+  { title: "Explorer", shortcut: SHORTCUTS["Explorer"] },
+  { title: "Search", shortcut: SHORTCUTS["Search"] },
+  { title: "Run", shortcut: SHORTCUTS["Run"] },
+  { title: "Extensions", shortcut: SHORTCUTS["Extensions"] },
 ]
 // View-PannelTab
 const PannelTabSubset: LayoutItem[] = [
-  { title: "Problems", shortcut: "Ctrl+Shift+M" },
-  { title: "Output", shortcut: "Ctrl+Shift+U" },
-  { title: "Debug Console", shortcut: "Ctrl+Shift+Y" },
-  { title: "Terminal", shortcut: "Ctrl+`" },
+  { title: "Problems", shortcut: SHORTCUTS["Problems"] },
+  { title: "Output", shortcut: SHORTCUTS["Output"] },
+  { title: "Debug Console", shortcut: SHORTCUTS["Debug Console"] },
+  { title: "Terminal", shortcut: SHORTCUTS["Terminal"] },
 ]
 // View
 const ViewSubsets: LayoutItem[][] = [
@@ -53,20 +61,20 @@ const ViewSubsets: LayoutItem[][] = [
 
 // Help-Welcome
 const GuideSubset: LayoutItem[] = [
-  { title: "Resume" },
-  { title: "Projects" },
-  { title: "Skills" },
+  { title: "Resume", shortcut: SHORTCUTS["Resume"] },
+  { title: "Projects", shortcut: SHORTCUTS["Projects"] },
+  { title: "Skills", shortcut: SHORTCUTS["Skills"] },
 ]
 const GuideSubsets: LayoutItem[][] = [GuideSubset]
 const WelcomeSubset: LayoutItem[] = [
-  { title: "Welcome" },
-  { title: "Show All Commands", shortcut: "Ctrl+Shift+P" },
+  { title: "Welcome", shortcut: SHORTCUTS["Welcome"] },
+  { title: "Show All Commands", shortcut: SHORTCUTS["Show All Commands"] },
   { title: "Guides", subsets: GuideSubsets },
 ]
 // Help-Link
 const LinkSubsets: LayoutItem[] = [
-  { title: "Velog" },
-  { title: "Github" },
+  { title: "Velog", shortcut: SHORTCUTS["Velog"] },
+  { title: "Github", shortcut: SHORTCUTS["Github"] },
   { title: "Report Issue" },
 ]
 const HelpSubsets: LayoutItem[][] = [WelcomeSubset, LinkSubsets]

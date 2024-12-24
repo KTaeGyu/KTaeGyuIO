@@ -8,14 +8,16 @@ import C from "../components/main/layout/primarySideBar/explorer/menus/folders/F
 import { Path } from "../components/main/layout/primarySideBar/explorer/menus/folders/paths/Paths.interface"
 
 interface FoldersValue {
-  state: Path[]
+  folders: Path[]
+  openEditors: { title: string; route: string }[]
   setIsOpen: (pathname: string) => void
 }
 
 const FoldersContext = createContext<FoldersValue>(null)
 
 export default function FoldersProvider({ children }: PropsWithChildren) {
-  const [state, setState] = useState(C.PATH)
+  const [folders, setState] = useState(C.PATH)
+  const openEditors = [{ title: "Welcome.tsx", route: "/Welcome.tsx" }]
   // State와 Titles를 이용하여 특정 Route의 IsOpen을 Toggle 하는 함수
   const togglePath = (paths: Path[], titles: string[]): Path[] => {
     return paths.map((path) => {
@@ -39,7 +41,7 @@ export default function FoldersProvider({ children }: PropsWithChildren) {
   }
 
   return (
-    <FoldersContext.Provider value={{ state, setIsOpen }}>
+    <FoldersContext.Provider value={{ folders, openEditors, setIsOpen }}>
       {children}
     </FoldersContext.Provider>
   )
