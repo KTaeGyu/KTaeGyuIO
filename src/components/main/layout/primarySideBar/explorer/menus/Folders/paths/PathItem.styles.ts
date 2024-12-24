@@ -8,7 +8,7 @@ const Container = styled.div``
 const TitleBox = styled.div<TitleBoxProps>`
   display: flex;
   align-items: center;
-  height: 24px;
+  height: ${theme.sizes.token["1.5"]};
   padding-left: ${({ $subsets }) => !$subsets && "18px"};
   user-select: none;
   cursor: pointer;
@@ -18,7 +18,7 @@ const TitleBox = styled.div<TitleBoxProps>`
     position: absolute;
     z-index: 0;
     width: 100%;
-    height: 28px;
+    height: ${theme.sizes.token["1.5"]};
     background-color: #ffffff11;
     left: 0;
   }

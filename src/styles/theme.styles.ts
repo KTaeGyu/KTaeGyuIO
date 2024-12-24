@@ -28,6 +28,7 @@ const fontWeights = {
 const sizes = {
   token: {
     1: "22px",
+    1.5: "24px",
     2: "26px",
     3: "34px",
     4: "48px",
