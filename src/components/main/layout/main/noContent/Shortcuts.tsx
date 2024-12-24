@@ -1,6 +1,6 @@
 import React, { Fragment } from "react"
-import { MAIN_SHORTCUT } from "../../../../constants/shortcuts"
-import ShortcutButton from "../../common/buttons/ShortcutButton"
+import { MAIN_SHORTCUT } from "../../../../../constants/shortcuts"
+import ShortcutButton from "../../../common/buttons/ShortcutButton"
 import S from "./Shortcuts.styles"
 
 export default function Shortcuts() {

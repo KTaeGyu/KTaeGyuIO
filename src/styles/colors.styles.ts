@@ -78,6 +78,7 @@ const colors = {
       2: "#848484",
       3: "#747474",
       4: "#979797",
+      5: "#626262",
       white: "#ffffff",
       green: "#0DBC79",
       purple: "#BE65C9",

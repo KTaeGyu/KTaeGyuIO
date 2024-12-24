@@ -41,11 +41,14 @@ const Icon = styled.img`
   width: 13px;
   height: 13px;
   margin: 0 ${theme.space.token[3]};
+  user-select: none;
 `
 
 const Title = styled.p`
+  color: ${theme.colors.vscode.txt[1]};
   font-size: ${theme.fontSizes[1]};
   line-height: ${theme.fontSizes[1]};
+  user-select: none;
 `
 
 const S = { Container, TitleBox, ChevronIcon, Icon, Title }
