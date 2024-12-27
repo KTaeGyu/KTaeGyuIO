@@ -1,19 +1,21 @@
 import React from "react"
-import { useLayoutContext } from "../../../../../contexts/LayoutContext"
+import { useAppSelector } from "../../../../../state/hooks"
+import { selectPannel } from "../../../../../state/slices/layoutSlice"
 import DebugConsole from "./debugConsole/DebugConsole"
 import Output from "./output/Output"
 import Problems from "./problems/Problems"
 import Terminal from "./terminal/Terminal"
 
 export default function Content() {
-  const { state } = useLayoutContext()
-  return state.pannel === "Problems" ? (
+  const pannel = useAppSelector(selectPannel)
+
+  return pannel === "Problems" ? (
     <Problems />
-  ) : state.pannel === "Output" ? (
+  ) : pannel === "Output" ? (
     <Output />
-  ) : state.pannel === "Debug Console" ? (
+  ) : pannel === "Debug Console" ? (
     <DebugConsole />
-  ) : state.pannel === "Terminal" ? (
+  ) : pannel === "Terminal" ? (
     <Terminal />
   ) : null
 }

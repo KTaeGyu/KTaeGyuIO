@@ -1,5 +1,5 @@
-import { field } from "../assets/data/fields"
-import skills from "../assets/data/skills"
+import { field } from "../../_example/assets/data/fields"
+import skills from "../../_example/assets/data/skills"
 
 const parseSkillTabData = (tab: string, data: field) => {
   let result = {

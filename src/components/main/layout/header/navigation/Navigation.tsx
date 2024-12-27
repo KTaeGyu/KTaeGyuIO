@@ -19,11 +19,14 @@ export default function Navigation() {
     <S.Container>
       <S.Button
         onClick={() => navigate(-1)}
-        disabled={!window.navigation.canGoBack}
+        // disabled={!window.navigation.canGoBack}
       >
         <S.BackIcon viewBox="0 0 24 24" />
       </S.Button>
-      <S.Button onClick={() => history.forward()} disabled={!canGoForward()}>
+      <S.Button
+        onClick={() => history.forward()}
+        // disabled={!canGoForward()}
+      >
         <S.ForwardIcon viewBox="0 0 24 24" />
       </S.Button>
     </S.Container>

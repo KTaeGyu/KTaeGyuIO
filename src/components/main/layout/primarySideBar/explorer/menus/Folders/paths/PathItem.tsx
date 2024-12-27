@@ -1,8 +1,12 @@
 import { navigate } from "gatsby"
 import React from "react"
-import { useFoldersContext } from "../../../../../../../../contexts/FoldersContext"
 import selectPathIcon from "../../../../../../../../functions/selectPathIcon"
 import useIsLocation from "../../../../../../../../hooks/useIsLocation"
+import { useAppDispatch } from "../../../../../../../../state/hooks"
+import {
+  addEditor,
+  setIsOpen,
+} from "../../../../../../../../state/slices/folderSlice"
 import { ComponentProps } from "./PathItem.interface"
 import S from "./PathItem.styles"
 import Folders from "./Paths"
@@ -14,19 +18,19 @@ export default function PathItem({
   href,
   route,
 }: ComponentProps) {
-  const { setIsOpen, setEditors } = useFoldersContext()
+  const dispatch = useAppDispatch()
   // route
   const newRoute = `${route ? route : ""}/${title}`
   const filteredRoute = newRoute.replace(/\.ts(x)?/g, "")
   // onClickTitleBox
   const clickHandler = () => {
     if (subsets) {
-      setIsOpen(newRoute)
+      dispatch(setIsOpen({ newRoute }))
     } else if (href) {
       window.open(href, "_blank")
     } else {
       navigate(filteredRoute)
-      setEditors.addEditor({ title, route: filteredRoute })
+      dispatch(addEditor({ title, route: filteredRoute }))
     }
   }
   // Icon

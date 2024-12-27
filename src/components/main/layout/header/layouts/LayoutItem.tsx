@@ -10,7 +10,11 @@ export default function LayoutItem({
   checked,
 }: ComponentProps) {
   return (
-    <S.Container onClick={onClick} $rotate={ROTATE[title]} $checked={checked}>
+    <S.Container
+      onClick={() => onClick(!checked)}
+      $rotate={ROTATE[title]}
+      $checked={checked}
+    >
       <IconPath.Layout viewBox="0 0 24 24" />
     </S.Container>
   )

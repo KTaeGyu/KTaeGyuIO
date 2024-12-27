@@ -1,16 +1,23 @@
 import React from "react"
 import IconPath from "../../../../../assets/iconPath"
-import { useLayoutContext } from "../../../../../contexts/LayoutContext"
+import { useAppDispatch, useAppSelector } from "../../../../../state/hooks"
+import {
+  selectPrimarySideBar,
+  selectPsbIsOpen,
+  setPrimarySideBar,
+} from "../../../../../state/slices/layoutSlice"
 import { ComponentProps } from "./ActivityItem.interface"
 import S from "./ActivityItem.styles"
 
 export default function ActivityItem({ title }: ComponentProps) {
   const Icon = IconPath[title]
-  const { state, getItem, setState } = useLayoutContext()
-  const isOpen = getItem(state.layouts, "Primary Side Bar").checked
-  const selected = state.primarySideBar === title && isOpen
+  const dispatch = useAppDispatch()
+  const primarySideBar = useAppSelector(selectPrimarySideBar)
+  const isOpen = useAppSelector(selectPsbIsOpen)
+
+  const selected = primarySideBar === title && isOpen
   const onClick = () => {
-    setState.setPrimarySideBar(title)
+    dispatch(setPrimarySideBar(title))
   }
 
   return (

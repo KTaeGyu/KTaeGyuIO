@@ -1,4 +1,6 @@
-type ComponentProps = LayoutItem<LayoutsTitle>
+interface ComponentProps extends Omit<LayoutItem<LayoutsTitle>, "onClick"> {
+  onClick: (checked: boolean) => void
+}
 
 interface ContainerProps {
   $checked?: boolean

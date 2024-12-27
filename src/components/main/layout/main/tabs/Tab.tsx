@@ -1,15 +1,16 @@
 import { navigate } from "gatsby"
 import React, { MouseEventHandler, useRef } from "react"
 import IconPath from "../../../../../assets/iconPath"
-import { useFoldersContext } from "../../../../../contexts/FoldersContext"
 import selectPathIcon from "../../../../../functions/selectPathIcon"
 import useIsLocation from "../../../../../hooks/useIsLocation"
+import { useAppDispatch } from "../../../../../state/hooks"
+import { removeEditor } from "../../../../../state/slices/folderSlice"
 import { ComponentProps } from "./Tab.interface"
 import S from "./Tab.styles"
 
 export default function Tab({ title, route, idx }: ComponentProps) {
   const closeRef = useRef(null)
-  const { setEditors } = useFoldersContext()
+  const dispatch = useAppDispatch()
   // Icon
   const src = selectPathIcon(title)
   // Hightlight
@@ -17,7 +18,7 @@ export default function Tab({ title, route, idx }: ComponentProps) {
   // onClickClose
   const onClickClose: MouseEventHandler = (e) => {
     e.stopPropagation()
-    setEditors.removeEditor(idx, isLocation)
+    dispatch(removeEditor({ idx, isLocation }))
   }
 
   return (

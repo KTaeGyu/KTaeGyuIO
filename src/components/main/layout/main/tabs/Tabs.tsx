@@ -1,10 +1,12 @@
 import React from "react"
-import { useFoldersContext } from "../../../../../contexts/FoldersContext"
+import { useAppSelector } from "../../../../../state/hooks"
+import { selectOpenEditors } from "../../../../../state/slices/folderSlice"
 import Tab from "./Tab"
 import S from "./Tabs.styles"
 
 export default function Tabs() {
-  const { openEditors } = useFoldersContext()
+  const openEditors = useAppSelector(selectOpenEditors)
+
   return (
     <S.Container>
       <S.Box>

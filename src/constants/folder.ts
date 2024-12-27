@@ -1,6 +1,6 @@
-import { Path } from "./paths/Paths.interface"
+import { Path } from "../components/main/layout/primarySideBar/explorer/menus/folders/paths/Paths.interface"
 
-const PATH: Path[] = [
+const FOLDERS: Path[] = [
   {
     title: "src",
     isOpen: false,
@@ -125,6 +125,4 @@ const PATH: Path[] = [
   },
 ]
 
-const C = { PATH }
-
-export default C
+export default FOLDERS

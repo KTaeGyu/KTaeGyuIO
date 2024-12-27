@@ -1,23 +1,27 @@
 import React from "react"
-import { useLayoutContext } from "../../../../contexts/LayoutContext"
+import { useAppSelector } from "../../../../state/hooks"
+import {
+  selectPrimarySideBar,
+  selectPsbIsOpen,
+} from "../../../../state/slices/layoutSlice"
 import Explorer from "./explorer/Explorer"
 import Extensions from "./extensions/Extensions"
 import Run from "./run/Run"
 import Search from "./search/Search"
 
 export default function PrimarySideBar() {
-  const { state, getItem } = useLayoutContext()
-  const isOpen = getItem(state.layouts, "Primary Side Bar").checked
+  const isOpen = useAppSelector(selectPsbIsOpen)
+  const primarySideBar = useAppSelector(selectPrimarySideBar)
 
   if (!isOpen) return null
 
-  return state.primarySideBar === "Explorer" ? (
+  return primarySideBar === "Explorer" ? (
     <Explorer />
-  ) : state.primarySideBar === "Search" ? (
+  ) : primarySideBar === "Search" ? (
     <Search />
-  ) : state.primarySideBar === "Run" ? (
+  ) : primarySideBar === "Run" ? (
     <Run />
-  ) : state.primarySideBar === "Extensions" ? (
+  ) : primarySideBar === "Extensions" ? (
     <Extensions />
   ) : null
 }

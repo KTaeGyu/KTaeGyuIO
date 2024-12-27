@@ -1,10 +1,11 @@
 import React from "react"
 import IconPath from "../../../../../../assets/iconPath"
-import { useLayoutContext } from "../../../../../../contexts/LayoutContext"
+import { useAppDispatch } from "../../../../../../state/hooks"
+import { setLayoutsChecked } from "../../../../../../state/slices/layoutSlice"
 import S from "./Options.styles"
 
 export default function Options() {
-  const { setState } = useLayoutContext()
+  const dispatch = useAppDispatch()
 
   return (
     <S.Container>
@@ -12,7 +13,9 @@ export default function Options() {
       <S.Button>
         <IconPath.Chevron viewBox="0 0 24 24" />
       </S.Button>
-      <S.Button onClick={() => setState.setLayoutsChecked(3, false)}>
+      <S.Button
+        onClick={() => dispatch(setLayoutsChecked({ idx: 3, checked: false }))}
+      >
         <IconPath.Close viewBox="0 0 24 24" />
       </S.Button>
     </S.Container>

@@ -1,4 +1,4 @@
-type ComponentProps = LayoutItem & {
+interface ComponentProps extends LayoutItem<MenusTitle> {
   media: number
 }
 

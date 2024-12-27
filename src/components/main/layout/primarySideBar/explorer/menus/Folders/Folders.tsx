@@ -1,9 +1,10 @@
 import React from "react"
-import { useFoldersContext } from "../../../../../../../contexts/FoldersContext"
+import { useAppSelector } from "../../../../../../../state/hooks"
+import { selectFolders } from "../../../../../../../state/slices/folderSlice"
 import Paths from "./paths/Paths"
 
 export default function Folders() {
-  const { folders } = useFoldersContext()
+  const folders = useAppSelector(selectFolders)
 
   return <Paths items={folders} isRoot />
 }

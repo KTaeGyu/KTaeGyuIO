@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react"
-import { useLayoutContext } from "../../../../../../contexts/LayoutContext"
 import useDropdown from "../../../../../../hooks/useDropdown"
+import { useAppSelector } from "../../../../../../state/hooks"
+import { selectMenus } from "../../../../../../state/slices/layoutSlice"
 import Dropdown from "../../../../common/dropdown/Dropdown"
 import ItemS from "../MenuItem.styles"
 import { BREAKPOINTS, MEDIA } from "../Menus.constant"
 import S from "./HamburgerMenu.styles"
 
 export default function HamburgerMenu() {
-  const { state } = useLayoutContext()
+  const menus = useAppSelector(selectMenus)
   const { ref, isOpen, open } = useDropdown()
   const [breakpoint, setBreakpoint] = useState(3)
   const breakpointHandler = () => {
@@ -48,10 +49,7 @@ export default function HamburgerMenu() {
         <S.MoreIcon />
       </ItemS.Container>
       {isOpen && (
-        <Dropdown
-          subsets={[state.menus.slice(breakpoint)]}
-          position="just-down"
-        />
+        <Dropdown subsets={[menus.slice(breakpoint)]} position="just-down" />
       )}
     </S.Container>
   )
