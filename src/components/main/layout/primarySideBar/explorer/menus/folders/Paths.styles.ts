@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { theme } from "../../../../../../../../styles/theme.styles"
+import { theme } from "../../../../../../../styles/theme.styles"
 import { ContainerProps } from "./Paths.interface"
 
 const Container = styled.div<ContainerProps>`

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { theme } from "../../../../../styles/theme.styles"
-import PathS from "../../primarySideBar/explorer/menus/folders/paths/PathItem.styles"
+import PathS from "../../primarySideBar/explorer/menus/folders/PathItem.styles"
 import { CloseButtonProps, ContainerProps, TitleProps } from "./Tab.interface"
 
 const Container = styled.li<ContainerProps>`

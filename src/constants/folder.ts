@@ -1,4 +1,4 @@
-import { Path } from "../components/main/layout/primarySideBar/explorer/menus/folders/paths/Paths.interface"
+import { Path } from "../components/main/layout/primarySideBar/explorer/menus/folders/Paths.interface"
 
 const FOLDERS: Path[] = [
   {

@@ -1,15 +1,15 @@
 import { navigate } from "gatsby"
 import React from "react"
-import selectPathIcon from "../../../../../../../../functions/selectPathIcon"
-import useIsLocation from "../../../../../../../../hooks/useIsLocation"
-import { useAppDispatch } from "../../../../../../../../state/hooks"
+import selectPathIcon from "../../../../../../../functions/selectPathIcon"
+import useIsLocation from "../../../../../../../hooks/useIsLocation"
+import { useAppDispatch } from "../../../../../../../state/hooks"
 import {
   addEditor,
   setIsOpen,
-} from "../../../../../../../../state/slices/folderSlice"
+} from "../../../../../../../state/slices/folderSlice"
 import { ComponentProps } from "./PathItem.interface"
 import S from "./PathItem.styles"
-import Folders from "./Paths"
+import Paths from "./Paths"
 
 export default function PathItem({
   title,
@@ -49,7 +49,7 @@ export default function PathItem({
         <S.Icon src={`/images/path/${src}.png`} />
         <S.Title>{title}</S.Title>
       </S.TitleBox>
-      {subsets && isOpen && <Folders items={subsets} route={newRoute} />}
+      {subsets && isOpen && <Paths items={subsets} route={newRoute} />}
     </S.Container>
   )
 }

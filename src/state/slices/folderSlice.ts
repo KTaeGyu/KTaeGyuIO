@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 import { navigate } from "gatsby"
 import { Tab } from "../../components/main/layout/main/tabs/Tab.interface"
-import { Path } from "../../components/main/layout/primarySideBar/explorer/menus/folders/paths/Paths.interface"
+import { Path } from "../../components/main/layout/primarySideBar/explorer/menus/folders/Paths.interface"
 import FOLDERS from "../../constants/folder"
 
 interface InitialState {

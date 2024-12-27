@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import IconPath from "../../../../../../../../assets/iconPath"
-import { theme } from "../../../../../../../../styles/theme.styles"
+import IconPath from "../../../../../../../assets/iconPath"
+import { theme } from "../../../../../../../styles/theme.styles"
 import { ChevronIconProps, TitleBoxProps } from "./PathItem.interface"
 
 const Container = styled.div``
