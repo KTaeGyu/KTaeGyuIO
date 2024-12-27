@@ -20,7 +20,7 @@ const Container = styled.div`
   }
 `
 
-const Line = styled.p`
+const Line = styled.div`
   position: relative;
   color: ${theme.colors.vscode.txt[1]};
   font-size: ${theme.fontSizes[1]};

@@ -4,9 +4,6 @@ require("dotenv").config({
 })
 
 module.exports = {
-  flags: {
-    DEV_SSR: true,
-  },
   siteMetadata: {
     siteUrl: "https://gatsbycontentfulhomepage.gatsbyjs.io/",
     title: "Gatsby Contentful Homepage Starter",
@@ -41,14 +38,7 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-vanilla-extract",
     "gatsby-plugin-styled-components",
-    {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-        rule: {
-          include: /\.inline\.svg$/,
-        },
-      },
-    },
+    "gatsby-plugin-svgr",
     {
       resolve: "gatsby-plugin-manifest",
       options: {

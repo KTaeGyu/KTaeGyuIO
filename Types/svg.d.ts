@@ -1,4 +1,4 @@
-declare module "*.inline.svg" {
-  const content: any
-  export default content
+declare module "*.svg" {
+  import { FC, SVGProps } from "react"
+  export const ReactComponent: FC<SVGProps<SVGElement>>
 }
