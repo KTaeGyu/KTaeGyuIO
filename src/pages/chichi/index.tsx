@@ -31,13 +31,11 @@ export default function ChichiPage({ data }: ChichiPageProps) {
   // 로그인 확인
   const [chichi, setChichi] = useState<string>()
   useEffect(() => {
-    if (typeof window !== undefined) {
-      const { name } = getChichi()
-      if (!name) {
-        alert("자신이 누구인지 설정해주세요.")
-        navigate("/chichi/login")
-      } else setChichi(name)
-    }
+    const chichi = getChichi()
+    if (!chichi?.name) {
+      alert("자신이 누구인지 설정해주세요.")
+      navigate("/chichi/login")
+    } else setChichi(name)
   }, [])
 
   return (
