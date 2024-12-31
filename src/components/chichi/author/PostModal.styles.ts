@@ -119,7 +119,7 @@ const ExitButton = styled.button`
 const ExitIcon = styled(IconPath.WindowClose)`
   width: 24px;
   height: 24px;
-  fill: ${theme.colors.original.black};
+  stroke: black;
 `
 
 const S = {

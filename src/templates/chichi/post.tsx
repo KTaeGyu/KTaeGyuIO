@@ -48,7 +48,10 @@ export default function PostPage({ pageContext }: PostPageProps) {
             <ModalS.Input value={isPublished ? title : ""} disabled />
           </ModalS.Title>
           <ModalS.Description>
-            <ModalS.Textarea value={isPublished ? description : ""} disabled />
+            <ModalS.Textarea
+              value={isPublished ? description.description : ""}
+              disabled
+            />
           </ModalS.Description>
           <ModalS.SubmitButton disabled>
             From.{author.nickname} / To.{reader.nickname}

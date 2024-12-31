@@ -21,7 +21,9 @@ exports.createPages = async ({ graphql, actions }) => {
         nodes {
           id
           title
-          description
+          description {
+            description
+          }
           reader {
             nickname
           }
