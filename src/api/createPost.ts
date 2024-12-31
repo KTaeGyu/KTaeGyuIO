@@ -20,9 +20,7 @@ export default async function createPost(postData: PostData) {
           "ko-KR": postData.title,
         },
         description: {
-          "ko-KR": {
-            description: postData.description,
-          },
+          "ko-KR": postData.description,
         },
         reader: {
           "ko-KR": {
