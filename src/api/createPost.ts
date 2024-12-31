@@ -59,6 +59,7 @@ export default async function createPost(postData: PostData) {
     await publishContent(createdPostId, response.data.sys.version)
     await addPostToAuthor(postData.readerId, createdPostId)
   } catch (error) {
-    console.error("Error createing post:", error)
+    console.error("Error createing post.")
+    throw error
   }
 }

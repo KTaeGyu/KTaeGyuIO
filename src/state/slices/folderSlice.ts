@@ -1,4 +1,5 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit"
+import type { PayloadAction } from "@reduxjs/toolkit"
+import { createSlice } from "@reduxjs/toolkit"
 import { navigate } from "gatsby"
 import { Tab } from "../../components/main/layout/main/tabs/Tab.interface"
 import { Path } from "../../components/main/layout/primarySideBar/explorer/menus/folders/Paths.interface"

@@ -10,18 +10,15 @@ export default async function addPostToAuthor(
     // pre request
     const result = await getExistingAuthor(authorId)
     if (!result) throw new Error("Cannot Get Existing Posted")
+
     // config
     const url = `https://api.contentful.com/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master/entries/${authorId}`
-    const updatedPosted = [
-      ...result.fields.posted?.["ko-KR"],
-      {
-        sys: {
-          type: "Link",
-          linkType: "Entry",
-          id: postId,
-        },
-      },
-    ]
+    const updatedPosted = result.fields.posted
+      ? [
+          ...result.fields.posted["ko-KR"],
+          { sys: { type: "Link", linkType: "Entry", id: postId } },
+        ]
+      : [{ sys: { type: "Link", linkType: "Entry", id: postId } }]
     const data = {
       fields: {
         ...result.fields,
