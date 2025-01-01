@@ -37,7 +37,7 @@
     "gatsby-plugin-styled-components": "^6.13.1",
     "gatsby-plugin-svgr": "^3.0.0-beta.0",
     "gatsby-plugin-vanilla-extract": "^4.0.1",
-    "gatsby-source-contentful": "^8.0.0",
+    "gatsby-source-contentful": "^8.15.0",
     "gatsby-source-filesystem": "^5.0.0",
     "gatsby-transformer-sharp": "^5.0.0",
     "is-absolute-url": "^4.0.1",

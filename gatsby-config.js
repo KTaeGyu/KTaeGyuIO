@@ -5,10 +5,10 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://gatsbycontentfulhomepage.gatsbyjs.io/",
-    title: "Gatsby Contentful Homepage Starter",
-    author: `Gatsby`,
-    description: "A Gatsby Starter for building homepages with Contentful",
+    siteUrl: "https://ktaegyuio.netlify.app/",
+    title: "KTaeGyuIO",
+    author: `KTaeGyu`,
+    description: "Portfolio site of KTeaGyu. With Gatsby & Contentful.",
   },
   plugins: [
     {
@@ -26,10 +26,8 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        downloadLocal: true,
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-        host: process.env.CONTENTFUL_HOST,
       },
     },
     "gatsby-plugin-catch-links",
