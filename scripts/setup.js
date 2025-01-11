@@ -104,7 +104,7 @@ inquirer
 
       fs.appendFileSync(
         ".env.development",
-        '\n# To enable previews locally, uncomment the next line:\n# CONTENTFUL_HOST="preview.contentful.com"'
+        '\n# To enable previews locally, uncomment the next line:\n# CONTENTFUL_HOST="cdn.contentful.com"'
       )
 
       return { spaceId, managementToken }

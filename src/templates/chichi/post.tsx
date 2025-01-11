@@ -1,5 +1,5 @@
 import { navigate, PageProps } from "gatsby"
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import Layout from "../../components/chichi/author/Layout"
 import ModalS from "../../components/chichi/author/PostModal.styles"
 import getChichi from "../../functions/getChichi"
@@ -22,22 +22,23 @@ export default function PostPage({ pageContext }: PostPageProps) {
     }
   }, [])
   // 공개 일
-  const [isPublished, setIsPublished] = useState(false)
-  useEffect(() => {
-    const currentDate = new Date()
-    const koreaTime = currentDate.toLocaleString("en-US", {
-      timeZone: "Asia/Seoul",
-    })
-    const koreaDate = new Date(koreaTime)
-    const targetDate = new Date(koreaDate.getFullYear(), 11, 25, 0, 0, 0)
+  const isPublished = true
+  // const [isPublished, setIsPublished] = useState(false)
+  // useEffect(() => {
+  //   const currentDate = new Date()
+  //   const koreaTime = currentDate.toLocaleString("en-US", {
+  //     timeZone: "Asia/Seoul",
+  //   })
+  //   const koreaDate = new Date(koreaTime)
+  //   const targetDate = new Date(koreaDate.getFullYear(), 11, 25, 0, 0, 0)
 
-    if (koreaDate < targetDate) {
-      alert("12월 25일 00시 00분에 공개됩니다.")
-      navigate("/", { replace: true })
-    } else {
-      setIsPublished(true)
-    }
-  }, [])
+  //   if (koreaDate < targetDate) {
+  //     alert("12월 25일 00시 00분에 공개됩니다.")
+  //     navigate("/", { replace: true })
+  //   } else {
+  //     setIsPublished(true)
+  //   }
+  // }, [])
 
   return (
     <Layout>

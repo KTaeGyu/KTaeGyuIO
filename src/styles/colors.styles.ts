@@ -83,6 +83,7 @@ const colors = {
       green: "#0DBC79",
       purple: "#BE65C9",
       yellow: "#E5E510",
+      link: "#328BF1",
     },
   },
 }

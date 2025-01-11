@@ -7,6 +7,8 @@ const Container = styled.main<ContainerProps>`
   grid-column: ${({ $primarySideBar }) =>
     $primarySideBar ? "span 1" : "span 2"};
   background-color: ${theme.colors.vscode.bg.black[7]};
+  display: flex;
+  flex-direction: column;
 `
 
 const S = { Container }

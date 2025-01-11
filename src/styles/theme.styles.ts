@@ -1,7 +1,7 @@
 import { colors } from "./colors.styles"
 
 const spaceToken = 2
-const tokenCount = 30
+const tokenCount = 35
 const space = {
   token: {
     2.5: "5px",
@@ -15,6 +15,9 @@ const fontSizes = {
   1: "13px",
   2: "11px",
   3: "12px",
+  4: "40px",
+  5: "24px",
+  6: "18px",
 }
 
 const fontWeights = {
@@ -33,10 +36,8 @@ const sizes = {
     3: "34px",
     4: "48px",
   },
-  container: "1280px",
-  header: {
-    height: "35px",
-  },
+  container: { 1: "1024px" },
+  header: { height: "35px" },
   icon: {
     10: "10px",
     12: "12px",
@@ -49,6 +50,7 @@ const sizes = {
 
 const radii = {
   1: "4px",
+  2: "8px",
   99: "9999px",
 }
 

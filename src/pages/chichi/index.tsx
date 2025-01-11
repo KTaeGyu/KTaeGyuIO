@@ -35,7 +35,7 @@ export default function ChichiPage({ data }: ChichiPageProps) {
     if (!chichi?.name) {
       alert("자신이 누구인지 설정해주세요.")
       navigate("/chichi/login")
-    } else setChichi(name)
+    } else setChichi(chichi.name)
   }, [])
 
   return (

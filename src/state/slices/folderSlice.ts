@@ -42,7 +42,9 @@ export const folderSlice = createSlice({
       state.folders = togglePath(state.folders, titles)
     },
     addEditor: (state, action: PayloadAction<Tab>) => {
-      state.openEditors = [...state.openEditors, action.payload]
+      if (!state.openEditors.find((e) => e.route === action.payload.route)) {
+        state.openEditors = [...state.openEditors, action.payload]
+      }
     },
     removeEditor: (
       state,

@@ -16,11 +16,15 @@ import { ReactComponent as Layout } from "./icons/Layout.inline.svg"
 import { ReactComponent as LayoutSetting } from "./icons/LayoutSetting.inline.svg"
 import { ReactComponent as Manage } from "./icons/Manage.inline.svg"
 import { ReactComponent as More } from "./icons/More.inline.svg"
+import { ReactComponent as Overview } from "./icons/Overview.inline.svg"
 import { ReactComponent as Plus } from "./icons/Plus.inline.svg"
+import { ReactComponent as Profile } from "./icons/Profile.inline.svg"
+import { ReactComponent as Projects } from "./icons/Projects.inline.svg"
 import { ReactComponent as RemoteWindow } from "./icons/RemoteWindow.inline.svg"
 import { ReactComponent as Rocket } from "./icons/Rocket.inline.svg"
 import { ReactComponent as Run } from "./icons/Run.inline.svg"
 import { ReactComponent as Search } from "./icons/Search.inline.svg"
+import { ReactComponent as Skills } from "./icons/Skills.inline.svg"
 import { ReactComponent as Spanner } from "./icons/Spanner.inline.svg"
 import { ReactComponent as Timer } from "./icons/Timer.inline.svg"
 import { ReactComponent as WindowClose } from "./icons/WindowClose.inline.svg"
@@ -45,11 +49,15 @@ type IconKeys =
   | "Layout"
   | "LayoutSetting"
   | "More"
+  | "Overview"
   | "Plus"
+  | "Profile"
+  | "Projects"
   | "RemoteWindow"
   | "Rocket"
   | "Run"
   | "Search"
+  | "Skills"
   | "Manage"
   | "Spanner"
   | "Timer"
@@ -72,10 +80,14 @@ const IconPath: { [key in IconKeys]: React.FC<SVGProps<SVGElement>> } = {
   LayoutSetting,
   Manage,
   More,
+  Overview,
   RemoteWindow,
   Run,
   Plus,
+  Profile,
+  Projects,
   Search,
+  Skills,
   WindowClose,
   WindowMaximize,
   WindowMinimize,
