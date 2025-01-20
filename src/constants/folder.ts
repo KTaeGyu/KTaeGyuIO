@@ -59,7 +59,7 @@ const FOLDERS: Path[] = [
       { title: "README.md", isOpen: false },
     ],
   },
-  { title: "Welcome.tsx", isOpen: false },
+  { title: "Welcome.io", isOpen: false },
   { title: "README.md", isOpen: false },
   { title: "package.json", isOpen: false },
 ]

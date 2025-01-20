@@ -22,7 +22,9 @@ const onInitialClientRender = () => {
       }
     }
 
-    store.dispatch(addEditor({ title, route }))
+    if (title) {
+      store.dispatch(addEditor({ title, route }))
+    }
   }
 
   handleRefresh(pathname)

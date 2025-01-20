@@ -12,7 +12,7 @@ interface InitialState {
 
 const initialState: InitialState = {
   folders: FOLDERS,
-  openEditors: [{ title: "Welcome.tsx", route: "/Welcome" }],
+  openEditors: [{ title: "Welcome.io", route: "/Welcome" }],
 }
 
 export const folderSlice = createSlice({

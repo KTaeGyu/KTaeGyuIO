@@ -1,6 +1,7 @@
 import { navigate } from "gatsby"
 import React, { MouseEventHandler, useRef } from "react"
 import IconPath from "../../../../../assets/iconPath"
+import filterExtention from "../../../../../functions/filterExtention"
 import selectPathIcon from "../../../../../functions/selectPathIcon"
 import useIsLocation from "../../../../../hooks/useIsLocation"
 import { useAppDispatch } from "../../../../../state/hooks"
@@ -24,7 +25,7 @@ export default function Tab({ title, route, idx }: ComponentProps) {
   return (
     <S.Container $isLocation={isLocation} onClick={() => navigate(route)}>
       <S.Icon src={`/images/path/${src}.png`} />
-      <S.Title $isLocation={isLocation}>{title}</S.Title>
+      <S.Title $isLocation={isLocation}>{filterExtention(title, true)}</S.Title>
       <S.CloseButton
         ref={closeRef}
         $isLocation={isLocation}

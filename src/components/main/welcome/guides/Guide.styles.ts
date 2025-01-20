@@ -61,7 +61,14 @@ const Description = styled.p`
   font-size: ${theme.fontSizes[1]};
 `
 
-const Icon = styled.img``
+const Icon = styled.img`
+  position: absolute;
+  left: ${theme.space.token[4]};
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  border-radius: ${theme.radii[1]};
+`
 
 const S = { Container, Title, Description, Icon }
 

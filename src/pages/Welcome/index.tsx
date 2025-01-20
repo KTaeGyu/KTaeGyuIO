@@ -13,8 +13,8 @@ export default function Page() {
       <S.Wrapper ref={ref} $isWide={isWide}>
         <S.Container $isWide={isWide}>
           <S.TitleBox $isWide={isWide}>
-            <S.Heading>FE Dev. Kim Tae Gyu</S.Heading>
-            <S.Slogan>Challenge constantly</S.Slogan>
+            <S.Heading>Developer. Kim Taegyu</S.Heading>
+            <S.Slogan>Challenge every moment, improve everyday.</S.Slogan>
           </S.TitleBox>
           <S.ContentBox $isWide={isWide}>
             <Navigation />

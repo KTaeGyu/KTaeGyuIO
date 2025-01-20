@@ -14,12 +14,17 @@ export default function Guide({
 }: ComponentProps) {
   const dispatch = useAppDispatch()
   const onClick = () => {
-    dispatch(addEditor({ title: "README.md", route }))
-    navigate(route)
+    if (route.includes("://")) {
+      window.open(route)
+    } else {
+      dispatch(addEditor({ title: "README.md", route }))
+      navigate(route)
+    }
   }
 
   return (
-    <S.Container $recommand={recommand}>
+    <S.Container $recommand={recommand} onClick={onClick}>
+      {iconPath && <S.Icon src={iconPath} />}
       <S.Title>{title}</S.Title>
       {description && <S.Description>{description}</S.Description>}
     </S.Container>

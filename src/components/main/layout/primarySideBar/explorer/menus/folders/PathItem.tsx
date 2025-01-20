@@ -1,5 +1,6 @@
 import { navigate } from "gatsby"
 import React from "react"
+import filterExtention from "../../../../../../../functions/filterExtention"
 import selectPathIcon from "../../../../../../../functions/selectPathIcon"
 import useIsLocation from "../../../../../../../hooks/useIsLocation"
 import { useAppDispatch } from "../../../../../../../state/hooks"
@@ -21,7 +22,7 @@ export default function PathItem({
   const dispatch = useAppDispatch()
   // route
   const newRoute = `${route ? route : ""}/${title}`
-  const filteredRoute = newRoute.replace(/\.ts(x)?/g, "")
+  const filteredRoute = filterExtention(newRoute)
   // onClickTitleBox
   const clickHandler = () => {
     if (subsets) {
@@ -47,7 +48,7 @@ export default function PathItem({
       >
         {subsets && <S.ChevronIcon $isOpen={isOpen} viewBox="0 0 24 24" />}
         <S.Icon src={`/images/path/${src}.png`} />
-        <S.Title>{title}</S.Title>
+        <S.Title>{filterExtention(title, true)}</S.Title>
       </S.TitleBox>
       {subsets && isOpen && <Paths items={subsets} route={newRoute} />}
     </S.Container>
