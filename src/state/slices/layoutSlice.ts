@@ -1,13 +1,13 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 import LAYOUT_ITEMS from "../../constants/layoutValue"
 
-interface InitialState {
+interface LayoutInitialState {
   menus: LayoutItem[]
   primarySideBar: ActivityTitle | ""
   pannel: PannelTabTitle
 }
 
-const initialState: InitialState = {
+const initialState: LayoutInitialState = {
   menus: LAYOUT_ITEMS,
   primarySideBar: "Explorer",
   pannel: "Terminal",
@@ -28,6 +28,15 @@ export const layoutSlice = createSlice({
       )
 
       state.menus[3].subsets[1][0].subsets[1] = newState
+    },
+    setLanguageChecked: (state, action: PayloadAction<number>) => {
+      const idx = action.payload
+      const prev = state.menus[3].subsets[1][1].subsets[0]
+      const newState = prev.map((subset, i) =>
+        i === idx ? { ...subset, checked: true } : { ...subset, checked: false }
+      )
+
+      state.menus[3].subsets[1][1].subsets[0] = newState
     },
     setPrimarySideBar: (state, action: PayloadAction<ActivityTitle>) => {
       const title = action.payload
@@ -53,14 +62,19 @@ export const layoutSlice = createSlice({
       layout.menus[3].subsets[1][0].subsets[1][1].checked,
     selectPannelIsOpen: (layout) =>
       layout.menus[3].subsets[1][0].subsets[1][3].checked,
+    selectLanguage: (layout) => layout.menus[3].subsets[1][1].subsets[0],
     // others
     selectPrimarySideBar: (layout) => layout.primarySideBar,
     selectPannel: (layout) => layout.pannel,
   },
 })
 
-export const { setLayoutsChecked, setPrimarySideBar, setPannel } =
-  layoutSlice.actions
+export const {
+  setLayoutsChecked,
+  setLanguageChecked,
+  setPrimarySideBar,
+  setPannel,
+} = layoutSlice.actions
 export const {
   selectMenus,
   selectLayouts,
@@ -70,6 +84,7 @@ export const {
   selectPannel,
   selectPsbIsOpen,
   selectPannelIsOpen,
+  selectLanguage,
 } = layoutSlice.selectors
 
 export default layoutSlice.reducer

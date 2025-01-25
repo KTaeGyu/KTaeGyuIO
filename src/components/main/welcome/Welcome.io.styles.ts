@@ -1,14 +1,13 @@
 import styled from "styled-components"
-import { theme } from "./../../../styles/theme.styles"
+import { theme } from "../../../styles/theme.styles"
 import {
   ContainerProps,
   ContentBoxProps,
   TitleBoxProps,
   WrapperProps,
-} from "./index.interface"
+} from "./Welcome.io.interface"
 
 const Wrapper = styled.div<WrapperProps>`
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;

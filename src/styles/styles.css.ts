@@ -11,7 +11,10 @@ globalStyle("body", {
   MozOsxFontSmoothing: "grayscale",
 })
 // li
-globalStyle("li", {
+globalStyle("ol", {
+  listStyle: "none",
+})
+globalStyle("ul", {
   listStyle: "none",
 })
 // button

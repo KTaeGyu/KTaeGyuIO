@@ -1,0 +1,86 @@
+{
+  "heading": [
+    {
+      "type": "H1",
+      "content": {
+        "ko": "시작하기",
+        "en": "Get Started with KTaeGyuIO"
+      }
+    },
+    {
+      "type": "P",
+      "content": {
+        "ko": "환영합니다! 이 페이지에서는 KTaeGyuIO에 대한 소개와 사이트 사용법에 대해서 소개할 것입니다. 아래는 이 페이지에서 어떤 내용을 소개하는지에 대한 요약입니다.",
+        "en": "Welcome to KTaeGuyIO! This page will introduce KTaeGyuIO and let you know how to use this site. You can see summation of this page below."
+      }
+    },
+    {
+      "type": "Blockquote",
+      "contents": [
+        {
+          "type": "H3",
+          "content": {
+            "ko": "목차",
+            "en": "You will learn..."
+          }
+        },
+        {
+          "type": "Ol",
+          "contents": [
+            {
+              "type": "Li",
+              "content": {
+                "ko": "언어 설정하기",
+                "en": "How to change language."
+              }
+            },
+            {
+              "type": "Li",
+              "content": {
+                "ko": "파일 시스템 사용하기",
+                "en": "How to use file-system"
+              }
+            },
+            {
+              "type": "Li",
+              "content": {
+                "ko": "각 세션에서 소개하는 내용",
+                "en": "What will introduce for each section"
+              }
+            },
+            {
+              "type": "Li",
+              "content": {
+                "ko": "레이아웃 시스템 사용하기",
+                "en": "How to use layout-system"
+              }
+            },
+            {
+              "type": "Li",
+              "content": {
+                "ko": "포트폴리오 파일로 저장하기 (준비중...)",
+                "en": "How to save portfolio as file (preparing...)"
+              }
+            },
+            {
+              "type": "Li",
+              "content": {
+                "ko": "검색하기 (준비중...)",
+                "en": "How to search (preparing...)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "text1": [
+    {
+      "type": "H2",
+      "content": {
+        "ko": "언어 설정하기",
+        "en": "How to change language."
+      }
+    }
+  ]
+}

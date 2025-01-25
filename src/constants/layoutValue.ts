@@ -33,9 +33,15 @@ const LayoutsSubset: LayoutItem<LayoutsTitle>[] = [
   { title: "Status Bar", disabled: true },
   { title: "Pannel", shortcut: SHORTCUTS["Pannel"], checked: false },
 ]
+const LanguageSubset: LayoutItem[] = [
+  { title: "Korean", checked: true },
+  { title: "English", checked: false },
+]
 const AppearanceSubsets: LayoutItem[][] = [ViewportSubset, LayoutsSubset]
+const LanguageSubsets: LayoutItem[][] = [LanguageSubset]
 const WindowSubset: LayoutItem[] = [
   { title: "Appearance", subsets: AppearanceSubsets },
+  { title: "Language", subsets: LanguageSubsets },
 ]
 // View-Activities
 const ActivitySubset: LayoutItem<ActivityTitle>[] = [
@@ -90,5 +96,5 @@ const LAYOUT_ITEMS: LayoutItem<MenusTitle>[] = [
   { title: "Help", subsets: HelpSubsets },
 ]
 
-export { LayoutsSubset }
+export { LanguageSubset, LayoutsSubset }
 export default LAYOUT_ITEMS

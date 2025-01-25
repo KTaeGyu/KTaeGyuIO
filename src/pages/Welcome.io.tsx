@@ -1,9 +1,9 @@
 import React from "react"
-import Layout from "../../components/main/layout/Layout"
-import Guides from "../../components/main/welcome/guides/Guides"
-import S from "../../components/main/welcome/index.styles"
-import Navigation from "../../components/main/welcome/navigation/Navigation"
-import useLocalMediaQuery from "../../hooks/useLocalMediaQuery"
+import Layout from "../components/main/layout/Layout"
+import Guides from "../components/main/welcome/guides/Guides"
+import Navigation from "../components/main/welcome/navigation/Navigation"
+import S from "../components/main/welcome/Welcome.io.styles"
+import useLocalMediaQuery from "../hooks/useLocalMediaQuery"
 
 export default function Page() {
   const { ref, isWide } = useLocalMediaQuery()

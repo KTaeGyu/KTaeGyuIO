@@ -4,7 +4,7 @@ const spaceToken = 2
 const tokenCount = 35
 const space = {
   token: {
-    2.5: "5px",
+    2.5: `${spaceToken * 2.5}px`,
   },
 }
 for (let i = 1; i <= tokenCount; i++) {
@@ -18,6 +18,7 @@ const fontSizes = {
   4: "40px",
   5: "24px",
   6: "18px",
+  7: "32px",
 }
 
 const fontWeights = {
@@ -77,6 +78,21 @@ const buttons = {
   },
 }
 
+const scrolls = {
+  1: `
+&::-webkit-scrollbar {
+  width: 14px;
+  border: 1px solid #ffffff11;
+}
+&:hover::-webkit-scrollbar-thumb {
+  background: #ffffff11;
+}
+&::-webkit-scrollbar-button {
+  display: none;
+}
+  `,
+}
+
 export const theme = {
   colors,
   space,
@@ -85,6 +101,7 @@ export const theme = {
   sizes,
   radii,
   buttons,
+  scrolls,
 }
 
 // Font Example

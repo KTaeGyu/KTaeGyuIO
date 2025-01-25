@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   gap: ${theme.space.token[12]};
 `
 
-const Container = styled.div`
+const Container = styled.ul`
   display: flex;
   flex-direction: column;
   gap: ${theme.space.token[5]};

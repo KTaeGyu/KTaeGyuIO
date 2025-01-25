@@ -12,6 +12,7 @@ import { ReactComponent as Explorer } from "./icons/Explorer.inline.svg"
 import { ReactComponent as Extensions } from "./icons/Extensions.inline.svg"
 import { ReactComponent as Hamburger } from "./icons/Hamburger.inline.svg"
 import { ReactComponent as Idea } from "./icons/Idea.inline.svg"
+import { ReactComponent as Language } from "./icons/Language.inline.svg"
 import { ReactComponent as Layout } from "./icons/Layout.inline.svg"
 import { ReactComponent as LayoutSetting } from "./icons/LayoutSetting.inline.svg"
 import { ReactComponent as Manage } from "./icons/Manage.inline.svg"
@@ -46,6 +47,7 @@ type IconKeys =
   | "Extensions"
   | "Hamburger"
   | "Idea"
+  | "Language"
   | "Layout"
   | "LayoutSetting"
   | "More"
@@ -76,6 +78,7 @@ const IconPath: { [key in IconKeys]: React.FC<SVGProps<SVGElement>> } = {
   Explorer,
   Extensions,
   Hamburger,
+  Language,
   Layout,
   LayoutSetting,
   Manage,

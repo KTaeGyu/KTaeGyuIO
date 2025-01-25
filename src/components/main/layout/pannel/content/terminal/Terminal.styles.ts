@@ -8,16 +8,7 @@ const Container = styled.div`
   padding-right: ${theme.space.token[7]};
 
   overflow-y: scroll;
-  &::-webkit-scrollbar {
-    width: 14px;
-    border: 1px solid #ffffff11;
-  }
-  &:hover::-webkit-scrollbar-thumb {
-    background: #ffffff11;
-  }
-  &::-webkit-scrollbar-button {
-    display: none;
-  }
+  ${theme.scrolls[1]}
 `
 
 const Line = styled.div`

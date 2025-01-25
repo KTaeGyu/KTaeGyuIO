@@ -10,11 +10,14 @@
 
 text
 
-*italics*
+_italics_
 
 **bold**
 
-> Blockquote
+> ### Blockquote
+>
+> 1. hi
+> 2. hi
 
 1. Ordered List
 2. Ordered List
@@ -25,6 +28,7 @@ text
 ~~Strikethrough~~
 
 ---
+
 Horizontal Rule
 
 [Link]()
@@ -32,7 +36,7 @@ Horizontal Rule
 ![Image]()
 
 | Table | Table |
-| ----------- | ----------- |
+| ----- | ----- |
 | Table | Table |
 
 `inline block`
@@ -52,6 +56,6 @@ Here's a sentence with a footnote. [^1]
 
 I need to highlight these ==very important words==.
 
-Subscript	H~2~O
+Subscript H~2~O
 
-Superscript	X^2^
+Superscript X^2^

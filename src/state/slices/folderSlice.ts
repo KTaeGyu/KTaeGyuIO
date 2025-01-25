@@ -5,28 +5,50 @@ import { Tab } from "../../components/main/layout/main/tabs/Tab.interface"
 import { Path } from "../../components/main/layout/primarySideBar/explorer/menus/folders/Paths.interface"
 import FOLDERS from "../../constants/folder"
 
-interface InitialState {
+interface FoldersInitialState {
   folders: Path[]
   openEditors: Tab[]
 }
 
-const initialState: InitialState = {
+const initialState: FoldersInitialState = {
   folders: FOLDERS,
-  openEditors: [{ title: "Welcome.io", route: "/Welcome" }],
+  openEditors: [{ title: "Welcome.io", route: "/Welcome.io" }],
 }
 
 export const folderSlice = createSlice({
   name: "folder",
   initialState,
   reducers: {
-    setIsOpen: (state, action: PayloadAction<{ newRoute: string }>) => {
-      const titles = action.payload.newRoute.split("/").filter(Boolean)
+    toggleIsOpen: (state, action: PayloadAction<string>) => {
+      const titles = action.payload.split("/").filter(Boolean)
 
       const togglePath = (paths: Path[], titles: string[]): Path[] => {
         return paths.map((path) => {
           if (path.title === titles[0]) {
             if (titles.length === 1) {
               return { ...path, isOpen: !path.isOpen }
+            }
+            if (path.subsets) {
+              return {
+                ...path,
+                subsets: togglePath(path.subsets, titles.slice(1)),
+              }
+            }
+          }
+          return path
+        })
+      }
+
+      state.folders = togglePath(state.folders, titles)
+    },
+    initiateIsOpen: (state, action: PayloadAction<string>) => {
+      const titles = action.payload.split("/").filter(Boolean)
+
+      const togglePath = (paths: Path[], titles: string[]): Path[] => {
+        return paths.map((path) => {
+          if (path.title === titles[0]) {
+            if (titles.length === 1) {
+              return { ...path, isOpen: true }
             }
             if (path.subsets) {
               return {
@@ -81,7 +103,8 @@ export const folderSlice = createSlice({
   },
 })
 
-export const { setIsOpen, addEditor, removeEditor } = folderSlice.actions
+export const { toggleIsOpen, initiateIsOpen, addEditor, removeEditor } =
+  folderSlice.actions
 export const { selectFolders, selectOpenEditors } = folderSlice.selectors
 
 export default folderSlice.reducer

@@ -17,7 +17,9 @@ const Container = styled.ul<ContainerProps>`
       ? "left: calc(100% + 6px); top: -6px;"
       : position === "just-down"
       ? "left: 0; top: 100%;"
-      : position === "just-right" && "left: 100%; top: 0;"}
+      : position === "just-right"
+      ? "left: 100%; top: 0;"
+      : position === "just-down-left" && "right: 0; top: 100%;"}
 `
 const S = { Container }
 
